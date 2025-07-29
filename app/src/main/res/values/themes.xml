@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.StarHero" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Status bar color. -->
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <!-- Customize your light theme here. -->
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:fontFamily">@font/bitcount</item>
+    </style>
+
+    <style name="Theme.StarHero" parent="Base.Theme.StarHero" />
+
+</resources>
