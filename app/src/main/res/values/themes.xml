@@ -6,7 +6,7 @@
         <item name="android:windowTranslucentStatus">true</item>
         <!-- Customize your light theme here. -->
         <item name="android:textColor">@color/primary</item>
-        <item name="android:fontFamily">@font/bitcount</item>
+        <item name="android:fontFamily">@font/aclonica</item>
     </style>
 
     <style name="Theme.StarHero" parent="Base.Theme.StarHero" />
