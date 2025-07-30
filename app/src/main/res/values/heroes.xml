@@ -3,22 +3,82 @@
     <string-array name="name_hero">
         <item>Amazon</item>
         <item>Banzo</item>
-        <item>Blackened</item>
+        <item>Blackguard</item>
         <item>Captain</item>
 
         <item>Druid</item>
         <item>Dwarf</item>
-        <item>Bard</item>
-        <item>Magician</item>
+        <item>Hunter</item>
+        <item>Psionic</item>
 
         <item>Pilgrim</item>
         <item>Knight</item>
-        <item>Sorcerer</item>
+        <item>Kinetic</item>
         <item>Rogue</item>
 
         <item>Witch</item>
-        <item>Demon</item>
-        <item>Wizard</item>
-        <item>Selenia</item>
+        <item>Mephisto</item>
+        <item>Enchanter</item>
+        <item>Vixen</item>
     </string-array>
+
+    <string-array name="image_hero">
+        <item>h_amazon</item>
+        <item>h_banzo</item>
+        <item>h_blackguard</item>
+        <item>h_captain</item>
+        <item>h_druid</item>
+        <item>h_dwarf</item>
+        <item>h_hunter</item>
+        <item>h_psionic</item>
+        <item>h_pilgrim</item>
+        <item>h_knight</item>
+        <item>h_kinetic</item>
+        <item>h_rogue</item>
+        <item>h_witch</item>
+        <item>h_mephisto</item>
+        <item>h_enchanter</item>
+        <item>h_vixen</item>
+    </string-array>
+
+    <string-array name="icon_hero"></string-array>
+
+    <string-array name="size_hero">
+        <item>M</item>
+        <item>H</item>
+        <item>M</item>
+        <item>M</item>
+        <item>L</item>
+        <item>H</item>
+        <item>L</item>
+        <item>L</item>
+        <item>M</item>
+        <item>H</item>
+        <item>L</item>
+        <item>L</item>
+        <item>L</item>
+        <item>L</item>
+        <item>M</item>
+        <item>L</item>
+    </string-array>
+
+    <string-array name="strength_hero">
+        <item>3</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>1</item>
+        <item>4</item>
+        <item>3</item>
+        <item>1</item>
+        <item>3</item>
+        <item>4</item>
+        <item>1</item>
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>">
+
 </resources>

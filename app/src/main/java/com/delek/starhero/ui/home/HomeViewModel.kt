@@ -23,8 +23,7 @@ class HomeViewModel @Inject constructor(
                 heroList.postValue(hero[0])
             }
         }
-
-    }
+   }
 
 
 }

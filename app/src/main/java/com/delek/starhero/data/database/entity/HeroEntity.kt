@@ -9,7 +9,7 @@ data class HeroEntity(
     val name: String,
     val image: String,
     val icon: String,
-    val size: Int,
+    val size: String,
     val advantage: Int,
     val strength: Int,
     val defense: Int,
