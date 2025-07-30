@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="name_hero">
+        <item>Amazon</item>
+        <item>Banzo</item>
+        <item>Blackened</item>
+        <item>Captain</item>
+
+        <item>Druid</item>
+        <item>Dwarf</item>
+        <item>Bard</item>
+        <item>Magician</item>
+
+        <item>Pilgrim</item>
+        <item>Knight</item>
+        <item>Sorcerer</item>
+        <item>Rogue</item>
+
+        <item>Witch</item>
+        <item>Demon</item>
+        <item>Wizard</item>
+        <item>Selenia</item>
+    </string-array>
+</resources>

@@ -7,14 +7,18 @@ import android.view.ViewGroup
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.delek.starhero.R
 import com.delek.starhero.databinding.FragmentHomeBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    private val viewModel: HomeViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,6 +30,7 @@ class HomeFragment : Fragment() {
         binding.textHome.text = getString(R.string.text_home)
         binding.textHome.blink()
 
+        viewModel.onCreate()
         binding.root.setOnClickListener {
             findNavController().navigate(
                 HomeFragmentDirections.actionNavHomeToNavSelection()
