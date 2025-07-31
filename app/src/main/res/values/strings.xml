@@ -8,9 +8,11 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_select">Select</string>
+    <string name="menu_detail">Detail</string>
     <string name="todo">TODO</string>
     <string name="text_home">Touch the screen</string>
     <string name="head">Select Hero</string>
+    <string name="size">Size: %1$s</string>
+    <string name="skill">Skill: %1$s</string>
 </resources>

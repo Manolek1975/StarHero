@@ -17,7 +17,7 @@
         <item>Rogue</item>
 
         <item>Witch</item>
-        <item>Mephisto</item>
+        <item>Balor</item>
         <item>Enchanter</item>
         <item>Vixen</item>
     </string-array>
@@ -36,31 +36,50 @@
         <item>h_kinetic</item>
         <item>h_rogue</item>
         <item>h_witch</item>
-        <item>h_mephisto</item>
+        <item>h_balor</item>
         <item>h_enchanter</item>
         <item>h_vixen</item>
     </string-array>
 
-    <string-array name="icon_hero"></string-array>
+    <string-array name="icon_hero">
+        <item>i_amazon</item>
+        <item>i_banzo</item>
+        <item>i_blackguard</item>
+        <item>i_captain</item>
+        <item>i_druid</item>
+        <item>i_dwarf</item>
+        <item>i_hunter</item>
+        <item>i_psionic</item>
+        <item>i_pilgrim</item>
+        <item>i_knight</item>
+        <item>i_kinetic</item>
+        <item>i_rogue</item>
+        <item>i_witch</item>
+        <item>i_balor</item>
+        <item>i_enchanter</item>
+        <item>i_vixen</item>
+    </string-array>
 
     <string-array name="size_hero">
-        <item>M</item>
-        <item>H</item>
-        <item>M</item>
-        <item>M</item>
-        <item>L</item>
-        <item>H</item>
-        <item>L</item>
-        <item>L</item>
-        <item>M</item>
-        <item>H</item>
-        <item>L</item>
-        <item>L</item>
-        <item>L</item>
-        <item>L</item>
-        <item>M</item>
-        <item>L</item>
+        <item>MEDIUM</item>
+        <item>HEAVY</item>
+        <item>MEDIUM</item>
+        <item>MEDIUM</item>
+        <item>LIGHT</item>
+        <item>HEAVY</item>
+        <item>LIGHT</item>
+        <item>LIGHT</item>
+        <item>MEDIUM</item>
+        <item>HEAVY</item>
+        <item>LIGHT</item>
+        <item>LIGHT</item>
+        <item>LIGHT</item>
+        <item>LIGHT</item>
+        <item>MEDIUM</item>
+        <item>LIGHT</item>
     </string-array>
+
+    <string-array name="skill_hero"></string-array>
 
     <string-array name="strength_hero">
         <item>3</item>
@@ -80,5 +99,64 @@
         <item>2</item>
         <item>3</item>
     </string-array>">
+
+
+    <string-array name="defense_hero">
+        <item>2</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>1</item>
+        <item>5</item>
+        <item>1</item>
+        <item>1</item>
+        <item>2</item>
+        <item>5</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="power_hero">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>2</item>
+        <item>0</item>
+        <item>1</item>
+        <item>4</item>
+        <item>2</item>
+        <item>1</item>
+        <item>3</item>
+        <item>0</item>
+        <item>3</item>
+        <item>5</item>
+        <item>3</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="speed_hero">
+        <item>3</item>
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>5</item>
+        <item>2</item>
+        <item>3</item>
+        <item>3</item>
+        <item>4</item>
+        <item>4</item>
+        <item>2</item>
+        <item>3</item>
+        <item>0</item>
+        <item>3</item>
+        <item>2</item>
+    </string-array>
+
 
 </resources>

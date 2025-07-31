@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_space"
     android:orientation="vertical"
-    tools:context=".ui.selection.SelectionFragment">
+    tools:context=".ui.select.SelectFragment">
 
     <TextView
         android:id="@+id/text_select"
@@ -16,7 +16,7 @@
         android:textAlignment="center"
         android:textSize="24sp"
         tools:text="Select Character"
-        android:textColor="@color/gold"
+        android:textColor="@color/primary"
         android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView

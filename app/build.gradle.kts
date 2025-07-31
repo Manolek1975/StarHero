@@ -19,6 +19,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -58,6 +59,8 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     //Hilt
     implementation (libs.hilt.android)
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.fragment.ktx)
     ksp(libs.dagger.compiler)
     ksp(libs.hilt.compiler)
     //ROOM

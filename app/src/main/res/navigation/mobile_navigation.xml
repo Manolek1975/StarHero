@@ -11,19 +11,28 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_nav_home_to_nav_selection"
-            app:destination="@id/nav_selection" />
+            android:id="@+id/action_nav_home_to_nav_select"
+            app:destination="@id/nav_select" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_selection"
-        android:name="com.delek.starhero.ui.selection.SelectionFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_selection" />
+        android:id="@+id/nav_select"
+        android:name="com.delek.starhero.ui.select.SelectFragment"
+        android:label="@string/menu_select"
+        tools:layout="@layout/fragment_select" >
+        <action
+            android:id="@+id/action_nav_select_to_nav_detail"
+            app:destination="@id/nav_detail" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.delek.starhero.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_detail"
+        android:name="com.delek.starhero.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="hero_id"
+            app:argType="integer" />
+    </fragment>
+
 </navigation>

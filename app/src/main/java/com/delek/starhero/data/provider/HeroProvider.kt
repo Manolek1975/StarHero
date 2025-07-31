@@ -10,13 +10,17 @@ class HeroProvider {
             val heroes = mutableListOf<HeroEntity>()
             val name = context.resources.getStringArray(R.array.name_hero)
             val image = context.resources.getStringArray(R.array.image_hero)
+            val icon = context.resources.getStringArray(R.array.icon_hero)
             val size = context.resources.getStringArray(R.array.size_hero)
             val strength = context.resources.getStringArray(R.array.strength_hero)
+            val defense = context.resources.getStringArray(R.array.defense_hero)
+            val power = context.resources.getStringArray(R.array.power_hero)
+            val speed = context.resources.getStringArray(R.array.speed_hero)
 
             for (i in name.indices) {
                 val hero = HeroEntity(
-                    i + 1, name[i], image[i], "", size[i], 0,
-                    strength[i].toInt(), 0, 0, 0, 0
+                    i + 1, name[i], image[i], icon[i], size[i], 0,
+                    strength[i].toInt(), defense[i].toInt(), power[i].toInt(), speed[i].toInt(), 0
                 )
                 heroes.add(hero)
             }

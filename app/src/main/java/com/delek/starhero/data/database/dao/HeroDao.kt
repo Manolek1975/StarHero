@@ -14,4 +14,8 @@ interface HeroDao {
 
     @Query("SELECT * FROM heroes")
     suspend fun getAllHeroes(): List<HeroEntity>
+
+    @Query("SELECT * FROM heroes WHERE id = :id")
+    suspend fun getHeroById(id: Int): HeroEntity
+
 }

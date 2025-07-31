@@ -17,6 +17,7 @@
         android:id="@+id/rv_hero"
         android:layout_gravity="center"
         tools:text="Amazon"
+        android:textColor="@color/gold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp" />

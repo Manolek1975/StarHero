@@ -16,4 +16,9 @@ class HeroRepository @Inject constructor(private val heroDao: HeroDao) {
         val response: List<HeroEntity> = heroDao.getAllHeroes()
         return response.map { it.toDomain() }
     }
+
+    suspend fun getHeroById(id: Int): Hero {
+        val response: HeroEntity = heroDao.getHeroById(id)
+        return response.toDomain()
+    }
 }

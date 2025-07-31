@@ -1,4 +1,4 @@
-package com.delek.starhero.ui.selection
+package com.delek.starhero.ui.select
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -7,8 +7,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.delek.starhero.R
 import com.delek.starhero.domain.model.Hero
 
-class HeroAdapter (private var heroes: List<Hero> = emptyList()) :
-    RecyclerView.Adapter<HeroViewHolder>() {
+
+class SelectAdapter (
+    private var heroes: List<Hero> = emptyList(),
+    private val onItemclickListener: (Hero) -> Unit) :
+    RecyclerView.Adapter<SelectViewHolder>() {
 
     @SuppressLint("NotifyDataSetChanged")
     fun updateList(list: List<Hero>){
@@ -16,15 +19,15 @@ class HeroAdapter (private var heroes: List<Hero> = emptyList()) :
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroViewHolder {
-        return HeroViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectViewHolder {
+        return SelectViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.item_hero, parent, false)
         )
     }
 
     override fun getItemCount() = heroes.size
 
-    override fun onBindViewHolder(holder: HeroViewHolder, position: Int) {
-        holder.render(heroes[position])
+    override fun onBindViewHolder(holder: SelectViewHolder, position: Int) {
+        holder.render(heroes[position], onItemclickListener)
     }
 }

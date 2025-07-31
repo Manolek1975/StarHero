@@ -33,7 +33,7 @@ class HomeFragment : Fragment() {
         viewModel.onCreate()
         binding.root.setOnClickListener {
             findNavController().navigate(
-                HomeFragmentDirections.actionNavHomeToNavSelection()
+                HomeFragmentDirections.actionNavHomeToNavSelect()
             )
         }
         return binding.root
