@@ -13,7 +13,8 @@ data class HeroEntity(
     val skill: Int,
     val strength: Int,
     val defense: Int,
-    val power: Int,
+    val health: Int,
     val speed: Int,
+    val power: Int,
     val relations: Int
 )

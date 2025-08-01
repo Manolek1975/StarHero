@@ -33,6 +33,7 @@ class DetailFragment : Fragment() {
     }
 
     private fun initUI() {
+
         val view = ImageView(context)
         view.setImageResource(R.drawable.ic_dot)
         viewModel.getHeroById(args.heroId)
@@ -42,10 +43,12 @@ class DetailFragment : Fragment() {
             binding.tvSkill.text = getString(R.string.skill, it.skill.toString())
             val id = Util.getResId(it.icon, R.drawable::class.java)
             binding.ivHero.setImageResource(id)
-            val n = it.strength
-            for(i in 0 until n) {
-                //binding.dotBar.addView(view)
-            }
+            binding.stats.strength.text = String.format("%s", it.strength)
+            binding.stats.defense.text = String.format("%s", it.defense)
+            binding.stats.health.text = String.format("%s", it.health)
+            binding.stats.speed.text = String.format("%s", it.speed)
+            binding.stats.power.text = String.format("%s", it.power)
+
         }
 
     }
