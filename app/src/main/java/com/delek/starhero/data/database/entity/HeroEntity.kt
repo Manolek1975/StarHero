@@ -11,6 +11,7 @@ data class HeroEntity(
     val icon: String,
     val size: String,
     val skill: Int,
+    val weapon: Int,
     val strength: Int,
     val defense: Int,
     val health: Int,

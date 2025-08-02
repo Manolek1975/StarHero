@@ -1,6 +1,9 @@
 package com.delek.starhero.ui.detail
 
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -48,6 +51,19 @@ class DetailFragment : Fragment() {
             binding.stats.health.text = String.format("%s", it.health)
             binding.stats.speed.text = String.format("%s", it.speed)
             binding.stats.power.text = String.format("%s", it.power)
+
+            viewModel.getWeaponById(it.weapon)
+            viewModel.weapon.observe(viewLifecycleOwner) { weapon ->
+                binding.tvWeapon.text = String.format("%s", weapon.name)
+                val weaponId = Util.getResId(weapon.image, R.drawable::class.java)
+                val bitmap = BitmapFactory.decodeResource(resources, weaponId)
+                val scale = Bitmap.createScaledBitmap(bitmap, 200, 200, false)
+                val image = BitmapDrawable(resources, scale)
+                binding.ivWeapon.background = image
+
+            }
+
+
 
         }
 

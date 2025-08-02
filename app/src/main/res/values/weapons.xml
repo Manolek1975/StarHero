@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="name_weapons">
+        <item>Assault rifle</item>
+        <item>Disruptor blaster</item>
+        <item>Disruptor phaser</item>
+        <item>Flamethrower</item>
+        <item>Harpoon gun</item>
+        <item>Ionic blaster</item>
+        <item>Ionic gun</item>
+        <item>Ionic phaser</item>
+        <item>Ionic shotgun</item>
+        <item>Ionic thrower</item>
+        <item>Kinetic gun</item>
+        <item>Kinetic shotgun</item>
+        <item>Laser axe</item>
+        <item>Laser sword</item>
+        <item>Machine gun</item>
+        <item>Microwave gun</item>
+        <item>Missile gun</item>
+        <item>Neurotic whip</item>
+        <item>Particle shotgun</item>
+        <item>Pizza cutter</item>
+        <item>Plasma blaster</item>
+        <item>Plasma phaser</item>
+        <item>Plasma shotgun</item>
+        <item>Power fist</item>
+        <item>Revolver</item>
+    </string-array>
+
+    <string-array name="image_weapons">
+        <item>w_assault_rifle</item>
+        <item>w_disruptor_blaster</item>
+        <item>w_disruptor_phaser</item>
+        <item>w_flamethrower</item>
+        <item>w_harpoon_gun</item>
+        <item>w_ionic_blaster</item>
+        <item>w_ionic_gun</item>
+        <item>w_ionic_phaser</item>
+        <item>w_ionic_shotgun</item>
+        <item>w_ionic_thrower</item>
+        <item>w_kinetic_gun</item>
+        <item>w_kinetic_shotgun</item>
+        <item>w_laser_axe</item>
+        <item>w_laser_sword</item>
+        <item>w_machine_gun</item>
+        <item>w_microwave_gun</item>
+        <item>w_missile_gun</item>
+        <item>w_neurotic_whip</item>
+        <item>w_particle_shotgun</item>
+        <item>w_pizza_cutter</item>
+        <item>w_plasma_blaster</item>
+        <item>w_plasma_phaser</item>
+        <item>w_plasma_shotgun</item>
+        <item>w_power_fist</item>
+        <item>w_revolver</item>
+    </string-array>
+</resources>

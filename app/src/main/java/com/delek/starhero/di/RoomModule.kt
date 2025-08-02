@@ -25,4 +25,8 @@ object RoomModule {
     @Provides
     fun provideHeroDao(db: StarHeroDatabase) = db.getHeroDao()
 
+    @Singleton
+    @Provides
+    fun provideWeaponDao(db: StarHeroDatabase) = db.getWeaponDao()
+
 }
