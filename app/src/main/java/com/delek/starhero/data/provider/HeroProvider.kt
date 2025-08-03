@@ -13,6 +13,7 @@ class HeroProvider {
             val icon = context.resources.getStringArray(R.array.icon_hero)
             val size = context.resources.getStringArray(R.array.size_hero)
             val weapon = context.resources.getStringArray(R.array.weapon_hero)
+            val ship = context.resources.getStringArray(R.array.ship_hero)
             val strength = context.resources.getStringArray(R.array.strength_hero)
             val defense = context.resources.getStringArray(R.array.defense_hero)
             val health = context.resources.getStringArray(R.array.health_hero)
@@ -21,7 +22,7 @@ class HeroProvider {
             for (i in name.indices) {
                 val hero = HeroEntity(
                     i + 1, name[i], image[i], icon[i], size[i], 0, weapon[i].toInt(),
-                    strength[i].toInt(), defense[i].toInt(), health[i].toInt(),
+                    ship[i].toInt(), strength[i].toInt(), defense[i].toInt(), health[i].toInt(),
                     speed[i].toInt(), power[i].toInt(),0
                 )
                 heroes.add(hero)

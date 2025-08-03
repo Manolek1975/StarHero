@@ -2,8 +2,8 @@
 <resources>
 
     <string-array name="name_weapons">
-        <item>Assault rifle</item>
-        <item>Disruptor blaster</item>
+        <item>Assault\nrifle</item>
+        <item>Disruptor\nblaster</item>
         <item>Disruptor phaser</item>
         <item>Flamethrower</item>
         <item>Harpoon gun</item>

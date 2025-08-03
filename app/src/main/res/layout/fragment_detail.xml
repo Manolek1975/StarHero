@@ -5,10 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_space"
-
     android:padding="20dp"
     tools:context=".ui.detail.DetailFragment">
-
 
     <LinearLayout
         android:id="@+id/head_layout"
@@ -73,35 +71,38 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/ly_weapons"
+<!--    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_ship"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
+        tools:background="@drawable/s_anson"
         app:layout_constraintTop_toBottomOf="@id/ly_stats"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"/>-->
 
-        <TextView
-            android:text="@string/weapon"
-            android:layout_gravity="center_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_ship"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Anson"
+        app:layout_constraintTop_toBottomOf="@id/ly_stats"
+        app:layout_constraintStart_toStartOf="parent"/>
 
-        <ImageView
-            android:id="@+id/iv_weapon"
-            tools:background="@drawable/w_ionic_blaster"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/todo" />
+<!--    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_weapon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:background="@drawable/w_disruptor_blaster"
+        app:layout_constraintTop_toBottomOf="@id/ly_stats"
+        app:layout_constraintStart_toEndOf="@id/iv_ship"/>-->
 
-        <TextView
-            android:id="@+id/tv_weapon"
-            tools:text="Ionic Blaster"
-            android:layout_gravity="center_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_weapon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:text="Disruptor\nblaster"
+        app:layout_constraintTop_toBottomOf="@id/ly_stats"
+        app:layout_constraintStart_toEndOf="@id/tv_ship"/>
 
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

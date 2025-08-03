@@ -10,14 +10,14 @@ data class Hero(
     val size: String,
     val skill: Int,
     val weapon: Int,
+    val ship: Int,
     val strength: Int,
     val defense: Int,
     val health: Int,
     val speed: Int,
     val power: Int,
     val relations: Int
-
 )
 
 fun HeroEntity.toDomain() =
-    Hero(id, name, image, icon, size, skill, weapon, strength, defense, health, speed, power, relations)
+    Hero(id, name, image, icon, size, skill, weapon, ship, strength, defense, health, speed, power, relations)

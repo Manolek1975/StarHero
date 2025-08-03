@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="name_ships">
+        <item>Argo</item>
+        <item>Seabear</item>
+        <item>Kilbane</item>
+        <item>Levis</item>
+
+        <item>Diamond</item>
+        <item>Rosaura</item>
+        <item>Minerva</item>
+        <item>Anson</item>
+
+        <item>Nepeta</item>
+        <item>Patriot</item>
+        <item>Neptune</item>
+        <item>Astute</item>
+
+        <item>Cornelia</item>
+        <item>Urtica</item>
+        <item>Diana</item>
+        <item>Dryad</item>
+    </string-array>
+
+    <string-array name="image_ships">
+        <item>s_argo</item>
+        <item>s_seabear</item>
+        <item>s_kilbane</item>
+        <item>s_levis</item>
+
+        <item>s_diamond</item>
+        <item>s_rosaura</item>
+        <item>s_minerva</item>
+        <item>s_anson</item>
+
+        <item>s_nepeta</item>
+        <item>s_patriot</item>
+        <item>s_neptune</item>
+        <item>s_astute</item>
+
+        <item>s_cornelia</item>
+        <item>s_urtica</item>
+        <item>s_diana</item>
+        <item>s_dryad</item>
+    </string-array>
+
+</resources>
