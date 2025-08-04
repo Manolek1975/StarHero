@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="name_group">
+        <item>BASHKARS</item>
+        <item>COMPANY</item>
+        <item>GUARD</item>
+        <item>LANCERS</item>
+        <item>ORDER</item>
+        <item>PATROL</item>
+        <item>ROGUES</item>
+        <item>SOLDIERS</item>
+        <item>WOODFOLK</item>
+        <item>Crone</item>
+        <item>Scholar</item>
+        <item>Shaman</item>
+        <item>Warlock</item>
+    </string-array>
+
+    <string-array name="start_group">
+        <item>6</item>
+        <item>1</item>
+        <item>3</item>
+        <item>7</item>
+        <item>4</item>
+        <item>1</item>
+        <item>1</item>
+        <item>2</item>
+        <item>6</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+</resources>

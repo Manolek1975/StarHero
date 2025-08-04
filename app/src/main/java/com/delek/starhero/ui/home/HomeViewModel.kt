@@ -3,10 +3,12 @@ package com.delek.starhero.ui.home
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.delek.starhero.domain.model.Group
 import com.delek.starhero.domain.model.Hero
 import com.delek.starhero.domain.model.Ship
 import com.delek.starhero.domain.model.Skill
 import com.delek.starhero.domain.model.Weapon
+import com.delek.starhero.domain.usecase.GetGroupUseCase
 import com.delek.starhero.domain.usecase.GetHeroUseCase
 import com.delek.starhero.domain.usecase.GetShipUseCase
 import com.delek.starhero.domain.usecase.GetSkillUseCase
@@ -20,13 +22,15 @@ class HomeViewModel @Inject constructor(
     private val getHeroUseCase: GetHeroUseCase,
     private val getWeaponUseCase: GetWeaponUseCase,
     private val getShipUseCase: GetShipUseCase,
-    private val getSkillUseCase: GetSkillUseCase
+    private val getSkillUseCase: GetSkillUseCase,
+    private val groupUseCase: GetGroupUseCase
 ): ViewModel() {
 
     private val heroList = MutableLiveData<Hero>()
     private val weaponList = MutableLiveData<Weapon>()
     private val shipList = MutableLiveData<Ship>()
     private val skillList = MutableLiveData<Skill>()
+    private val groupList = MutableLiveData<Group>()
 
     fun onCreate() {
         viewModelScope.launch {
@@ -51,6 +55,12 @@ class HomeViewModel @Inject constructor(
             val skill = getSkillUseCase()
             if (skill.isNotEmpty()) {
                 skillList.postValue(skill[0])
+            }
+        }
+        viewModelScope.launch {
+            val group = groupUseCase()
+            if (group.isNotEmpty()) {
+                groupList.postValue(group[0])
             }
         }
    }

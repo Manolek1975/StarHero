@@ -40,7 +40,6 @@ class DetailFragment : Fragment() {
         viewModel.hero.observe(viewLifecycleOwner) {
             binding.tvName.text = it.name
             binding.tvSize.text = getString(R.string.size, it.size)
-            //binding.tvSkill.text = getString(R.string.skill, it.skill.toString())
             val id = Util.getResId(it.image, R.drawable::class.java)
             binding.ivHero.setImageResource(id)
             binding.stats.strength.text = String.format("%s", it.strength)
@@ -54,7 +53,6 @@ class DetailFragment : Fragment() {
                 //val skillId = Util.getResId(it.image, R.drawable::class.java)
                 //binding.ivSkill.leftDrawable(skillId, R.dimen.icon_size)
             }
-
             viewModel.getWeaponById(it.weapon)
             viewModel.weapon.observe(viewLifecycleOwner) { weapon ->
                 binding.ivWeapon.text = getString(R.string.weapon_detail, weapon.name, weapon.type)

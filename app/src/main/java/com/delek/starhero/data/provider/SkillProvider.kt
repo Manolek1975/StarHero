@@ -13,7 +13,7 @@ class SkillProvider {
             val description = context.resources.getStringArray(R.array.advantages_description)
             //val image = context.resources.getStringArray(R.array.image_skills)
             for (i in name.indices) {
-                val skill = SkillEntity(i, name[i], description[i], "")
+                val skill = SkillEntity(i+1, name[i], description[i], "")
                 skills.add(skill)
             }
             return skills
