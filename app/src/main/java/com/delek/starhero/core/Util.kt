@@ -1,4 +1,4 @@
-package com.delek.starhero.data.core
+package com.delek.starhero.core
 
 import java.lang.reflect.Field
 
@@ -15,4 +15,5 @@ class Util {
             }
         }
     }
+
 }

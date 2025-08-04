@@ -2,7 +2,7 @@
 <resources>
 
     <string-array name="name_ships">
-        <item>Argo</item>
+        <item>Argos</item>
         <item>Seabear</item>
         <item>Kilbane</item>
         <item>Levis</item>

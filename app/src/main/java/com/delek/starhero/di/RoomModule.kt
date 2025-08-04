@@ -32,4 +32,8 @@ object RoomModule {
     @Singleton
     @Provides
     fun provideShipDao(db: StarHeroDatabase) = db.getShipDao()
+
+    @Singleton
+    @Provides
+    fun provideSkillDao(db: StarHeroDatabase) = db.getSkillDao()
 }

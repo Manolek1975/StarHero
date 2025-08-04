@@ -2,31 +2,59 @@
 <resources>
 
     <string-array name="name_weapons">
-        <item>Assault\nrifle</item>
-        <item>Disruptor\nblaster</item>
-        <item>Disruptor phaser</item>
-        <item>Flamethrower</item>
-        <item>Harpoon gun</item>
-        <item>Ionic blaster</item>
-        <item>Ionic gun</item>
-        <item>Ionic phaser</item>
-        <item>Ionic shotgun</item>
-        <item>Ionic thrower</item>
-        <item>Kinetic gun</item>
-        <item>Kinetic shotgun</item>
-        <item>Laser axe</item>
-        <item>Laser sword</item>
-        <item>Machine gun</item>
-        <item>Microwave gun</item>
-        <item>Missile gun</item>
-        <item>Neurotic whip</item>
-        <item>Particle shotgun</item>
-        <item>Pizza cutter</item>
-        <item>Plasma blaster</item>
-        <item>Plasma phaser</item>
-        <item>Plasma shotgun</item>
-        <item>Power fist</item>
+        <item>Assault</item>
+        <item>Disruptor</item>
+        <item>Disruptor</item>
+        <item>Flame</item>
+        <item>Harpoon</item>
+        <item>Ionic</item>
+        <item>Ionic</item>
+        <item>Ionic</item>
+        <item>Ionic</item>
+        <item>Ionic</item>
+        <item>Kinetic</item>
+        <item>Kinetic</item>
+        <item>Laser</item>
+        <item>Laser</item>
+        <item>Machine</item>
+        <item>Microwave</item>
+        <item>Missile</item>
+        <item>Neurotic</item>
+        <item>Particle</item>
+        <item>Pizza</item>
+        <item>Plasma</item>
+        <item>Plasma</item>
+        <item>Plasma</item>
+        <item>Power</item>
         <item>Revolver</item>
+    </string-array>
+
+    <string-array name="type_weapons">
+        <item>rifle</item>
+        <item>blaster</item>
+        <item>phaser</item>
+        <item>thrower</item>
+        <item>gun</item>
+        <item>blaster</item>
+        <item>gun</item>
+        <item>phaser</item>
+        <item>shotgun</item>
+        <item>thrower</item>
+        <item>gun</item>
+        <item>shotgun</item>
+        <item>axe</item>
+        <item>sword</item>
+        <item>gun</item>
+        <item>gun</item>
+        <item>gun</item>
+        <item>whip</item>
+        <item>shotgun</item>
+        <item>cutter</item>
+        <item>blaster</item>
+        <item>phaser</item>
+        <item>shotgun</item>
+        <item>fist</item>
+        <item>gun</item>
     </string-array>
 
     <string-array name="image_weapons">

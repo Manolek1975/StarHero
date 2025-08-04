@@ -22,4 +22,6 @@
     <string name="speed">SPEED</string>
     <string name="power">POWER</string>
     <string name="weapon">WEAPON</string>
+    <string name="ship_detail">SHIP: %1$s</string>
+    <string name="weapon_detail">%1$s\n%2$s</string>
 </resources>

@@ -5,9 +5,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.delek.starhero.domain.model.Hero
 import com.delek.starhero.domain.model.Ship
+import com.delek.starhero.domain.model.Skill
 import com.delek.starhero.domain.model.Weapon
 import com.delek.starhero.domain.usecase.GetHeroUseCase
 import com.delek.starhero.domain.usecase.GetShipUseCase
+import com.delek.starhero.domain.usecase.GetSkillUseCase
 import com.delek.starhero.domain.usecase.GetWeaponUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -17,12 +19,14 @@ import javax.inject.Inject
 class HomeViewModel @Inject constructor(
     private val getHeroUseCase: GetHeroUseCase,
     private val getWeaponUseCase: GetWeaponUseCase,
-    private val getShipUseCase: GetShipUseCase
+    private val getShipUseCase: GetShipUseCase,
+    private val getSkillUseCase: GetSkillUseCase
 ): ViewModel() {
 
     private val heroList = MutableLiveData<Hero>()
     private val weaponList = MutableLiveData<Weapon>()
     private val shipList = MutableLiveData<Ship>()
+    private val skillList = MutableLiveData<Skill>()
 
     fun onCreate() {
         viewModelScope.launch {
@@ -41,6 +45,12 @@ class HomeViewModel @Inject constructor(
             val ship = getShipUseCase()
             if (ship.isNotEmpty()) {
                 shipList.postValue(ship[0])
+            }
+        }
+        viewModelScope.launch {
+            val skill = getSkillUseCase()
+            if (skill.isNotEmpty()) {
+                skillList.postValue(skill[0])
             }
         }
    }

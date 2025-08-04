@@ -71,38 +71,25 @@
 
     </LinearLayout>
 
-<!--    <androidx.appcompat.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/iv_ship"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:background="@drawable/s_anson"
-        app:layout_constraintTop_toBottomOf="@id/ly_stats"
-        app:layout_constraintStart_toStartOf="parent"/>-->
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_ship"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:gravity="center"
         tools:text="Anson"
+        tools:background="@drawable/s_anson"
         app:layout_constraintTop_toBottomOf="@id/ly_stats"
         app:layout_constraintStart_toStartOf="parent"/>
 
-<!--    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/iv_weapon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:background="@drawable/w_disruptor_blaster"
-        app:layout_constraintTop_toBottomOf="@id/ly_stats"
-        app:layout_constraintStart_toEndOf="@id/iv_ship"/>-->
-
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_weapon"
+        android:id="@+id/iv_weapon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         tools:text="Disruptor\nblaster"
+        tools:background="@drawable/w_disruptor_blaster"
         app:layout_constraintTop_toBottomOf="@id/ly_stats"
-        app:layout_constraintStart_toEndOf="@id/tv_ship"/>
+        app:layout_constraintStart_toEndOf="@id/iv_ship"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
