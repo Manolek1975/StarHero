@@ -41,4 +41,7 @@ object RoomModule {
     @Provides
     fun provideGroupDao(db: StarHeroDatabase) = db.getGroupDao()
 
+    @Singleton
+    @Provides
+    fun provideRelationDao(db: StarHeroDatabase) = db.getRelationDao()
 }
