@@ -75,6 +75,7 @@
         android:id="@+id/iv_ship"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:gravity="center"
         tools:text="Anson"
         tools:background="@drawable/s_anson"
@@ -85,11 +86,81 @@
         android:id="@+id/iv_weapon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:gravity="center"
         tools:text="Disruptor\nblaster"
         tools:background="@drawable/w_disruptor_blaster"
         app:layout_constraintTop_toBottomOf="@id/ly_stats"
         app:layout_constraintStart_toEndOf="@id/iv_ship"/>
+
+    <LinearLayout
+        android:id="@+id/ly_natives"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_ship">
+
+        <TextView
+            android:id="@+id/tv_ally"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="ALLY: ORDER" />
+
+        <TextView
+            android:id="@+id/tv_friendly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="FRIENDLY: LANCERS" />
+
+        <TextView
+            android:id="@+id/tv_unfriendly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="UNFRIENDLY: BASHKARS, Crone" />
+
+        <TextView
+            android:id="@+id/tv_enemy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="ENEMY: COMPANY" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_cancel"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/cancel"
+        android:padding="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_check"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_check"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/check"
+        android:padding="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_cancel" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

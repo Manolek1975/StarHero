@@ -18,4 +18,28 @@ interface GroupDao {
     @Query("SELECT * FROM groups WHERE id = :id")
     suspend fun getById(id: Int): GroupEntity
 
+    @Query("SELECT groups.* FROM groups INNER JOIN relations " +
+            "ON groups.id = relations.groupId " +
+            "WHERE relations.heroId = :id " +
+            "AND relations.relation = '1'")
+    suspend fun getAllyNatives(id: Int): List<GroupEntity>
+
+    @Query("SELECT groups.* FROM groups INNER JOIN relations " +
+            "ON groups.id = relations.groupId " +
+            "WHERE relations.heroId = :id " +
+            "AND relations.relation = '2'")
+    suspend fun getFriendlyNatives(id: Int): List<GroupEntity>
+
+    @Query("SELECT groups.* FROM groups INNER JOIN relations " +
+            "ON groups.id = relations.groupId " +
+            "WHERE relations.heroId = :id " +
+            "AND relations.relation = '4'")
+    suspend fun getUnfriendlyNatives(id: Int): List<GroupEntity>
+
+    @Query("SELECT groups.* FROM groups INNER JOIN relations " +
+            "ON groups.id = relations.groupId " +
+            "WHERE relations.heroId = :id " +
+            "AND relations.relation = '5'")
+    suspend fun getEnemyNatives(id: Int): List<GroupEntity>
+
 }

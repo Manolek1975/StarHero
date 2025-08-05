@@ -20,4 +20,24 @@ class GroupRepository @Inject constructor(private val groupDao: GroupDao) {
         return response.toDomain()
     }
 
+    suspend fun getAllyNatives(id: Int): List<Group> {
+        val response: List<GroupEntity> = groupDao.getAllyNatives(id)
+        return response.map { it.toDomain() }
+    }
+
+    suspend fun getFriendlyNatives(id: Int): List<Group> {
+        val response: List<GroupEntity> = groupDao.getFriendlyNatives(id)
+        return response.map { it.toDomain() }
+    }
+
+    suspend fun getUnfriendNatives(id: Int): List<Group> {
+        val response: List<GroupEntity> = groupDao.getUnfriendlyNatives(id)
+        return response.map { it.toDomain() }
+    }
+
+    suspend fun getEnemyNatives(id: Int): List<Group> {
+        val response: List<GroupEntity> = groupDao.getEnemyNatives(id)
+        return response.map { it.toDomain() }
+    }
+
 }

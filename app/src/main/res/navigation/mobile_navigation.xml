@@ -33,6 +33,9 @@
         <argument
             android:name="hero_id"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_nav_detail_to_nav_select"
+            app:destination="@id/nav_select" />
     </fragment>
 
 </navigation>

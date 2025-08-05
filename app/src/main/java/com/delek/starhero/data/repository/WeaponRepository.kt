@@ -8,9 +8,7 @@ import javax.inject.Inject
 
 class WeaponRepository @Inject constructor(private val weaponDao: WeaponDao) {
 
-    suspend fun insertAll(weapons: List<WeaponEntity>) {
-        weaponDao.insertAll(weapons)
-    }
+    suspend fun insertAll(weapons: List<WeaponEntity>) = weaponDao.insertAll(weapons)
 
     suspend fun getAllWeapons(): List<Weapon> {
         val response: List<WeaponEntity> = weaponDao.getAllWeapons()

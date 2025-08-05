@@ -8,9 +8,7 @@ import javax.inject.Inject
 
 class HeroRepository @Inject constructor(private val heroDao: HeroDao) {
 
-    suspend fun insertAll(heroes: List<HeroEntity>) {
-        heroDao.insertAll(heroes)
-    }
+    suspend fun insertAll(heroes: List<HeroEntity>) = heroDao.insertAll(heroes)
 
     suspend fun getAllHeroes(): List<Hero> {
         val response: List<HeroEntity> = heroDao.getAllHeroes()

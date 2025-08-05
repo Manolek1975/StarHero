@@ -11,11 +11,16 @@ import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.delek.starhero.R
 import com.delek.starhero.core.Util
 import com.delek.starhero.databinding.FragmentDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 
 @AndroidEntryPoint
@@ -65,7 +70,79 @@ class DetailFragment : Fragment() {
                 val shipId = Util.getResId(ship.image, R.drawable::class.java)
                 binding.ivShip.leftDrawable(shipId, R.dimen.icon_size)
             }
+            initNatives(args.heroId)
+            initListeners()
         }
+    }
+
+    private fun initNatives(id: Int) {
+        viewModel.getAllyNatives(id)
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.allyNatives.observe(viewLifecycleOwner) {
+                    val ally: MutableList<String> = mutableListOf()
+                    for (i in it) {
+                        ally.add(i.name)
+                    }
+                    if (ally.isEmpty()) binding.tvAlly.visibility = View.GONE
+                    binding.tvAlly.text = ally.joinToString(prefix = "ALLY: ", separator = ", ")
+                }
+            }
+        }
+        viewModel.getFriendlyNatives(id)
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.friendlyNatives.observe(viewLifecycleOwner) {
+                    val friend: MutableList<String> = mutableListOf()
+                    for (i in it) {
+                        friend.add(i.name)
+                    }
+                    if (friend.isEmpty()) binding.tvFriendly.visibility = View.GONE
+                    binding.tvFriendly.text =
+                        friend.joinToString(prefix = "FRIENDLY: ", separator = ", ")
+                }
+            }
+        }
+        viewModel.getUnfriendlyNatives(id)
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.unfriendlyNatives.observe(viewLifecycleOwner) {
+                    val unfriend: MutableList<String> = mutableListOf()
+                    for (i in it) {
+                        unfriend.add(i.name)
+                    }
+                    if (unfriend.isEmpty()) binding.tvUnfriendly.visibility = View.GONE
+                    binding.tvUnfriendly.text =
+                        unfriend.joinToString(prefix = "UNFRIENDLY: ", separator = ", ")
+                }
+            }
+        }
+        viewModel.getEnemyNatives(id)
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.enemyNatives.observe(viewLifecycleOwner) {
+                    val enemy: MutableList<String> = mutableListOf()
+                    for (i in it) {
+                        enemy.add(i.name)
+                    }
+                    if (enemy.isEmpty()) binding.tvEnemy.visibility = View.GONE
+                    binding.tvEnemy.text = enemy.joinToString(prefix = "ENEMY: ", separator = ", ")
+                }
+            }
+        }
+    }
+
+    private fun initListeners() {
+        binding.ivCancel.setOnClickListener {
+            findNavController().navigate(
+                DetailFragmentDirections.actionNavDetailToNavSelect()
+            )
+        }
+/*        binding.ivCheck.setOnClickListener {
+            findNavController().navigate(
+                DetailFragmentDirections.actionNavDetailToNavOptions(args.id)
+            )
+        }*/
     }
 
     private fun TextView.leftDrawable(@DrawableRes id: Int = 0, @DimenRes sizeRes: Int) {
