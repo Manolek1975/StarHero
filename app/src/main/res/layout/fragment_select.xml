@@ -8,16 +8,10 @@
     android:orientation="vertical"
     tools:context=".ui.select.SelectFragment">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_select"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:text="Select Character"
-        android:textColor="@color/primary"
-        android:textStyle="bold" />
+        style="@style/head"
+        tools:text="Select Character" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_heroes"

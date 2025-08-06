@@ -112,11 +112,11 @@ class DetailFragment : Fragment() {
                 DetailFragmentDirections.actionNavDetailToNavSelect()
             )
         }
-        /*        binding.ivCheck.setOnClickListener {
-                    findNavController().navigate(
-                        DetailFragmentDirections.actionNavDetailToNavOptions(args.id)
-                    )
-                }*/
+        binding.ivCheck.setOnClickListener {
+            findNavController().navigate(
+                DetailFragmentDirections.actionNavDetailToPowerFragment(args.heroId)
+            )
+        }
     }
 
     private fun TextView.leftDrawable(@DrawableRes id: Int = 0, @DimenRes sizeRes: Int) {
