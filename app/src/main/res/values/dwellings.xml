@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="name_dwellings">
+        <item>INN</item>
+        <item>HOUSE</item>
+        <item>GUARD</item>
+        <item>CHAPEL</item>
+        <item />
+        <item>LARGE\nCAMPFIRE</item>
+        <item>SMALL\nCAMPFIRE</item>
+        <item>ALTAR</item>
+        <item>STATUE</item>
+        <item>LAIR</item>
+        <item>VAULT</item>
+        <item>SHRINE</item>
+        <item>CAIRNS</item>
+        <item>HOARD</item>
+        <item>POOL</item>
+        <item>LOST\nCASTLE</item>
+        <item>LOST\nCITY</item>
+    </string-array>
+
+    <string-array name="image_dwellings">
+        <item>d_inn</item>
+        <item>d_house</item>
+        <item>d_guard</item>
+        <item>d_chapel</item>
+        <item>d_ghost</item>
+
+        <item>d_large_campfire</item>
+        <item>d_small_campfire</item>
+        <item>d_altar</item>
+        <item>d_statue</item>
+        <item>d_lair</item>
+
+        <item>d_vault</item>
+        <item>d_shrine</item>
+        <item>d_cairns</item>
+        <item>d_hoard</item>
+        <item>d_pool</item>
+
+        <item>d_lost_castle</item>
+        <item>d_lost_city</item>
+    </string-array>
+</resources>

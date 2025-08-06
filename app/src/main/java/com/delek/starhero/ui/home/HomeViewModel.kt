@@ -3,12 +3,14 @@ package com.delek.starhero.ui.home
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.delek.starhero.domain.model.Dwelling
 import com.delek.starhero.domain.model.Group
 import com.delek.starhero.domain.model.Hero
 import com.delek.starhero.domain.model.Relation
 import com.delek.starhero.domain.model.Ship
 import com.delek.starhero.domain.model.Skill
 import com.delek.starhero.domain.model.Weapon
+import com.delek.starhero.domain.usecase.GetDwellingUseCase
 import com.delek.starhero.domain.usecase.GetGroupUseCase
 import com.delek.starhero.domain.usecase.GetHeroUseCase
 import com.delek.starhero.domain.usecase.GetRelationUseCase
@@ -26,7 +28,8 @@ class HomeViewModel @Inject constructor(
     private val getShipUseCase: GetShipUseCase,
     private val getSkillUseCase: GetSkillUseCase,
     private val groupUseCase: GetGroupUseCase,
-    private val relationUseCase: GetRelationUseCase
+    private val relationUseCase: GetRelationUseCase,
+    private val getDwellingUseCase: GetDwellingUseCase
 ): ViewModel() {
 
     private val heroList = MutableLiveData<Hero>()
@@ -35,6 +38,7 @@ class HomeViewModel @Inject constructor(
     private val skillList = MutableLiveData<Skill>()
     private val groupList = MutableLiveData<Group>()
     private val relationList = MutableLiveData<Relation>()
+    private val dwellingList = MutableLiveData<Dwelling>()
 
     fun onCreate() {
         viewModelScope.launch {
@@ -71,6 +75,12 @@ class HomeViewModel @Inject constructor(
             val relation = relationUseCase()
             if (relation.isNotEmpty()) {
                 relationList.postValue(relation[0])
+            }
+        }
+        viewModelScope.launch {
+            val dwelling = getDwellingUseCase()
+            if (dwelling.isNotEmpty()) {
+                dwellingList.postValue(dwelling[0])
             }
         }
    }
