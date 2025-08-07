@@ -29,6 +29,8 @@
 
     <!-- POWER -->
     <string name="head_start_skill">Select your Skill</string>
+    <string name="head_select_power">Select Power</string>
     <string name="selected_power">Power (%1$d/%2$d)</string>
+
 
 </resources>

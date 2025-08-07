@@ -10,6 +10,7 @@ import com.delek.starhero.domain.model.Power
 import com.delek.starhero.domain.model.Relation
 import com.delek.starhero.domain.model.Ship
 import com.delek.starhero.domain.model.Skill
+import com.delek.starhero.domain.model.StartPower
 import com.delek.starhero.domain.model.Weapon
 import com.delek.starhero.domain.usecase.GetDwellingUseCase
 import com.delek.starhero.domain.usecase.GetGroupUseCase
@@ -18,6 +19,7 @@ import com.delek.starhero.domain.usecase.GetPowerUseCase
 import com.delek.starhero.domain.usecase.GetRelationUseCase
 import com.delek.starhero.domain.usecase.GetShipUseCase
 import com.delek.starhero.domain.usecase.GetSkillUseCase
+import com.delek.starhero.domain.usecase.GetStartPowerUseCase
 import com.delek.starhero.domain.usecase.GetWeaponUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -32,7 +34,8 @@ class HomeViewModel @Inject constructor(
     private val groupUseCase: GetGroupUseCase,
     private val relationUseCase: GetRelationUseCase,
     private val getDwellingUseCase: GetDwellingUseCase,
-    private val getPowerUseCase: GetPowerUseCase
+    private val getPowerUseCase: GetPowerUseCase,
+    private val startPowerUseCase: GetStartPowerUseCase
 ): ViewModel() {
 
     private val heroList = MutableLiveData<Hero>()
@@ -42,7 +45,8 @@ class HomeViewModel @Inject constructor(
     private val groupList = MutableLiveData<Group>()
     private val relationList = MutableLiveData<Relation>()
     private val dwellingList = MutableLiveData<Dwelling>()
-    private val powerList = MutableLiveData<List<Power>>()
+    private val powerList = MutableLiveData<Power>()
+    private val startPowerList = MutableLiveData<StartPower>()
 
     fun onCreate() {
         viewModelScope.launch {
@@ -90,7 +94,13 @@ class HomeViewModel @Inject constructor(
         viewModelScope.launch {
             val power = getPowerUseCase()
             if (power.isNotEmpty()) {
-                powerList.postValue(power)
+                powerList.postValue(power[0])
+            }
+        }
+        viewModelScope.launch {
+            val startPower = startPowerUseCase()
+            if (startPower.isNotEmpty()) {
+                startPowerList.postValue(startPower[0])
             }
         }
    }

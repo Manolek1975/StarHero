@@ -11,7 +11,7 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/head_power"
         style="@style/head"
-        tools:text="Select Power"
+        android:text="@string/head_select_power"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
