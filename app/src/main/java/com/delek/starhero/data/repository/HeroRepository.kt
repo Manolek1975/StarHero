@@ -2,7 +2,9 @@ package com.delek.starhero.data.repository
 
 import com.delek.starhero.data.database.dao.HeroDao
 import com.delek.starhero.data.database.entity.HeroEntity
+import com.delek.starhero.data.database.entity.StartPowerEntity
 import com.delek.starhero.domain.model.Hero
+import com.delek.starhero.domain.model.StartPower
 import com.delek.starhero.domain.model.toDomain
 import javax.inject.Inject
 
@@ -18,5 +20,10 @@ class HeroRepository @Inject constructor(private val heroDao: HeroDao) {
     suspend fun getHeroById(id: Int): Hero {
         val response: HeroEntity = heroDao.getHeroById(id)
         return response.toDomain()
+    }
+
+    suspend fun getStartPowerByRole(heroId: Int): List<StartPower> {
+        val response: List<StartPowerEntity> = heroDao.getStartPowerByRole(heroId)
+        return response.map { it.toDomain() }
     }
 }

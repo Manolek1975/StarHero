@@ -21,5 +21,11 @@ class PowerRepository @Inject constructor(private val powerDao: PowerDao) {
         return response.toDomain()
     }
 
+    suspend fun getPowerByType(type: Int): List<Power> {
+        val response: List<PowerEntity> = powerDao.getPowerByType(type)
+        return response.map { it.toDomain() }
+    }
+
+
 
 }

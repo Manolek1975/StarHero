@@ -18,5 +18,6 @@ interface PowerDao {
     @Query("SELECT * FROM powers WHERE id = :id")
     suspend fun getPowerById(id: Int): PowerEntity
 
-
+    @Query("SELECT * FROM powers WHERE type = :type")
+    suspend fun getPowerByType(type: Int): List<PowerEntity>
 }
