@@ -16,26 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<!--    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/head_skill"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/head_start_skill"
-        android:textColor="@color/primary"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/head_power" />-->
-
-<!--    <RadioGroup
-        android:id="@+id/rg_dwelling"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/head_power" />-->
-
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/selected_power"
         android:layout_width="wrap_content"
@@ -48,14 +28,7 @@
         app:layout_goneMarginTop="8dp"
         android:text="@string/selected_power" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_types"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/selected_power"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-<!--    <androidx.appcompat.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/ly_power_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,22 +36,14 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/selected_power" />-->
+        app:layout_constraintTop_toBottomOf="@id/selected_power" />
 
-<!--    <LinearLayout
-        android:id="@+id/ly_types"
-        android:layout_width="match_parent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_types"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ly_power_layout">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_types"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>-->
+        app:layout_constraintTop_toBottomOf="@id/ly_power_layout"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_powers"

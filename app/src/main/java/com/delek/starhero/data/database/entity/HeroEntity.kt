@@ -18,6 +18,6 @@ data class HeroEntity(
     val health: Int,
     val speed: Int,
     val power: Int,
-    val startPower: Int,
+    val numPowers: Int,
     val relations: Int
 )
