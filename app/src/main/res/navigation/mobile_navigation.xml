@@ -51,6 +51,14 @@
         <argument
             android:name="hero_id"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_powerFragment_to_starsFragment"
+            app:destination="@id/starsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/starsFragment"
+        android:name="com.delek.starhero.ui.stars.StarsFragment"
+        android:label="fragment_stars"
+        tools:layout="@layout/fragment_stars" />
 
 </navigation>

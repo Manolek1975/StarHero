@@ -52,6 +52,11 @@ class PowerFragment : Fragment() {
                 PowerFragmentDirections.actionPowerFragmentToNavDetail(args.heroId)
             )
         }
+        binding.ivCheck.setOnClickListener {
+            findNavController().navigate(
+                PowerFragmentDirections.actionPowerFragmentToStarsFragment()
+            )
+        }
     }
 
     private fun initPower() {

@@ -56,4 +56,8 @@ object RoomModule {
     @Singleton
     @Provides
     fun provideStartPowerDao(db: StarHeroDatabase) = db.getStartPowerDao()
+
+    @Singleton
+    @Provides
+    fun provideStarDao(db: StarHeroDatabase) = db.getStarDao()
 }

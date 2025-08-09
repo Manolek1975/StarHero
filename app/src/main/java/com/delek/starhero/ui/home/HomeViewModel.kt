@@ -10,6 +10,7 @@ import com.delek.starhero.domain.model.Power
 import com.delek.starhero.domain.model.Relation
 import com.delek.starhero.domain.model.Ship
 import com.delek.starhero.domain.model.Skill
+import com.delek.starhero.domain.model.Star
 import com.delek.starhero.domain.model.StartPower
 import com.delek.starhero.domain.model.Weapon
 import com.delek.starhero.domain.usecase.GetDwellingUseCase
@@ -19,6 +20,7 @@ import com.delek.starhero.domain.usecase.GetPowerUseCase
 import com.delek.starhero.domain.usecase.GetRelationUseCase
 import com.delek.starhero.domain.usecase.GetShipUseCase
 import com.delek.starhero.domain.usecase.GetSkillUseCase
+import com.delek.starhero.domain.usecase.GetStarUseCase
 import com.delek.starhero.domain.usecase.GetStartPowerUseCase
 import com.delek.starhero.domain.usecase.GetWeaponUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -35,7 +37,8 @@ class HomeViewModel @Inject constructor(
     private val relationUseCase: GetRelationUseCase,
     private val getDwellingUseCase: GetDwellingUseCase,
     private val getPowerUseCase: GetPowerUseCase,
-    private val startPowerUseCase: GetStartPowerUseCase
+    private val startPowerUseCase: GetStartPowerUseCase,
+    private val getStarUseCase: GetStarUseCase
 ): ViewModel() {
 
     private val heroList = MutableLiveData<Hero>()
@@ -47,6 +50,7 @@ class HomeViewModel @Inject constructor(
     private val dwellingList = MutableLiveData<Dwelling>()
     private val powerList = MutableLiveData<Power>()
     private val startPowerList = MutableLiveData<StartPower>()
+    private val starList = MutableLiveData<Star>()
 
     fun onCreate() {
         viewModelScope.launch {
@@ -101,6 +105,12 @@ class HomeViewModel @Inject constructor(
             val startPower = startPowerUseCase()
             if (startPower.isNotEmpty()) {
                 startPowerList.postValue(startPower[0])
+            }
+        }
+        viewModelScope.launch {
+            val star = getStarUseCase()
+            if (star.isNotEmpty()) {
+                starList.postValue(star[0])
             }
         }
    }
