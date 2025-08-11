@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.delek.starhero.data.repository.HeroRepository
 import com.delek.starhero.data.repository.PowerRepository
-import com.delek.starhero.data.repository.StartPowerRepository
+import com.delek.starhero.data.repository.StarRepository
 import com.delek.starhero.domain.model.Hero
 import com.delek.starhero.domain.model.Power
 import com.delek.starhero.domain.model.StartPower
@@ -17,7 +17,7 @@ import javax.inject.Inject
 class PowerViewModel @Inject constructor(
     private val repoHero: HeroRepository,
     private val repoPower: PowerRepository,
-    private val repoStartPower: StartPowerRepository
+    private val repoStar: StarRepository
 ): ViewModel() {
 
     val hero = MutableLiveData<Hero>()
@@ -42,5 +42,10 @@ class PowerViewModel @Inject constructor(
         }
     }
 
+    fun updatePosStar(x: Int, y: Int, id: Int) {
+        viewModelScope.launch {
+            repoStar.updatePosStar(x,y,id)
+        }
+    }
 
 }

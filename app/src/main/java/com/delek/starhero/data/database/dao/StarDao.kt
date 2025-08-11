@@ -12,7 +12,7 @@ interface StarDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(stars: List<StarEntity>)
 
-    @Query("SELECT * FROM stars")
+    @Query("SELECT * FROM stars ORDER BY RANDOM() LIMIT 20")
     suspend fun getAll(): List<StarEntity>
 
     @Query("SELECT * FROM stars")
@@ -20,5 +20,8 @@ interface StarDao {
 
     @Query("SELECT * FROM stars WHERE id = :id")
     suspend fun getStarById(id: Int): StarEntity
+
+    @Query("UPDATE stars SET x = :x, y = :y WHERE id = :id")
+    suspend fun updatePosStar(x: Int, y: Int, id: Int)
 
 }

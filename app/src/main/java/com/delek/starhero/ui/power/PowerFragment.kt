@@ -1,5 +1,6 @@
 package com.delek.starhero.ui.power
 
+import android.graphics.Point
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,6 +20,7 @@ import com.delek.starhero.databinding.FragmentPowerBinding
 import com.delek.starhero.domain.model.Power
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import kotlin.random.Random
 
 @AndroidEntryPoint
 class PowerFragment : Fragment() {
@@ -53,6 +55,10 @@ class PowerFragment : Fragment() {
             )
         }
         binding.ivCheck.setOnClickListener {
+            val coords = randomStars()
+            for (i in coords.indices) {
+                viewModel.updatePosStar(coords[i].x, coords[i].y, i + 1)
+            }
             findNavController().navigate(
                 PowerFragmentDirections.actionPowerFragmentToStarsFragment()
             )
@@ -141,6 +147,47 @@ class PowerFragment : Fragment() {
                 Toast.LENGTH_SHORT
             ).show()
         }
+    }
+
+    // Insert random coordinates to stars
+    private fun randomStars(): MutableList<Point> {
+        val random = Random
+        val size = 20
+        val dm = resources.displayMetrics
+        val width = dm.widthPixels
+        val height = dm.heightPixels
+        val diameter = 200
+        val radius = diameter * 0.5f
+        val d2 = (diameter * diameter).toFloat()
+        val coordinate : MutableList<Point> = ArrayList(size)
+
+        val posX: MutableList<Float> = ArrayList(size)
+        val posY: MutableList<Float> = ArrayList(size)
+        while (posX.size < size) {
+            // generate new coordinates
+            val x: Float = random.nextInt(width - diameter) + radius
+            val y: Float = random.nextInt(height - diameter) + radius
+            // verify it does not overlap/touch with previous circles
+            var j = 0
+            while (j < posX.size) {
+                val dx = posX[j] - x
+                val dy = posY[j] - y
+                val diffSquare = (dx * dx) + (dy * dy)
+                if (diffSquare <= d2) break
+                ++j
+            }
+            // generate another pair of coordinates, if it does touch previous
+            if (j != posX.size) {
+                //println("collided.")
+                continue
+            }
+            //println("added.")
+            // not overlapping/touch, add as new circle
+            posX.add(x)
+            posY.add(y)
+            coordinate.add(Point(x.toInt(),y.toInt()))
+        }
+        return coordinate
     }
 
 }

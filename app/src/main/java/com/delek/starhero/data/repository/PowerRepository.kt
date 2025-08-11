@@ -26,6 +26,4 @@ class PowerRepository @Inject constructor(private val powerDao: PowerDao) {
         return response.map { it.toDomain() }
     }
 
-
-
 }

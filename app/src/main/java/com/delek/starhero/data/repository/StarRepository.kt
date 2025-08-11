@@ -24,4 +24,8 @@ class StarRepository @Inject constructor(private val starDao: StarDao) {
         val response: StarEntity = starDao.getStarById(id)
         return response.toDomain()
     }
+
+    suspend fun updatePosStar(x: Int, y: Int, id: Int) {
+        starDao.updatePosStar(x,y,id)
+    }
 }
