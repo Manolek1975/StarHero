@@ -34,7 +34,7 @@
     <string name="toast_already_power">%1$s already selected</string>
     <string name="no_powers">This hero has no powers</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="head_star_fragment">Sector Virgo</string>
 
 
 </resources>

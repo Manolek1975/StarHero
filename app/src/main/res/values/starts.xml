@@ -2,30 +2,132 @@
 <resources>
 
     <string-array name="name_stars">
-        <item>Alpha Centauri</item>
-        <item>Barnard</item>
-        <item>Luhman</item>
-        <item>Wise</item>
-        <item>Wolf</item>
+        <item>Canopus</item>
+        <item>Arturo</item>
+        <item>Rigel</item>
+        <item>Vega</item>
+        <item>Achernar</item>
 
-        <item>Lalande</item>
-        <item>Sirio</item>
-        <item>Luyten</item>
-        <item>Ross 128</item>
-        <item>Ross 154</item>
+        <item>Betelgeuse</item>
+        <item>Capella</item>
+        <item>Altair</item>
+        <item>Aldebaran</item>
+        <item>Espiga</item>
 
-        <item>Ross 248</item>
-        <item>Eridani</item>
-        <item>Lacaille</item>
-        <item>Aquari</item>
-        <item>Procyon</item>
+        <item>Antares</item>
+        <item>Polux</item>
+        <item>Fomalhaut</item>
+        <item>Deneb</item>
+        <item>Becrux</item>
 
-        <item>Cygni</item>
-        <item>Struve</item>
-        <item>Groombridge</item>
-        <item>Indi</item>
-        <item>Cancri</item>
-
+        <item>Regulus</item>
+        <item>Adhara</item>
+        <item>Shaula</item>
+        <item>Gacrux</item>
+        <item>Bellatrix</item>
     </string-array>
 
+    <string-array name="image_stars">
+        <item>star_sol</item>
+        <item>star_sol</item>
+        <item>star_sol</item>
+        <item>star_sol</item>
+        <item>star_sol</item>
+
+        <item>star_gigante_azul</item>
+        <item>star_gigante_azul</item>
+        <item>star_gigante_azul</item>
+        <item>star_gigante_azul</item>
+        <item>star_gigante_azul</item>
+
+        <item>star_gigante_roja</item>
+        <item>star_gigante_roja</item>
+        <item>star_gigante_roja</item>
+        <item>star_gigante_roja</item>
+        <item>star_gigante_roja</item>
+
+        <item>star_enana_blanca</item>
+        <item>star_enana_blanca</item>
+        <item>star_enana_blanca</item>
+        <item>star_enana_blanca</item>
+        <item>star_enana_blanca</item>
+    </string-array>
+
+    <string-array name="type_stars">
+        <item>S</item>
+        <item>S</item>
+        <item>S</item>
+        <item>S</item>
+        <item>S</item>
+
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+
+        <item>R</item>
+        <item>R</item>
+        <item>R</item>
+        <item>R</item>
+        <item>R</item>
+
+        <item>B</item>
+        <item>B</item>
+        <item>B</item>
+        <item>B</item>
+        <item>B</item>
+    </string-array>
+
+    <string-array name="tile_x">
+        <item>570</item>
+        <item>250</item>
+        <item>880</item>
+        <item>780</item>
+        <item>860</item>
+
+        <item>840</item>
+        <item>740</item>
+        <item>640</item>
+        <item>880</item>
+        <item>400</item>
+
+        <item>520</item>
+        <item>350</item>
+        <item>340</item>
+        <item>200</item>
+        <item>200</item>
+
+        <item>680</item>
+        <item>180</item>
+        <item>160</item>
+        <item>240</item>
+        <item>940</item>
+    </string-array>
+
+    <string-array name="tile_y">
+        <item>710</item>
+        <item>800</item>
+        <item>550</item>
+        <item>1460</item>
+        <item>2060</item>
+
+        <item>920</item>
+        <item>1080</item>
+        <item>1200</item>
+        <item>1620</item>
+        <item>350</item>
+
+        <item>1860</item>
+        <item>1100</item>
+        <item>1560</item>
+        <item>1440</item>
+        <item>250</item>
+
+        <item>300</item>
+        <item>1860</item>
+        <item>620</item>
+        <item>1280</item>
+        <item>1260</item>
+    </string-array>
 </resources>

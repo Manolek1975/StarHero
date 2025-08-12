@@ -55,10 +55,10 @@ class PowerFragment : Fragment() {
             )
         }
         binding.ivCheck.setOnClickListener {
-            val coords = randomStars()
+/*            val coords = randomStars()
             for (i in coords.indices) {
-                viewModel.updatePosStar(coords[i].x, coords[i].y, i + 1)
-            }
+                viewModel.updatePosStar(coords[i].x, coords[i].y, i)
+            }*/
             findNavController().navigate(
                 PowerFragmentDirections.actionPowerFragmentToStarsFragment()
             )
@@ -160,7 +160,6 @@ class PowerFragment : Fragment() {
         val radius = diameter * 0.5f
         val d2 = (diameter * diameter).toFloat()
         val coordinate : MutableList<Point> = ArrayList(size)
-
         val posX: MutableList<Float> = ArrayList(size)
         val posY: MutableList<Float> = ArrayList(size)
         while (posX.size < size) {
@@ -178,7 +177,7 @@ class PowerFragment : Fragment() {
             }
             // generate another pair of coordinates, if it does touch previous
             if (j != posX.size) {
-                //println("collided.")
+                println("collided.")
                 continue
             }
             //println("added.")

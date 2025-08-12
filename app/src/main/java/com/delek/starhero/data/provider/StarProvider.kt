@@ -10,10 +10,13 @@ class StarProvider {
         fun loadStars(context: Context): List<StarEntity> {
             val stars = mutableListOf<StarEntity>()
             val name = context.resources.getStringArray(R.array.name_stars)
-            //val image = context.resources.getStringArray(R.array.image_stars)
-            //val type = context.resources.getStringArray(R.array.type_stars)
+            val image = context.resources.getStringArray(R.array.image_stars)
+            val type = context.resources.getStringArray(R.array.type_stars)
+            val x = context.resources.getStringArray(R.array.tile_x)
+            val y = context.resources.getStringArray(R.array.tile_y)
+
             for (i in name.indices) {
-                stars.add(StarEntity(i, name[i], "", "", 0, 0))
+                stars.add(StarEntity(i+1, name[i], image[i], type[i], x[i].toInt(), y[i].toInt()))
             }
             return stars
         }
