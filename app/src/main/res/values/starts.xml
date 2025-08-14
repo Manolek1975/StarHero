@@ -79,7 +79,7 @@
         <item>B</item>
     </string-array>
 
-    <string-array name="tile_x">
+    <string-array name="star_x">
         <item>570</item>
         <item>250</item>
         <item>880</item>
@@ -105,7 +105,7 @@
         <item>940</item>
     </string-array>
 
-    <string-array name="tile_y">
+    <string-array name="star_y">
         <item>710</item>
         <item>800</item>
         <item>550</item>
