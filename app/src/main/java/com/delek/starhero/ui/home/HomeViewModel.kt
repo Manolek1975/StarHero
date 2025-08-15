@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.delek.starhero.domain.model.Dwelling
 import com.delek.starhero.domain.model.Group
 import com.delek.starhero.domain.model.Hero
+import com.delek.starhero.domain.model.Planet
 import com.delek.starhero.domain.model.Power
 import com.delek.starhero.domain.model.Relation
 import com.delek.starhero.domain.model.Ship
@@ -16,6 +17,7 @@ import com.delek.starhero.domain.model.Weapon
 import com.delek.starhero.domain.usecase.GetDwellingUseCase
 import com.delek.starhero.domain.usecase.GetGroupUseCase
 import com.delek.starhero.domain.usecase.GetHeroUseCase
+import com.delek.starhero.domain.usecase.GetPlanetUseCase
 import com.delek.starhero.domain.usecase.GetPowerUseCase
 import com.delek.starhero.domain.usecase.GetRelationUseCase
 import com.delek.starhero.domain.usecase.GetShipUseCase
@@ -38,7 +40,8 @@ class HomeViewModel @Inject constructor(
     private val getDwellingUseCase: GetDwellingUseCase,
     private val getPowerUseCase: GetPowerUseCase,
     private val startPowerUseCase: GetStartPowerUseCase,
-    private val getStarUseCase: GetStarUseCase
+    private val getStarUseCase: GetStarUseCase,
+    private val getPlanetUseCase: GetPlanetUseCase
 ): ViewModel() {
 
     private val heroList = MutableLiveData<Hero>()
@@ -51,6 +54,7 @@ class HomeViewModel @Inject constructor(
     private val powerList = MutableLiveData<Power>()
     private val startPowerList = MutableLiveData<StartPower>()
     private val starList = MutableLiveData<Star>()
+    private val planetList = MutableLiveData<Planet>()
 
     fun onCreate() {
         viewModelScope.launch {
@@ -111,6 +115,12 @@ class HomeViewModel @Inject constructor(
             val star = getStarUseCase()
             if (star.isNotEmpty()) {
                 starList.postValue(star[0])
+            }
+        }
+        viewModelScope.launch {
+            val planet = getPlanetUseCase()
+            if (planet.isNotEmpty()) {
+                planetList.postValue(planet[0])
             }
         }
    }
