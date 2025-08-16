@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="name_planets">
+        <item>Canopus b</item>
+        <item>Canopus c</item>
+        <item>Canopus d</item>
+        <item>Canopus e</item>
+        <item>Arturo b</item>
+        <item>Arturo c</item>
+        <item>Arturo d</item>
+        <item>Arturo e</item>
+        <item>Rigel b</item>
+        <item>Rigel c</item>
+        <item>Rigel d</item>
+        <item>Rigel e</item>
+        <item>Vega b</item>
+        <item>Vega c</item>
+        <item>Vega d</item>
+        <item>Vega e</item>
+        <item>Achernar b</item>
+        <item>Achernar c</item>
+        <item>Achernar d</item>
+        <item>Achernar e</item>
+
+        <item>Betelgeuse b</item>
+        <item>Betelgeuse c</item>
+        <item>Betelgeuse d</item>
+        <item>Capella b</item>
+        <item>Capella c</item>
+        <item>Capella d</item>
+        <item>Altair b</item>
+        <item>Altair c</item>
+        <item>Altair d</item>
+        <item>Aldebaran b</item>
+        <item>Aldebaran c</item>
+        <item>Aldebaran d</item>
+        <item>Espiga b</item>
+        <item>Espiga c</item>
+        <item>Espiga d</item>
+
+        <item>Antares b</item>
+        <item>Antares c</item>
+        <item>Antares d</item>
+        <item>Antares e</item>
+        <item>Antares f</item>
+        <item>Antares g</item>
+        <item>Polux b</item>
+        <item>Polux c</item>
+        <item>Polux d</item>
+        <item>Polux e</item>
+        <item>Polux f</item>
+        <item>Polux g</item>
+        <item>Fomalhaut b</item>
+        <item>Fomalhaut c</item>
+        <item>Fomalhaut d</item>
+        <item>Fomalhaut e</item>
+        <item>Fomalhaut f</item>
+        <item>Fomalhaut g</item>
+        <item>Deneb b</item>
+        <item>Deneb c</item>
+        <item>Deneb d</item>
+        <item>Deneb e</item>
+        <item>Deneb f</item>
+        <item>Deneb g</item>
+        <item>Becrux b</item>
+        <item>Becrux c</item>
+        <item>Becrux d</item>
+        <item>Becrux e</item>
+        <item>Becrux f</item>
+        <item>Becrux g</item>
+
+        <item>Regulus b</item>
+        <item>Regulus c</item>
+        <item>Regulus d</item>
+        <item>Regulus e</item>
+        <item>Regulus f</item>
+        <item>Regulus g</item>
+
+        <item>Adhara b</item>
+        <item>Adhara c</item>
+        <item>Adhara d</item>
+        <item>Adhara e</item>
+        <item>Adhara f</item>
+        <item>Adhara g</item>
+        <item>Shaula b</item>
+        <item>Shaula c</item>
+        <item>Shaula d</item>
+        <item>Shaula e</item>
+        <item>Shaula f</item>
+        <item>Shaula g</item>
+        <item>Gacrux b</item>
+        <item>Gacrux c</item>
+        <item>Gacrux d</item>
+        <item>Gacrux e</item>
+        <item>Gacrux f</item>
+        <item>Gacrux g</item>
+        <item>Bellatrix b</item>
+        <item>Bellatrix c</item>
+        <item>Bellatrix d</item>
+        <item>Bellatrix e</item>
+        <item>Bellatrix f</item>
+        <item>Bellatrix g</item>
+    </string-array>
+
+    <string-array name="image_planets">
+        <item>p_111</item>
+        <item>p_102</item>
+        <item>p_103</item>
+        <item>p_101</item>
+        <item>p_116</item>
+        <item>p_113</item>
+        <item>p_115</item>
+        <item>p_122</item>
+        <item>p_124</item>
+        <item>p_107</item>
+        <item>p_106</item>
+        <item>p_109</item>
+        <item>p_122</item>
+        <item>p_117</item>
+        <item>p_127</item>
+        <item>p_129</item>
+        <item>p_121</item>
+        <item>p_105</item>
+        <item>p_110</item>
+        <item>p_125</item>
+
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_102</item>
+        <item>p_103</item>
+        <item>p_105</item>
+        <item>p_110</item>
+        <item>p_125</item>
+        <item>p_107</item>
+        <item>p_106</item>
+        <item>p_109</item>
+        <item>p_116</item>
+        <item>p_113</item>
+        <item>p_115</item>
+
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_108</item>
+        <item>p_118</item>
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_108</item>
+        <item>p_118</item>
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_108</item>
+        <item>p_118</item>
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_108</item>
+        <item>p_118</item>
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_108</item>
+        <item>p_118</item>
+
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_108</item>
+        <item>p_118</item>
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_108</item>
+        <item>p_118</item>
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_108</item>
+        <item>p_118</item>
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_108</item>
+        <item>p_118</item>
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_108</item>
+        <item>p_118</item>
+
+    </string-array>
+
+
+</resources>
