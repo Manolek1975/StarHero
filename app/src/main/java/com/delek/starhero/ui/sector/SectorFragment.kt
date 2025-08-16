@@ -1,28 +1,28 @@
-package com.delek.starhero.ui.stars
+package com.delek.starhero.ui.sector
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.delek.starhero.databinding.FragmentStarsBinding
+import com.delek.starhero.databinding.FragmentSectorBinding
 
-class StarsFragment : Fragment() {
+class SectorFragment : Fragment() {
 
-    private var _binding: FragmentStarsBinding? = null
+    private var _binding: FragmentSectorBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentStarsBinding.inflate(inflater, container, false)
+        _binding = FragmentSectorBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val map = DrawStars(requireContext())
+        val map = DrawSector(requireContext())
         binding.map.addView(map)
     }
 

@@ -2,10 +2,10 @@
 <resources>
 
     <string-array name="name_planets">
-        <item>Canopus b</item>
-        <item>Canopus c</item>
-        <item>Canopus d</item>
-        <item>Canopus e</item>
+        <item>Capella b</item>
+        <item>Capella c</item>
+        <item>Capella d</item>
+        <item>Capella e</item>
         <item>Arturo b</item>
         <item>Arturo c</item>
         <item>Arturo d</item>
@@ -18,17 +18,17 @@
         <item>Vega c</item>
         <item>Vega d</item>
         <item>Vega e</item>
-        <item>Achernar b</item>
-        <item>Achernar c</item>
-        <item>Achernar d</item>
-        <item>Achernar e</item>
+        <item>Regulus b</item>
+        <item>Regulus c</item>
+        <item>Regulus d</item>
+        <item>Regulus e</item>
 
         <item>Betelgeuse b</item>
         <item>Betelgeuse c</item>
         <item>Betelgeuse d</item>
-        <item>Capella b</item>
-        <item>Capella c</item>
-        <item>Capella d</item>
+        <item>Canopus b</item>
+        <item>Canopus c</item>
+        <item>Canopus d</item>
         <item>Altair b</item>
         <item>Altair c</item>
         <item>Altair d</item>
@@ -57,12 +57,12 @@
         <item>Fomalhaut e</item>
         <item>Fomalhaut f</item>
         <item>Fomalhaut g</item>
-        <item>Deneb b</item>
-        <item>Deneb c</item>
-        <item>Deneb d</item>
-        <item>Deneb e</item>
-        <item>Deneb f</item>
-        <item>Deneb g</item>
+        <item>Achernar b</item>
+        <item>Achernar c</item>
+        <item>Achernar d</item>
+        <item>Achernar e</item>
+        <item>Achernar f</item>
+        <item>Achernar g</item>
         <item>Becrux b</item>
         <item>Becrux c</item>
         <item>Becrux d</item>
@@ -70,13 +70,12 @@
         <item>Becrux f</item>
         <item>Becrux g</item>
 
-        <item>Regulus b</item>
-        <item>Regulus c</item>
-        <item>Regulus d</item>
-        <item>Regulus e</item>
-        <item>Regulus f</item>
-        <item>Regulus g</item>
-
+        <item>Deneb b</item>
+        <item>Deneb c</item>
+        <item>Deneb d</item>
+        <item>Deneb e</item>
+        <item>Deneb f</item>
+        <item>Deneb g</item>
         <item>Adhara b</item>
         <item>Adhara c</item>
         <item>Adhara d</item>

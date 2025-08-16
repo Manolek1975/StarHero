@@ -3,16 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/map"
-    android:background="@drawable/bg_space"
-    tools:context=".ui.stars.StarsFragment">
+    tools:context=".ui.star.StarFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center|top"
-        android:padding="20dp"
-        android:textSize="24sp"
-        android:text="@string/head_star_fragment" />
+        android:text="Hello" />
 
 </FrameLayout>

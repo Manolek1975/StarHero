@@ -38,10 +38,10 @@
             app:destination="@id/nav_select" />
         <action
             android:id="@+id/action_nav_detail_to_powerFragment"
-            app:destination="@id/powerFragment" />
+            app:destination="@id/nav_power" />
     </fragment>
     <fragment
-        android:id="@+id/powerFragment"
+        android:id="@+id/nav_power"
         android:name="com.delek.starhero.ui.power.PowerFragment"
         android:label="fragment_power"
         tools:layout="@layout/fragment_power" >
@@ -53,12 +53,27 @@
             app:argType="integer" />
         <action
             android:id="@+id/action_powerFragment_to_starsFragment"
-            app:destination="@id/starsFragment" />
+            app:destination="@id/nav_sector" />
     </fragment>
+
     <fragment
-        android:id="@+id/starsFragment"
-        android:name="com.delek.starhero.ui.stars.StarsFragment"
+        android:id="@+id/nav_sector"
+        android:name="com.delek.starhero.ui.sector.SectorFragment"
         android:label="fragment_stars"
-        tools:layout="@layout/fragment_stars" />
+        tools:layout="@layout/fragment_sector" >
+        <action
+            android:id="@+id/action_nav_sector_to_nav_star"
+            app:destination="@id/nav_star" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_star"
+        android:name="com.delek.starhero.ui.star.StarFragment"
+        android:label="fragment_star"
+        tools:layout="@layout/fragment_star" >
+        <argument
+            android:name="starId"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>

@@ -4,22 +4,22 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.delek.starhero.data.database.entity.StarEntity
+import com.delek.starhero.data.database.entity.SectorEntity
 
 @Dao
-interface StarDao {
+interface SectorDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAll(stars: List<StarEntity>)
+    suspend fun insertAll(stars: List<SectorEntity>)
 
     @Query("SELECT * FROM stars ORDER BY RANDOM() LIMIT 20")
-    suspend fun getAll(): List<StarEntity>
+    suspend fun getAll(): List<SectorEntity>
 
     @Query("SELECT * FROM stars")
-    fun getStars(): List<StarEntity>
+    fun getStars(): List<SectorEntity>
 
     @Query("SELECT * FROM stars WHERE id = :id")
-    suspend fun getStarById(id: Int): StarEntity
+    suspend fun getStarById(id: Int): SectorEntity
 
     @Query("UPDATE stars SET x = :x, y = :y WHERE id = :id")
     suspend fun updatePosStar(x: Int, y: Int, id: Int)

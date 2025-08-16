@@ -2,14 +2,14 @@
 <resources>
 
     <string-array name="name_stars">
-        <item>Canopus</item>
+        <item>Capella</item>
         <item>Arturo</item>
         <item>Rigel</item>
         <item>Vega</item>
-        <item>Achernar</item>
+        <item>Regulus</item>
 
         <item>Betelgeuse</item>
-        <item>Capella</item>
+        <item>Canopus</item>
         <item>Altair</item>
         <item>Aldebaran</item>
         <item>Espiga</item>
@@ -17,10 +17,10 @@
         <item>Antares</item>
         <item>Polux</item>
         <item>Fomalhaut</item>
-        <item>Deneb</item>
+        <item>Achernar</item>
         <item>Becrux</item>
 
-        <item>Regulus</item>
+        <item>Deneb</item>
         <item>Adhara</item>
         <item>Shaula</item>
         <item>Gacrux</item>
@@ -28,25 +28,25 @@
     </string-array>
 
     <string-array name="image_stars">
+        <item>star_gigante_azul</item>
         <item>star_sol</item>
         <item>star_sol</item>
         <item>star_sol</item>
-        <item>star_sol</item>
-        <item>star_sol</item>
-
-        <item>star_gigante_azul</item>
-        <item>star_gigante_azul</item>
-        <item>star_gigante_azul</item>
-        <item>star_gigante_azul</item>
-        <item>star_gigante_azul</item>
-
-        <item>star_gigante_roja</item>
-        <item>star_gigante_roja</item>
-        <item>star_gigante_roja</item>
-        <item>star_gigante_roja</item>
-        <item>star_gigante_roja</item>
-
         <item>star_enana_blanca</item>
+
+        <item>star_gigante_azul</item>
+        <item>star_sol</item>
+        <item>star_gigante_azul</item>
+        <item>star_gigante_azul</item>
+        <item>star_gigante_azul</item>
+
+        <item>star_gigante_roja</item>
+        <item>star_gigante_roja</item>
+        <item>star_gigante_roja</item>
+        <item>star_sol</item>
+        <item>star_gigante_roja</item>
+
+        <item>star_gigante_roja</item>
         <item>star_enana_blanca</item>
         <item>star_enana_blanca</item>
         <item>star_enana_blanca</item>

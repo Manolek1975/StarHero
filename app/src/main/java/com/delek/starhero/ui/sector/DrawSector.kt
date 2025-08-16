@@ -1,4 +1,4 @@
-package com.delek.starhero.ui.stars
+package com.delek.starhero.ui.sector
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -11,19 +11,21 @@ import android.util.DisplayMetrics
 import android.view.MotionEvent
 import android.view.ScaleGestureDetector
 import android.view.View
+import androidx.navigation.findNavController
 import androidx.room.Room
 import com.delek.starhero.R
 import com.delek.starhero.core.Util
 import com.delek.starhero.data.database.StarHeroDatabase
-import com.delek.starhero.data.repository.StarRepository
+import com.delek.starhero.data.repository.SectorRepository
+import com.delek.starhero.domain.model.Sector
 import javax.inject.Inject
 
-class DrawStars @Inject constructor(context: Context) : View(context) {
+class DrawSector @Inject constructor(context: Context) : View(context) {
     //Build ROOM database out of Main thread
     private val db = Room.databaseBuilder(context, StarHeroDatabase::class.java, "db_star_hero")
         .allowMainThreadQueries().build()
-    private val dao = db.getStarDao()
-    private val repo = StarRepository(dao)
+    private val dao = db.getSectorDao()
+    private val repo = SectorRepository(dao)
     private val star = repo.getStars()
     private val bm = mutableListOf<Bitmap>()
     private val p = Paint()
@@ -98,8 +100,30 @@ class DrawStars @Inject constructor(context: Context) : View(context) {
                 cy = event.y/mScaleFactor - dy
                 invalidate()
             }
+            MotionEvent.ACTION_UP -> {
+                val touchedTile = findStar(event.x, event.y)
+                touchedTile?.let {
+                    //data.edit().putInt("tileId", touchedTile.id).apply()
+                    findNavController().navigate(
+                        SectorFragmentDirections.actionNavSectorToNavStar(touchedTile.id)
+                    )
+                }
+                return true
+            }
         }
         return true
+    }
+
+    private fun findStar(x: Float, y: Float): Sector? {
+        // Logic to find the star that was touched based on coordinates
+        for (cord in star) {
+            // Check if (x, y) is within the bounds of the star's circle
+            if (cord.x - 40 <= x && x <= cord.x + 40 &&
+                cord.y - 40 <= y && y <= cord.y + 40) {
+                return cord
+            }
+        }
+        return null
     }
 
     override fun performClick(): Boolean {

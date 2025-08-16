@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "stars")
-data class StarEntity(
+data class SectorEntity(
     @PrimaryKey(autoGenerate = true) val id: Int,
     val name: String,
     val image: String,
