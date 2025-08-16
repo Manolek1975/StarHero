@@ -16,16 +16,16 @@ import androidx.room.Room
 import com.delek.starhero.R
 import com.delek.starhero.core.Util
 import com.delek.starhero.data.database.StarHeroDatabase
-import com.delek.starhero.data.repository.SectorRepository
-import com.delek.starhero.domain.model.Sector
+import com.delek.starhero.data.repository.StarRepository
+import com.delek.starhero.domain.model.Star
 import javax.inject.Inject
 
 class DrawSector @Inject constructor(context: Context) : View(context) {
     //Build ROOM database out of Main thread
     private val db = Room.databaseBuilder(context, StarHeroDatabase::class.java, "db_star_hero")
         .allowMainThreadQueries().build()
-    private val dao = db.getSectorDao()
-    private val repo = SectorRepository(dao)
+    private val dao = db.getStarDao()
+    private val repo = StarRepository(dao)
     private val star = repo.getStars()
     private val bm = mutableListOf<Bitmap>()
     private val p = Paint()
@@ -114,7 +114,7 @@ class DrawSector @Inject constructor(context: Context) : View(context) {
         return true
     }
 
-    private fun findStar(x: Float, y: Float): Sector? {
+    private fun findStar(x: Float, y: Float): Star? {
         // Logic to find the star that was touched based on coordinates
         for (cord in star) {
             // Check if (x, y) is within the bounds of the star's circle

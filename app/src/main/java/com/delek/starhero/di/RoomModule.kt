@@ -59,7 +59,7 @@ object RoomModule {
 
     @Singleton
     @Provides
-    fun provideSectorDao(db: StarHeroDatabase) = db.getSectorDao()
+    fun provideStarDao(db: StarHeroDatabase) = db.getStarDao()
 
     @Singleton
     @Provides

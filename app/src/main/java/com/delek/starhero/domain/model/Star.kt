@@ -1,8 +1,8 @@
 package com.delek.starhero.domain.model
 
-import com.delek.starhero.data.database.entity.SectorEntity
+import com.delek.starhero.data.database.entity.StarEntity
 
-data class Sector(
+data class Star(
     val id: Int,
     val name: String,
     val image: String,
@@ -11,4 +11,4 @@ data class Sector(
     val y: Int
 )
 
-fun SectorEntity.toDomain() = Sector(id, name, image, type, x, y)
+fun StarEntity.toDomain() = Star(id, name, image, type, x, y)

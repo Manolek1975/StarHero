@@ -8,7 +8,7 @@ import com.delek.starhero.data.database.dao.GroupDao
 import com.delek.starhero.data.database.dao.PlanetDao
 import com.delek.starhero.data.database.dao.PowerDao
 import com.delek.starhero.data.database.dao.RelationDao
-import com.delek.starhero.data.database.dao.SectorDao
+import com.delek.starhero.data.database.dao.StarDao
 import com.delek.starhero.data.database.dao.ShipDao
 import com.delek.starhero.data.database.dao.SkillDao
 import com.delek.starhero.data.database.dao.StartPowerDao
@@ -21,7 +21,7 @@ import com.delek.starhero.data.database.entity.PowerEntity
 import com.delek.starhero.data.database.entity.RelationEntity
 import com.delek.starhero.data.database.entity.ShipEntity
 import com.delek.starhero.data.database.entity.SkillEntity
-import com.delek.starhero.data.database.entity.SectorEntity
+import com.delek.starhero.data.database.entity.StarEntity
 import com.delek.starhero.data.database.entity.StartPowerEntity
 import com.delek.starhero.data.database.entity.WeaponEntity
 
@@ -36,7 +36,7 @@ import com.delek.starhero.data.database.entity.WeaponEntity
         DwellingEntity::class,
         PowerEntity::class,
         StartPowerEntity::class,
-        SectorEntity::class,
+        StarEntity::class,
         PlanetEntity::class],
     version = 1, exportSchema = false
 )
@@ -51,7 +51,7 @@ abstract class StarHeroDatabase : RoomDatabase() {
     abstract fun getDwellingDao(): DwellingDao
     abstract fun getPowerDao(): PowerDao
     abstract fun getStartPowerDao(): StartPowerDao
-    abstract fun getSectorDao(): SectorDao
+    abstract fun getStarDao(): StarDao
     abstract fun getPlanetDao(): PlanetDao
 
 }
