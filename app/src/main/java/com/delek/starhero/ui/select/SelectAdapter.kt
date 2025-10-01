@@ -10,7 +10,7 @@ import com.delek.starhero.domain.model.Hero
 
 class SelectAdapter (
     private var heroes: List<Hero> = emptyList(),
-    private val onItemclickListener: (Hero) -> Unit) :
+    private val onItemClickListener: (Hero) -> Unit) :
     RecyclerView.Adapter<SelectViewHolder>() {
 
     @SuppressLint("NotifyDataSetChanged")
@@ -28,6 +28,6 @@ class SelectAdapter (
     override fun getItemCount() = heroes.size
 
     override fun onBindViewHolder(holder: SelectViewHolder, position: Int) {
-        holder.render(heroes[position], onItemclickListener)
+        holder.render(heroes[position], onItemClickListener)
     }
 }

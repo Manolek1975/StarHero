@@ -20,4 +20,10 @@ class PlanetRepository @Inject constructor(private val planetDao: PlanetDao) {
         return response.toDomain()
     }
 
+    suspend fun getPlanetsByStarId(id: Int): List<Planet> {
+        val response: List<PlanetEntity> = planetDao.getPlanetsByStarId(id)
+        return response.map { it.toDomain() }
+    }
+
+
 }

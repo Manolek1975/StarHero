@@ -63,10 +63,10 @@ class DrawSector @Inject constructor(context: Context) : View(context) {
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        //canvas.translate(x, y + 250)
+        //canvas.translate(x, y)
         canvas.apply {
             save()
-            scale(mScaleFactor, mScaleFactor)
+            scale(mScaleFactor, mScaleFactor, dx, dy)
             setPaint()
             for (t in bm.indices) {
                 canvas.drawText(star[t].name, cx + star[t].x - x, cy + star[t].y - 20f - y, p)
@@ -91,17 +91,22 @@ class DrawSector @Inject constructor(context: Context) : View(context) {
         mScaleDetector.onTouchEvent(event)
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
-                dx = event.x/mScaleFactor - cx
-                dy = event.y/mScaleFactor - cy
+                dx = event.x/mScaleFactor// - cx
+                dy = event.y/mScaleFactor// - cy
                 performClick()
             }
-            MotionEvent.ACTION_MOVE -> {
+/*            MotionEvent.ACTION_MOVE -> {
                 cx = event.x/mScaleFactor - dx
                 cy = event.y/mScaleFactor - dy
                 invalidate()
-            }
+            }*/
             MotionEvent.ACTION_UP -> {
-                val touchedTile = findStar(event.x, event.y)
+                //TODO FIX CLICK FOR SCALE FACTOR
+                println("---------------------------")
+                println("dX: $dx, --- dY: $dy")
+                println("cX: $cx, --- cY: $cy")
+                println("X: ${event.x}, --- Y: ${event.y}")
+                val touchedTile = findStar(event.x/mScaleFactor, event.y/mScaleFactor)
                 touchedTile?.let {
                     //data.edit().putInt("tileId", touchedTile.id).apply()
                     findNavController().navigate(
@@ -129,6 +134,13 @@ class DrawSector @Inject constructor(context: Context) : View(context) {
     override fun performClick(): Boolean {
         super.performClick()
         //println("pX: $dx, --- pY: $dy")
+        val touchedTile = findStar(dx, dy)
+        touchedTile?.let {
+            //data.edit().putInt("tileId", touchedTile.id).apply()
+            findNavController().navigate(
+                SectorFragmentDirections.actionNavSectorToNavStar(touchedTile.id)
+            )
+        }
         return true
     }
 }

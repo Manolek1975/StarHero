@@ -35,7 +35,7 @@ class SelectFragment : Fragment() {
 
     private fun initUI() {
         binding.textSelect.text = getString(R.string.head)
-        val adapter = SelectAdapter(onItemclickListener = {
+        val adapter = SelectAdapter(onItemClickListener = {
             findNavController().navigate(
                 SelectFragmentDirections.actionNavSelectToNavDetail(it.id)
             )
