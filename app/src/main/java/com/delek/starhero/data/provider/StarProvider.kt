@@ -15,7 +15,8 @@ class StarProvider {
             val x = context.resources.getStringArray(R.array.star_x)
             val y = context.resources.getStringArray(R.array.star_y)
 
-            name.shuffle()
+            // Reserved for random map
+            //name.shuffle()
 
             for (i in name.indices) {
                 stars.add(StarEntity(i+1, name[i], image[i], type[i], x[i].toInt(), y[i].toInt()))

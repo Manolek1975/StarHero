@@ -59,7 +59,6 @@ class StarFragment : Fragment() {
                 }
             }
         }
-
         return binding.root
     }
 

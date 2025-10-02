@@ -11,9 +11,10 @@ class PlanetProvider {
             val planets = mutableListOf<PlanetEntity>()
             val names = context.resources.getStringArray(R.array.name_planets)
             val images = context.resources.getStringArray(R.array.image_planets)
+            val stars = context.resources.getStringArray(R.array.star_planets)
 
             for (i in names.indices) {
-                planets.add(PlanetEntity(i+1, names[i], images[i], "", 0, 0, 0, 0))
+                planets.add(PlanetEntity(i+1, names[i], images[i], "", 0, stars[i].toInt(), 0, 0))
             }
             return planets
         }
