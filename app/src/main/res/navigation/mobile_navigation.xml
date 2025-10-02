@@ -74,6 +74,19 @@
         <argument
             android:name="starId"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_nav_star_to_nav_planet"
+            app:destination="@id/nav_planet" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_planet"
+        android:name="com.delek.starhero.ui.planet.PlanetFragment"
+        android:label="fragment_planet"
+        tools:layout="@layout/fragment_planet" >
+        <argument
+            android:name="planetId"
+            app:argType="integer" />
     </fragment>
 
 </navigation>
