@@ -13,6 +13,7 @@ import com.delek.starhero.domain.model.Ship
 import com.delek.starhero.domain.model.Skill
 import com.delek.starhero.domain.model.Star
 import com.delek.starhero.domain.model.StartPower
+import com.delek.starhero.domain.model.Surface
 import com.delek.starhero.domain.model.Weapon
 import com.delek.starhero.domain.usecase.GetDwellingUseCase
 import com.delek.starhero.domain.usecase.GetGroupUseCase
@@ -24,6 +25,7 @@ import com.delek.starhero.domain.usecase.GetShipUseCase
 import com.delek.starhero.domain.usecase.GetSkillUseCase
 import com.delek.starhero.domain.usecase.GetStarUseCase
 import com.delek.starhero.domain.usecase.GetStartPowerUseCase
+import com.delek.starhero.domain.usecase.GetSurfaceUseCase
 import com.delek.starhero.domain.usecase.GetWeaponUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -41,7 +43,8 @@ class HomeViewModel @Inject constructor(
     private val getPowerUseCase: GetPowerUseCase,
     private val startPowerUseCase: GetStartPowerUseCase,
     private val getStarUseCase: GetStarUseCase,
-    private val getPlanetUseCase: GetPlanetUseCase
+    private val getPlanetUseCase: GetPlanetUseCase,
+    private val getSurfaceUseCase: GetSurfaceUseCase
 ): ViewModel() {
 
     private val heroList = MutableLiveData<Hero>()
@@ -55,6 +58,7 @@ class HomeViewModel @Inject constructor(
     private val startPowerList = MutableLiveData<StartPower>()
     private val starList = MutableLiveData<Star>()
     private val planetList = MutableLiveData<Planet>()
+    private val surfaceList = MutableLiveData<Surface>()
 
     fun onCreate() {
         viewModelScope.launch {
@@ -121,6 +125,12 @@ class HomeViewModel @Inject constructor(
             val planet = getPlanetUseCase()
             if (planet.isNotEmpty()) {
                 planetList.postValue(planet[0])
+            }
+        }
+        viewModelScope.launch {
+            val surface = getSurfaceUseCase()
+            if (surface.isNotEmpty()) {
+                surfaceList.postValue(surface[0])
             }
         }
    }

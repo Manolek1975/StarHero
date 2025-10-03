@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="name_surfaces">
+        <item>Surface 1</item>
+        <item>Surface 2</item>
+        <item>Surface 3</item>
+        <item>Surface 4</item>
+        <item>Surface 5</item>
+    </string-array>
+
+    <string-array name="image_surfaces">
+        <item>surface 1</item>
+        <item>surface 2</item>
+        <item>surface 3</item>
+        <item>surface 4</item>
+        <item>surface 5</item>
+    </string-array>
+
+    <string-array name="description_surfaces">
+        <item>Description 1</item>
+        <item>Description 2</item>
+        <item>Description 3</item>
+        <item>Description 4</item>
+        <item>Description 5</item>
+    </string-array>
+</resources>
