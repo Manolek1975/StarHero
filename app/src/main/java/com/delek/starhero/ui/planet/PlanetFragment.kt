@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.delek.starhero.R
 import com.delek.starhero.core.Util
@@ -31,6 +32,12 @@ class PlanetFragment : Fragment() {
             binding.tvPlanet.text = planet.name
             val id = Util.getResId(planet.image, R.drawable::class.java)
             binding.ivPlanet.setImageResource(id)
+        }
+
+        binding.ivPlanet.setOnClickListener {
+            findNavController().navigate(
+                PlanetFragmentDirections.actionNavPlanetToNavSurface(args.planetId)
+            )
         }
 
         return binding.root

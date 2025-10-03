@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="Typos">
 
     <string-array name="name_surfaces">
         <item>Surface 1</item>
@@ -7,14 +8,56 @@
         <item>Surface 3</item>
         <item>Surface 4</item>
         <item>Surface 5</item>
+        <item>Surface 6</item>
+        <item>Surface 7</item>
+        <item>Surface 8</item>
+        <item>Surface 9</item>
+        <item>Surface 10</item>
+        <item>Surface 11</item>
+        <item>Surface 12</item>
+        <item>Surface 13</item>
+        <item>Surface 14</item>
+        <item>Surface 15</item>
+        <item>Surface 16</item>
+        <item>Surface 17</item>
+        <item>Surface 18</item>
+        <item>Surface 19</item>
+        <item>Surface 20</item>
+        <item>Surface 21</item>
+        <item>Surface 22</item>
+        <item>Surface 23</item>
+        <item>Surface 24</item>
+        <item>Surface 25</item>
+        <item>Surface 26</item>
     </string-array>
 
     <string-array name="image_surfaces">
-        <item>surface 1</item>
-        <item>surface 2</item>
-        <item>surface 3</item>
-        <item>surface 4</item>
-        <item>surface 5</item>
+        <item>surface14</item>
+        <item>surface02</item>
+        <item>surface13</item>
+        <item>surface20</item>
+        <item>surface24</item>
+        <item>surface04</item>
+        <item>surface07</item>
+        <item>surface20</item>
+        <item>surface09</item>
+        <item>surface22</item>
+        <item>surface11</item>
+        <item>surface12</item>
+        <item>surface13</item>
+        <item>surface14</item>
+        <item>surface15</item>
+        <item>surface10</item>
+        <item>surface17</item>
+        <item>surface18</item>
+        <item>surface19</item>
+        <item>surface08</item>
+        <item>surface21</item>
+        <item>surface09</item>
+        <item>surface13</item>
+        <item>surface05</item>
+        <item>surface25</item>
+        <item>surface26</item>
     </string-array>
 
     <string-array name="description_surfaces">
@@ -23,5 +66,26 @@
         <item>Description 3</item>
         <item>Description 4</item>
         <item>Description 5</item>
+        <item>Description 6</item>
+        <item>Description 7</item>
+        <item>Description 8</item>
+        <item>Description 9</item>
+        <item>Description 10</item>
+        <item>Description 11</item>
+        <item>Description 12</item>
+        <item>Description 13</item>
+        <item>Description 14</item>
+        <item>Description 15</item>
+        <item>Description 16</item>
+        <item>Description 17</item>
+        <item>Description 18</item>
+        <item>Description 19</item>
+        <item>Description 20</item>
+        <item>Description 21</item>
+        <item>Description 22</item>
+        <item>Description 23</item>
+        <item>Description 24</item>
+        <item>Description 25</item>
+        <item>Description 26</item>
     </string-array>
 </resources>

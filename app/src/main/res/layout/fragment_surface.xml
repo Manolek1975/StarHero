@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/surface01"
+    android:id="@+id/surfaceId"
+    tools:context=".ui.surface.SurfaceFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_planet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:padding="20dp"
+        android:textSize="24sp"
+        android:textColor="@color/gold"
+        tools:text="PLANET"/>
+
+</FrameLayout>

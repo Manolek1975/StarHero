@@ -12,10 +12,12 @@ interface SurfaceDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(surface: List<SurfaceEntity>)
 
-    @Query("SELECT * FROM surface")
+    @Query("SELECT * FROM surfaces")
     suspend fun getAll(): List<SurfaceEntity>
 
-    @Query("SELECT * FROM surface WHERE planetID = :id")
+    @Query("SELECT surfaces.* FROM surfaces INNER JOIN planets " +
+            "ON surfaces.id = planets.type " +
+            "WHERE planets.id = :id ")
     suspend fun getSurfaceById(id: Int): SurfaceEntity
 
 }

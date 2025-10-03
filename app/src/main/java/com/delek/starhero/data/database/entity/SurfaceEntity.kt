@@ -3,7 +3,7 @@ package com.delek.starhero.data.database.entity
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "surface")
+@Entity(tableName = "surfaces")
 data class SurfaceEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
