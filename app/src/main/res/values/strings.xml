@@ -7,10 +7,19 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="todo">TODO</string>
+    <!-- SETTINGS -->
+    <string name="menu_settings">Settings</string>
+    <string name="vibrate">Vibrate</string>
+    <string name="desc_vibrate">Vibrate when new character joins</string>
+    <string name="desc_music">Turn on background music</string>
+    <string name="desc_sound">Volume of sound effects</string>
+    <string name="new_game">Restart - New Game</string>
+    <string name="go"><![CDATA[>]]></string>
     <!-- HOME -->
     <string name="menu_home">Home</string>
     <string name="menu_select">Select</string>
     <string name="menu_detail">Detail</string>
+    <string name="menu_sector">Sector</string>
     <string name="text_home">Touch the screen</string>
     <string name="head">Select Hero</string>
     <!-- DETAIL -->
@@ -33,7 +42,6 @@
     <string name="selected_power">Power (%1$d/%2$d)</string>
     <string name="toast_already_power">%1$s already selected</string>
     <string name="no_powers">This hero has no powers</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="head_star_fragment">Sector Virgo</string>
 
 

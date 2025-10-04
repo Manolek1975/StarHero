@@ -1,5 +1,6 @@
 package com.delek.starhero
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.Menu
 import androidx.activity.enableEdgeToEdge
@@ -19,6 +20,13 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        private lateinit var player: MediaPlayer
+        fun stopPlayer() {
+            player.stop()
+        }
+    }
+
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
@@ -27,7 +35,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         hideSystemBars()
+        hideItem()
+        initUI()
+        initMedia()
+    }
 
+    private fun initUI() {
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navHost = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
@@ -38,6 +51,20 @@ class MainActivity : AppCompatActivity() {
             ), drawerLayout
         )
         navView.setupWithNavController(navController)
+    }
+
+    private fun initMedia() {
+        player = MediaPlayer.create(applicationContext, R.raw.trio_eflat)
+        player.isLooping = true // Set looping
+        player.setVolume(100f, 100f)
+        player.start()
+    }
+
+    private fun hideItem() {
+        val navigationView: NavigationView = this.findViewById(R.id.nav_view)
+        val navMenu: Menu = navigationView.menu
+        navMenu.findItem(R.id.nav_home).setVisible(false)
+        navMenu.findItem(R.id.nav_detail).setVisible(false)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

@@ -31,7 +31,17 @@ class StarFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentStarBinding.inflate(inflater, container, false)
+        initUI()
 
+        binding.ivStar.setOnClickListener {
+            findNavController().navigate(
+                StarFragmentDirections.actionNavStarToNavSector()
+            )
+        }
+        return binding.root
+    }
+
+    private fun initUI() {
         viewModel.getStarById(args.starId)
         viewModel.star.observe(viewLifecycleOwner) { star ->
             binding.tvStar.text = star.name
@@ -54,14 +64,13 @@ class StarFragment : Fragment() {
                 }
             }
         }
-        return binding.root
     }
 
-/*    private fun TextView.leftDrawable(@DrawableRes id: Int = 0, @DimenRes sizeRes: Int) {
-        val drawable = ContextCompat.getDrawable(context, id)
-        val size = resources.getDimensionPixelSize(sizeRes)
-        drawable?.setBounds(0, 0, size, size)
-        this.setCompoundDrawables(drawable, null, null, null)
-    }*/
+    /*    private fun TextView.leftDrawable(@DrawableRes id: Int = 0, @DimenRes sizeRes: Int) {
+            val drawable = ContextCompat.getDrawable(context, id)
+            val size = resources.getDimensionPixelSize(sizeRes)
+            drawable?.setBounds(0, 0, size, size)
+            this.setCompoundDrawables(drawable, null, null, null)
+        }*/
 
 }

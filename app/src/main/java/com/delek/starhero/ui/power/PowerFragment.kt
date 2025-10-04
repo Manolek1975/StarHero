@@ -55,10 +55,10 @@ class PowerFragment : Fragment() {
             )
         }
         binding.ivCheck.setOnClickListener {
-/*            val coords = randomStars()
+            val coords = randomStars()
             for (i in coords.indices) {
                 viewModel.updatePosStar(coords[i].x, coords[i].y, i)
-            }*/
+            }
             findNavController().navigate(
                 PowerFragmentDirections.actionPowerFragmentToStarsFragment()
             )
@@ -168,7 +168,7 @@ class PowerFragment : Fragment() {
             val y: Float = random.nextInt(height - diameter) + radius
             // verify it does not overlap/touch with previous circles
             var j = 0
-            while (j < posX.size) {
+            while (j < posX.size || j < posY.size) {
                 val dx = posX[j] - x
                 val dy = posY[j] - y
                 val diffSquare = (dx * dx) + (dy * dy)
@@ -180,7 +180,6 @@ class PowerFragment : Fragment() {
                 println("collided.")
                 continue
             }
-            //println("added.")
             // not overlapping/touch, add as new circle
             posX.add(x)
             posY.add(y)
