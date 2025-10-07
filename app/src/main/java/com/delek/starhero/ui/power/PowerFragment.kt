@@ -56,6 +56,7 @@ class PowerFragment : Fragment() {
         }
         binding.ivCheck.setOnClickListener {
             initStars()
+            initAdviceChits()
         }
     }
 
@@ -64,21 +65,22 @@ class PowerFragment : Fragment() {
         for (i in coords.indices) {
             viewModel.updatePosStar(coords[i].x, coords[i].y, i)
         }
-        val type = listOf("S", "A", "R", "B")
-        for (i in type) { // 4 groups of 5 stars
-            viewModel.getStarsByType(i)
-            lifecycleScope.launch {
-                repeatOnLifecycle(Lifecycle.State.STARTED) {
-                    viewModel.stars.observe(viewLifecycleOwner) {
-                        println(it)
-                        viewModel.updateStarAdvice(it[0].id, 1)
-                    }
-                }
-            }
-        }
         findNavController().navigate(
             PowerFragmentDirections.actionPowerFragmentToStarsFragment()
         )
+    }
+
+    private fun initAdviceChits() {
+        val advice = mutableListOf(1, 2, 3, 4, 5)
+        var i = 0
+        for (s in 1..20) {
+            if (s % 5 == 1) {
+                advice.shuffle()
+                i = 0
+            }
+            viewModel.updateStarAdvice(s, advice[i])
+            ++i
+        }
     }
 
     private fun initPower() {
@@ -175,7 +177,7 @@ class PowerFragment : Fragment() {
         val diameter = 200
         val radius = diameter * 0.5f
         val d2 = (diameter * diameter).toFloat()
-        val coordinate : MutableList<Point> = ArrayList(size)
+        val coordinate: MutableList<Point> = ArrayList(size)
         val posX: MutableList<Float> = ArrayList(size)
         val posY: MutableList<Float> = ArrayList(size)
         while (posX.size < size) {
@@ -189,10 +191,10 @@ class PowerFragment : Fragment() {
                 val dy = posY[j] - y
                 val diffSquare = (dx * dx) + (dy * dy)
                 if (diffSquare <= d2) break
-/*                val dx = posX[j] - radius
-                val dy = posY[j] - radius
-                if ( x in dx..dx && y in dy..dy &&
-                    x in dy..dy && y in dx..dx) break*/
+                /*                val dx = posX[j] - radius
+                                val dy = posY[j] - radius
+                                if ( x in dx..dx && y in dy..dy &&
+                                    x in dy..dy && y in dx..dx) break*/
                 ++j
             }
             // generate another pair of coordinates, if it does touch previous
@@ -203,7 +205,7 @@ class PowerFragment : Fragment() {
             // not overlapping/touch, add as new circle
             posX.add(x)
             posY.add(y)
-            coordinate.add(Point(x.toInt(),y.toInt()))
+            coordinate.add(Point(x.toInt(), y.toInt()))
         }
         return coordinate
     }
