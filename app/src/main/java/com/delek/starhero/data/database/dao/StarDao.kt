@@ -13,7 +13,7 @@ interface StarDao {
     suspend fun insertAll(stars: List<StarEntity>)
 
     @Query("SELECT * FROM stars ORDER BY RANDOM() LIMIT 20")
-    suspend fun getAll(): List<StarEntity>
+    suspend fun getAllStars(): List<StarEntity>
 
     @Query("SELECT * FROM stars")
     fun getStars(): List<StarEntity>
@@ -21,7 +21,13 @@ interface StarDao {
     @Query("SELECT * FROM stars WHERE id = :id")
     suspend fun getStarById(id: Int): StarEntity
 
+    @Query("SELECT * FROM stars WHERE type = :type ORDER BY RANDOM() LIMIT 20")
+    suspend fun getStarsByType(type: String): List<StarEntity>
+
     @Query("UPDATE stars SET x = :x, y = :y WHERE id = :id")
     suspend fun updatePosStar(x: Int, y: Int, id: Int)
+
+    @Query("UPDATE stars SET advice = :advice WHERE id = :id")
+    suspend fun updateStarAdvice(id: Int, advice: Int)
 
 }

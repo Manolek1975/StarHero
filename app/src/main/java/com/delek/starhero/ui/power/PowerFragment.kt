@@ -55,14 +55,30 @@ class PowerFragment : Fragment() {
             )
         }
         binding.ivCheck.setOnClickListener {
-            val coords = randomStars()
-            for (i in coords.indices) {
-                viewModel.updatePosStar(coords[i].x, coords[i].y, i)
-            }
-            findNavController().navigate(
-                PowerFragmentDirections.actionPowerFragmentToStarsFragment()
-            )
+            initStars()
         }
+    }
+
+    private fun initStars() {
+        val coords = randomStars()
+        for (i in coords.indices) {
+            viewModel.updatePosStar(coords[i].x, coords[i].y, i)
+        }
+        val type = listOf("S", "A", "R", "B")
+        for (i in type) { // 4 groups of 5 stars
+            viewModel.getStarsByType(i)
+            lifecycleScope.launch {
+                repeatOnLifecycle(Lifecycle.State.STARTED) {
+                    viewModel.stars.observe(viewLifecycleOwner) {
+                        println(it)
+                        viewModel.updateStarAdvice(it[0].id, 1)
+                    }
+                }
+            }
+        }
+        findNavController().navigate(
+            PowerFragmentDirections.actionPowerFragmentToStarsFragment()
+        )
     }
 
     private fun initPower() {
@@ -168,11 +184,15 @@ class PowerFragment : Fragment() {
             val y: Float = random.nextInt(height - diameter) + radius
             // verify it does not overlap/touch with previous circles
             var j = 0
-            while (j < posX.size || j < posY.size) {
+            while (j < posX.size) {
                 val dx = posX[j] - x
                 val dy = posY[j] - y
                 val diffSquare = (dx * dx) + (dy * dy)
                 if (diffSquare <= d2) break
+/*                val dx = posX[j] - radius
+                val dy = posY[j] - radius
+                if ( x in dx..dx && y in dy..dy &&
+                    x in dy..dy && y in dx..dx) break*/
                 ++j
             }
             // generate another pair of coordinates, if it does touch previous

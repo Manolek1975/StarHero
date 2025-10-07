@@ -2,6 +2,7 @@ package com.delek.starhero.data.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import com.delek.starhero.data.database.dao.AdviceChitDao
 import com.delek.starhero.data.database.dao.DwellingDao
 import com.delek.starhero.data.database.dao.HeroDao
 import com.delek.starhero.data.database.dao.GroupDao
@@ -14,6 +15,7 @@ import com.delek.starhero.data.database.dao.SkillDao
 import com.delek.starhero.data.database.dao.StartPowerDao
 import com.delek.starhero.data.database.dao.SurfaceDao
 import com.delek.starhero.data.database.dao.WeaponDao
+import com.delek.starhero.data.database.entity.AdviceChitEntity
 import com.delek.starhero.data.database.entity.DwellingEntity
 import com.delek.starhero.data.database.entity.HeroEntity
 import com.delek.starhero.data.database.entity.GroupEntity
@@ -40,7 +42,8 @@ import com.delek.starhero.data.database.entity.WeaponEntity
         StartPowerEntity::class,
         StarEntity::class,
         PlanetEntity::class,
-        SurfaceEntity::class],
+        SurfaceEntity::class,
+        AdviceChitEntity::class],
     version = 1, exportSchema = false
 )
 abstract class StarHeroDatabase : RoomDatabase() {
@@ -57,5 +60,6 @@ abstract class StarHeroDatabase : RoomDatabase() {
     abstract fun getStarDao(): StarDao
     abstract fun getPlanetDao(): PlanetDao
     abstract fun getSurfaceDao(): SurfaceDao
+    abstract fun getAdviceChitDao(): AdviceChitDao
 
 }

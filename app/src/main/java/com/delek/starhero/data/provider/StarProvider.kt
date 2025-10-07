@@ -19,7 +19,7 @@ class StarProvider {
             //name.shuffle()
 
             for (i in name.indices) {
-                stars.add(StarEntity(i+1, name[i], image[i], type[i], x[i].toInt(), y[i].toInt()))
+                stars.add(StarEntity(i+1, name[i], image[i], type[i], 0, x[i].toInt(), y[i].toInt()))
             }
             return stars
         }

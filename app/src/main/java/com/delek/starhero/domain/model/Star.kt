@@ -7,8 +7,9 @@ data class Star(
     val name: String,
     val image: String,
     val type: String,
+    val advice: Int,
     val x: Int,
     val y: Int
 )
 
-fun StarEntity.toDomain() = Star(id, name, image, type, x, y)
+fun StarEntity.toDomain() = Star(id, name, image, type, advice, x, y)
