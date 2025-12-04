@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.annotation.DimenRes
 import androidx.annotation.DrawableRes
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -59,6 +60,9 @@ class DetailFragment : Fragment() {
                 binding.tvSkill.text = getString(R.string.skill, skill.name)
                 //val skillId = Util.getResId(it.image, R.drawable::class.java)
                 //binding.ivSkill.leftDrawable(skillId, R.dimen.icon_size)
+                binding.tvSkill.setOnClickListener {
+                    showSkillDialog(skill.name, skill.description)
+                }
             }
             viewModel.getWeaponById(it.weapon)
             viewModel.weapon.observe(viewLifecycleOwner) { weapon ->
@@ -73,6 +77,8 @@ class DetailFragment : Fragment() {
                 binding.ivShip.leftDrawable(shipId, R.dimen.icon_size)
             }
         }
+
+
     }
 
     private fun initNatives(id: Int) {
@@ -117,6 +123,14 @@ class DetailFragment : Fragment() {
                 DetailFragmentDirections.actionNavDetailToPowerFragment(args.heroId)
             )
         }
+    }
+
+    private fun showSkillDialog(name: String, description: String){
+        val dialogBuilder = AlertDialog.Builder(requireContext(), R.style.AlertDialogStyle)
+        dialogBuilder.setIcon(android.R.drawable.stat_sys_warning)
+        dialogBuilder.setTitle(name)
+        dialogBuilder.setMessage(description)
+        dialogBuilder.setNegativeButton("OK") { _, _ -> }.show()
     }
 
     private fun TextView.leftDrawable(@DrawableRes id: Int = 0, @DimenRes sizeRes: Int) {

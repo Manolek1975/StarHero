@@ -1,7 +1,6 @@
 package com.delek.starhero.ui.surface
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,10 +35,9 @@ class SurfaceFragment : Fragment() {
     }
 
     private fun initUI() {
-        viewModel.getSurfaceById(args.planetId)
-        viewModel.surface.observe(viewLifecycleOwner) {
-            Log.d("SurfaceFragment", "initUI: ${it.id} ${it.image}")
-            val id = Util.getResId(it.image, R.drawable::class.java)
+        viewModel.getPlanetById(args.planetId)
+        viewModel.planet.observe(viewLifecycleOwner) {
+            val id = Util.getResId(it.surface, R.drawable::class.java)
             val bg = ContextCompat.getDrawable(requireContext(), id)
             binding.root.background = bg
         }

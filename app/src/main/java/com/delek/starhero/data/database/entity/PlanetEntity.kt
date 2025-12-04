@@ -8,6 +8,7 @@ data class PlanetEntity(
     @PrimaryKey(autoGenerate = true) val id: Int,
     val name: String,
     val image: String,
+    val surface: String,
     val type: String,
     val pos: Int,
     val starId: Int,

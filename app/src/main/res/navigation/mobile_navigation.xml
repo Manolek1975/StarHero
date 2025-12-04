@@ -54,6 +54,9 @@
         <action
             android:id="@+id/action_powerFragment_to_starsFragment"
             app:destination="@id/nav_sector" />
+        <action
+            android:id="@+id/action_nav_power_to_nav_surface"
+            app:destination="@id/nav_surface" />
     </fragment>
 
     <fragment

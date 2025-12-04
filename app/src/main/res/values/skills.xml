@@ -3,7 +3,7 @@
 
     <string-array name="name_skills">
         <item>AIM</item>
-        <item>STAMINA</item>
+        <item>FEIGN DEAD</item>
         <item>ROBUST</item>
         <item>BERSERK</item>
         <item>FEAR</item>
@@ -33,9 +33,8 @@
     <string-array name="advantages_description">
         <item>Subtracts one from each die roll whenever she
 rolls on the Missile Table to attack with a missile weapon.</item>
-        <item>The Amazon can record and do an extra Move phase
-each turn. She gets this bonus even when she is riding a horse - her
-stamina includes being an excellent horsewoman.</item>
+        <item>Feign death is the ability to fool mobs into believing
+that you are dead when you are actually still alive.</item>
         <item>The Berserker can record and do an extra Rest phase
 each day.</item>
         <item>The Berserker can play his Berserk chit to increase

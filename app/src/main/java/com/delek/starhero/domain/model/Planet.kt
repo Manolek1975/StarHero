@@ -6,6 +6,7 @@ data class Planet(
     val id: Int,
     val name: String,
     val image: String,
+    val surface: String,
     val type: String,
     val pos: Int,
     val starId: Int,
@@ -13,4 +14,4 @@ data class Planet(
     val con2: Int
 )
 
-fun PlanetEntity.toDomain() = Planet(id, name, image, type, pos, starId, con1, con2)
+fun PlanetEntity.toDomain() = Planet(id, name, image, surface, type, pos, starId, con1, con2)

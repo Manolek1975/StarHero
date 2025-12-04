@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <string-array name="name_planets">
         <item>Capella b</item>
@@ -107,6 +107,107 @@
         <item>p_102</item>
         <item>p_103</item>
         <item>p_101</item>
+        <item>p_116</item>
+        <item>p_113</item>
+        <item>p_115</item>
+        <item>p_122</item>
+        <item>p_124</item>
+        <item>p_107</item>
+        <item>p_106</item>
+        <item>p_109</item>
+        <item>p_122</item>
+        <item>p_117</item>
+        <item>p_127</item>
+        <item>p_129</item>
+        <item>p_121</item>
+        <item>p_105</item>
+        <item>p_110</item>
+        <item>p_125</item>
+
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_102</item>
+        <item>p_103</item>
+        <item>p_105</item>
+        <item>p_110</item>
+        <item>p_125</item>
+        <item>p_107</item>
+        <item>p_106</item>
+        <item>p_109</item>
+        <item>p_116</item>
+        <item>p_113</item>
+        <item>p_115</item>
+
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_128</item>
+        <item>p_118</item>
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_128</item>
+        <item>p_118</item>
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_128</item>
+        <item>p_118</item>
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_128</item>
+        <item>p_118</item>
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_128</item>
+        <item>p_118</item>
+
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_128</item>
+        <item>p_118</item>
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_128</item>
+        <item>p_118</item>
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_128</item>
+        <item>p_118</item>
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_128</item>
+        <item>p_118</item>
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_108</item>
+        <item>p_124</item>
+        <item>p_128</item>
+        <item>p_118</item>
+    </string-array>
+
+    <string-array name="surface_planets">
+        <item tools:ignore="Typos">surface11</item>
+        <item>surface02</item>
+        <item>surface27</item>
+        <item>surface09</item>
         <item>p_116</item>
         <item>p_113</item>
         <item>p_115</item>

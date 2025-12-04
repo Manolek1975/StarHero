@@ -61,13 +61,18 @@ class PowerFragment : Fragment() {
     }
 
     private fun initStars() {
-        val coords = randomStars()
+/*        val coords = randomStars()
         for (i in coords.indices) {
             viewModel.updatePosStar(coords[i].x, coords[i].y, i)
+        }*/
+        viewModel.getHeroById(args.heroId)
+        viewModel.hero.observe(viewLifecycleOwner) {
+            println(it)
+            findNavController().navigate(
+
+                PowerFragmentDirections.actionNavPowerToNavSurface(3)
+            )
         }
-        findNavController().navigate(
-            PowerFragmentDirections.actionPowerFragmentToStarsFragment()
-        )
     }
 
     private fun initAdviceChits() {

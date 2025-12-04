@@ -13,9 +13,10 @@ class PlanetProvider {
             val images = context.resources.getStringArray(R.array.image_planets)
             val types = context.resources.getStringArray(R.array.type_planets)
             val stars = context.resources.getStringArray(R.array.star_planets)
+            val surface = context.resources.getStringArray(R.array.surface_planets)
 
             for (i in names.indices) {
-                planets.add(PlanetEntity(i+1, names[i], images[i], types[i], 0, stars[i].toInt(), 0, 0))
+                planets.add(PlanetEntity(i+1, names[i], images[i], surface[i], types[i], 0, stars[i].toInt(), 0, 0))
             }
             return planets
         }

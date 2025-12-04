@@ -19,5 +19,6 @@ data class HeroEntity(
     val speed: Int,
     val power: Int,
     val numPowers: Int,
-    val relations: Int
+    val relations: Int,
+    val origin: Int
 )
