@@ -4,17 +4,17 @@ import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.Menu
 import androidx.activity.enableEdgeToEdge
-import com.google.android.material.navigation.NavigationView
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupWithNavController
 import com.delek.starhero.databinding.ActivityMainBinding
+import com.google.android.material.navigation.NavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         val navController = navHost.navController
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_select, R.id.nav_detail
+                R.id.nav_home
             ), drawerLayout
         )
         navView.setupWithNavController(navController)
@@ -85,4 +85,5 @@ class MainActivity : AppCompatActivity() {
         controller.systemBarsBehavior =
             WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
     }
+
 }

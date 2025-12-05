@@ -2,14 +2,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <string-array name="name_planets">
-        <item>Capella b</item>
-        <item>Capella c</item>
-        <item>Capella d</item>
-        <item>Capella e</item>
-        <item>Arturo b</item>
-        <item>Arturo c</item>
-        <item>Arturo d</item>
-        <item>Arturo e</item>
+        <item>Umma</item>
+        <item>Eridu</item>
+        <item>Uruk</item>
+        <item>Lagash</item>
+        <item>Ngirsu</item>
+        <item>Nippur</item>
+        <item>Ur</item>
+        <item>Kish</item>
         <item>Rigel b</item>
         <item>Rigel c</item>
         <item>Rigel d</item>
@@ -208,10 +208,10 @@
         <item>surface02</item>
         <item>surface27</item>
         <item>surface09</item>
-        <item>p_116</item>
-        <item>p_113</item>
-        <item>p_115</item>
-        <item>p_122</item>
+        <item>surface10</item>
+        <item>surface02</item>
+        <item>surface31</item>
+        <item>surface12</item>
         <item>p_124</item>
         <item>p_107</item>
         <item>p_106</item>

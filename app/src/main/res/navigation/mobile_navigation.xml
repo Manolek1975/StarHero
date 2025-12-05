@@ -52,20 +52,26 @@
             android:name="hero_id"
             app:argType="integer" />
         <action
-            android:id="@+id/action_powerFragment_to_starsFragment"
-            app:destination="@id/nav_sector" />
-        <action
             android:id="@+id/action_nav_power_to_nav_surface"
             app:destination="@id/nav_surface" />
     </fragment>
 
     <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.delek.starhero.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
         android:id="@+id/nav_sector"
         android:name="com.delek.starhero.ui.sector.SectorFragment"
-        android:label="fragment_stars"
+        android:label="fragment_sector"
         tools:layout="@layout/fragment_sector" >
         <action
             android:id="@+id/action_nav_sector_to_nav_star"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_sector"
+            app:popUpToInclusive="true"
             app:destination="@id/nav_star" />
     </fragment>
 
@@ -106,10 +112,5 @@
             android:name="planetId"
             app:argType="integer" />
     </fragment>
-    <fragment
-        android:id="@+id/nav_settings"
-        android:name="com.delek.starhero.ui.settings.SettingsFragment"
-        android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
 
 </navigation>

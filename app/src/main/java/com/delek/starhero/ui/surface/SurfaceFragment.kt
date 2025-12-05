@@ -40,6 +40,8 @@ class SurfaceFragment : Fragment() {
             val id = Util.getResId(it.surface, R.drawable::class.java)
             val bg = ContextCompat.getDrawable(requireContext(), id)
             binding.root.background = bg
+            binding.tvPlanet.text = it.name
         }
+
     }
 }

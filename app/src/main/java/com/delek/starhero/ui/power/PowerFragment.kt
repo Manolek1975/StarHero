@@ -1,6 +1,5 @@
 package com.delek.starhero.ui.power
 
-import android.graphics.Point
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -20,7 +19,6 @@ import com.delek.starhero.databinding.FragmentPowerBinding
 import com.delek.starhero.domain.model.Power
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import kotlin.random.Random
 
 @AndroidEntryPoint
 class PowerFragment : Fragment() {
@@ -173,7 +171,7 @@ class PowerFragment : Fragment() {
     }
 
     // Insert random coordinates to stars
-    private fun randomStars(): MutableList<Point> {
+/*    private fun randomStars(): MutableList<Point> {
         val random = Random
         val size = 20
         val dm = resources.displayMetrics
@@ -196,10 +194,10 @@ class PowerFragment : Fragment() {
                 val dy = posY[j] - y
                 val diffSquare = (dx * dx) + (dy * dy)
                 if (diffSquare <= d2) break
-                /*                val dx = posX[j] - radius
+                *//*                val dx = posX[j] - radius
                                 val dy = posY[j] - radius
                                 if ( x in dx..dx && y in dy..dy &&
-                                    x in dy..dy && y in dx..dx) break*/
+                                    x in dy..dy && y in dx..dx) break*//*
                 ++j
             }
             // generate another pair of coordinates, if it does touch previous
@@ -213,6 +211,6 @@ class PowerFragment : Fragment() {
             coordinate.add(Point(x.toInt(), y.toInt()))
         }
         return coordinate
-    }
+    }*/
 
 }
