@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/surface03"
+    android:background="@drawable/surface27"
     android:id="@+id/surfaceId"
     tools:context=".ui.surface.SurfaceFragment">
 
@@ -18,5 +19,49 @@
         android:textColor="@color/white"
         android:background="@drawable/head_rounded"
         tools:text="PLANET"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_native"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="120dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/n_assassin" />
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="80dp" >
+
+        <Button
+            android:id="@+id/skill_1"
+            style="@style/button_rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ATTACK" />
+
+        <Button
+            android:id="@+id/skill2"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/skill3"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/skill4"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 
 </FrameLayout>

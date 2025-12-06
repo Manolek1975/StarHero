@@ -1,0 +1,24 @@
+package com.delek.starhero.data.database.dao
+
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import com.delek.starhero.data.database.entity.NativeEntity
+
+
+@Dao
+interface NativeDao {
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertNatives(natives: List<NativeEntity>)
+
+    @Query("SELECT * FROM natives")
+    suspend fun getNatives(): List<NativeEntity>
+
+    @Query("SELECT * FROM natives WHERE id = :id")
+    suspend fun getNativeById(id: Int): NativeEntity
+
+    @Query("SELECT * FROM natives WHERE group_id = :groupId")
+    suspend fun getNativesByGroup(groupId: Int): List<NativeEntity>
+}

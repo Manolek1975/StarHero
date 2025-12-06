@@ -19,4 +19,7 @@
         <item name="android:background">@drawable/layout_rounded</item>
     </style>
 
+    <style name="button_rounded">
+        <item name="android:background">@drawable/button_rounded</item>
+    </style>
 </resources>

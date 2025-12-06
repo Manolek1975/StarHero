@@ -7,6 +7,7 @@ import com.delek.starhero.domain.model.AdviceChit
 import com.delek.starhero.domain.model.Dwelling
 import com.delek.starhero.domain.model.Group
 import com.delek.starhero.domain.model.Hero
+import com.delek.starhero.domain.model.Native
 import com.delek.starhero.domain.model.Planet
 import com.delek.starhero.domain.model.Power
 import com.delek.starhero.domain.model.Relation
@@ -20,6 +21,7 @@ import com.delek.starhero.domain.usecase.GetAdviceChitUseCase
 import com.delek.starhero.domain.usecase.GetDwellingUseCase
 import com.delek.starhero.domain.usecase.GetGroupUseCase
 import com.delek.starhero.domain.usecase.GetHeroUseCase
+import com.delek.starhero.domain.usecase.GetNativeUseCase
 import com.delek.starhero.domain.usecase.GetPlanetUseCase
 import com.delek.starhero.domain.usecase.GetPowerUseCase
 import com.delek.starhero.domain.usecase.GetRelationUseCase
@@ -40,6 +42,7 @@ class HomeViewModel @Inject constructor(
     private val getShipUseCase: GetShipUseCase,
     private val getSkillUseCase: GetSkillUseCase,
     private val groupUseCase: GetGroupUseCase,
+    private val nativeUseCase: GetNativeUseCase,
     private val relationUseCase: GetRelationUseCase,
     private val getDwellingUseCase: GetDwellingUseCase,
     private val getPowerUseCase: GetPowerUseCase,
@@ -55,6 +58,7 @@ class HomeViewModel @Inject constructor(
     private val shipList = MutableLiveData<Ship>()
     private val skillList = MutableLiveData<Skill>()
     private val groupList = MutableLiveData<Group>()
+    private val nativeList = MutableLiveData<Native>()
     private val relationList = MutableLiveData<Relation>()
     private val dwellingList = MutableLiveData<Dwelling>()
     private val powerList = MutableLiveData<Power>()
@@ -93,6 +97,12 @@ class HomeViewModel @Inject constructor(
             val group = groupUseCase()
             if (group.isNotEmpty()) {
                 groupList.postValue(group[0])
+            }
+        }
+        viewModelScope.launch {
+            val native = nativeUseCase()
+            if (native.isNotEmpty()) {
+                nativeList.postValue(native[0])
             }
         }
         viewModelScope.launch {

@@ -41,7 +41,9 @@ class SurfaceFragment : Fragment() {
             val bg = ContextCompat.getDrawable(requireContext(), id)
             binding.root.background = bg
             binding.tvPlanet.text = it.name
+            binding.ivNative.setImageResource(R.drawable.n_rogues)
         }
 
     }
+
 }

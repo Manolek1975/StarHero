@@ -43,6 +43,10 @@ object RoomModule {
 
     @Singleton
     @Provides
+    fun provideNativeDao(db: StarHeroDatabase) = db.getNativeDao()
+
+    @Singleton
+    @Provides
     fun provideRelationDao(db: StarHeroDatabase) = db.getRelationDao()
 
     @Singleton
