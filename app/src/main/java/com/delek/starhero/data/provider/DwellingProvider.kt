@@ -12,7 +12,7 @@ class DwellingProvider {
             val name = context.resources.getStringArray(R.array.name_dwellings)
             val image = context.resources.getStringArray(R.array.image_dwellings)
             for (i in name.indices) {
-                dwellings.add(DwellingEntity(i, name[i], image[i]))
+                dwellings.add(DwellingEntity(i+1, name[i], image[i]))
             }
             return dwellings
         }

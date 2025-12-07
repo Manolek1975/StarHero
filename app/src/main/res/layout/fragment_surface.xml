@@ -1,67 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/surfaceId"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/surface27"
-    android:id="@+id/surfaceId"
     tools:context=".ui.surface.SurfaceFragment">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_planet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center|top"
         android:layout_marginTop="20dp"
-        android:padding="8dp"
-        android:textSize="24sp"
-        android:textColor="@color/white"
         android:background="@drawable/head_rounded"
-        tools:text="PLANET"/>
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        tools:text="PLANET"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/iv_native"
+        android:id="@+id/iv_dwelling"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center|top"
         android:layout_marginTop="120dp"
         android:contentDescription="@string/todo"
-        android:src="@drawable/n_assassin" />
+        android:src="@drawable/d_inn"
+        app:layout_constraintTop_toTopOf="@+id/tv_planet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <LinearLayout
-        style="?android:attr/buttonBarStyle"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_dwelling"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/gray"
+        tools:text="DISCO BAR"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/iv_dwelling"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
         android:orientation="horizontal"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="80dp" >
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/skill_1"
-            style="@style/button_rounded"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ATTACK" />
+            style="@style/button_action"
+            tools:text="AUTO\nATTACK" />
 
-        <Button
-            android:id="@+id/skill2"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/skill_2"
+            style="@style/button_action"
+            tools:text="FEIGN\n DEAD"/>
 
-        <Button
-            android:id="@+id/skill3"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/skill_3"
+            style="@style/button_action"
+            tools:text="BERSERK"/>
 
-        <Button
-            android:id="@+id/skill4"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/skill_4"
+            style="@style/button_action"
+            tools:text="HIDE"/>
+
 
     </LinearLayout>
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

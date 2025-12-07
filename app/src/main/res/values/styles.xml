@@ -19,7 +19,18 @@
         <item name="android:background">@drawable/layout_rounded</item>
     </style>
 
-    <style name="button_rounded">
-        <item name="android:background">@drawable/button_rounded</item>
+    <style name="button_check">
+        android:textSize="12sp"
+    </style>
+
+    <style name="button_action" parent="Base.Theme.StarHero">
+        <item name="android:background">@drawable/button_action</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:backgroundTint">@color/gray</item>
+        <item name="android:textSize">12sp</item>
     </style>
 </resources>

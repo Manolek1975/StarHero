@@ -41,7 +41,13 @@ class SurfaceFragment : Fragment() {
             val bg = ContextCompat.getDrawable(requireContext(), id)
             binding.root.background = bg
             binding.tvPlanet.text = it.name
-            binding.ivNative.setImageResource(R.drawable.n_rogues)
+            binding.ivDwelling.setImageResource(R.drawable.d_inn)
+            binding.tvDwelling.text = "DISCO BAR"
+            binding.skill1.text = "AUTO\nATTACK"
+            binding.skill2.text = "FEIGN\nDEAD"
+            binding.skill3.text = "BERSERK"
+            binding.skill4.text = "HIDE"
+
         }
 
     }
