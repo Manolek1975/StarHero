@@ -20,6 +20,11 @@ class GroupRepository @Inject constructor(private val groupDao: GroupDao) {
         return response.toDomain()
     }
 
+    suspend fun getGroupByStart(start: Int): List<Group> {
+        val response: List<GroupEntity> = groupDao.getGroupByStart(start)
+        return response.map { it.toDomain() }
+    }
+
     suspend fun getAllyNatives(id: Int): List<Group> {
         val response: List<GroupEntity> = groupDao.getAllyNatives(id)
         return response.map { it.toDomain() }

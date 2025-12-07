@@ -111,6 +111,19 @@
         <argument
             android:name="planetId"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_nav_surface_to_nav_dwelling"
+            app:destination="@id/nav_dwelling" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_dwelling"
+        android:name="com.delek.starhero.ui.dwelling.DwellingFragment"
+        android:label="fragment_dwelling"
+        tools:layout="@layout/fragment_dwelling" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
     </fragment>
 
 </navigation>

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.delek.starhero.R
 import com.delek.starhero.core.Util
@@ -47,7 +48,12 @@ class SurfaceFragment : Fragment() {
             binding.skill2.text = "FEIGN\nDEAD"
             binding.skill3.text = "BERSERK"
             binding.skill4.text = "HIDE"
+        }
 
+        binding.ivDwelling.setOnClickListener {
+            findNavController().navigate(
+                SurfaceFragmentDirections.actionNavSurfaceToNavDwelling(1)
+            )
         }
 
     }

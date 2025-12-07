@@ -18,6 +18,9 @@ interface GroupDao {
     @Query("SELECT * FROM groups WHERE id = :id")
     suspend fun getById(id: Int): GroupEntity
 
+    @Query("SELECT * FROM groups WHERE start = :start")
+    suspend fun getGroupByStart(start: Int): List<GroupEntity>
+
     @Query("SELECT groups.* FROM groups INNER JOIN relations " +
             "ON groups.id = relations.groupId " +
             "WHERE relations.heroId = :id " +
