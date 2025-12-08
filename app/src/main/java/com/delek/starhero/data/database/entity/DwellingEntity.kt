@@ -9,4 +9,5 @@ data class DwellingEntity(
     val id: Int,
     val name: String,
     val image: String,
+    val planet: Int
 )

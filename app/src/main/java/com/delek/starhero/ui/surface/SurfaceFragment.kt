@@ -42,13 +42,21 @@ class SurfaceFragment : Fragment() {
             val bg = ContextCompat.getDrawable(requireContext(), id)
             binding.root.background = bg
             binding.tvPlanet.text = it.name
-            binding.ivDwelling.setImageResource(R.drawable.d_inn)
-            binding.tvDwelling.text = "DISCO BAR"
-            binding.skill1.text = "AUTO\nATTACK"
-            binding.skill2.text = "FEIGN\nDEAD"
-            binding.skill3.text = "BERSERK"
-            binding.skill4.text = "HIDE"
         }
+
+        viewModel.getDwellingByPlanet(args.planetId)
+        viewModel.dwelling.observe(viewLifecycleOwner) {
+            if (it != null) {
+                val id = Util.getResId(it.image, R.drawable::class.java)
+                binding.ivDwelling.setImageResource(id)
+                binding.tvDwelling.text = it.name
+            }
+        }
+
+/*        binding.skill1.text = "AUTO\nATTACK"
+        binding.skill2.text = "FEIGN\nDEAD"
+        binding.skill3.text = "BERSERK"
+        binding.skill4.text = "HIDE"*/
 
         binding.ivDwelling.setOnClickListener {
             findNavController().navigate(

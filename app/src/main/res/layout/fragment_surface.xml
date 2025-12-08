@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         android:contentDescription="@string/todo"
-        android:src="@drawable/d_inn"
+        tools:src="@drawable/d_inn"
         app:layout_constraintTop_toTopOf="@+id/tv_planet"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

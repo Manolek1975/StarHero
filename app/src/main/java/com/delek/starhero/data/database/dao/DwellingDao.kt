@@ -18,5 +18,7 @@ interface DwellingDao {
     @Query("SELECT * FROM dwellings WHERE id = :id")
     suspend fun getDwellingById(id: Int): DwellingEntity
 
+    @Query("SELECT * FROM dwellings WHERE planet = :id")
+    suspend fun getDwellingByPlanet(id: Int): DwellingEntity?
 
 }
