@@ -1,5 +1,7 @@
 package com.delek.starhero.ui.home
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,6 +21,7 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private val viewModel: HomeViewModel by viewModels()
+    private lateinit var data: SharedPreferences
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,15 +29,23 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-
+        data = requireContext().getSharedPreferences("data", Context.MODE_PRIVATE)
         binding.textHome.text = getString(R.string.text_home)
         binding.textHome.blink()
 
         viewModel.onCreate()
         binding.root.setOnClickListener {
-            findNavController().navigate(
-                HomeFragmentDirections.actionNavHomeToNavSelect()
-            )
+            if (data.getInt("hero", 0) == 0) {
+                findNavController().navigate(
+                    HomeFragmentDirections.actionNavHomeToNavSelect()
+                )
+            } else {
+                val planet = data.getInt("planet", 0)
+                println(planet)
+                findNavController().navigate(
+                    HomeFragmentDirections.actionNavHomeToNavSurface(planet)
+                )
+            }
         }
         return binding.root
     }

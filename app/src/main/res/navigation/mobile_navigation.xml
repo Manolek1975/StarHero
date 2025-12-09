@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_nav_home_to_nav_select"
             app:destination="@id/nav_select" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_surface"
+            app:destination="@id/nav_surface" />
     </fragment>
 
     <fragment

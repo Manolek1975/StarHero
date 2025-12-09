@@ -1,7 +1,22 @@
 package com.delek.starhero.ui.settings
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.delek.starhero.data.repository.DwellingRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class SettingsViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+@HiltViewModel
+class SettingsViewModel @Inject constructor(
+    private val dwellingRepository: DwellingRepository
+): ViewModel(
+){
+
+    fun deleteDwellings(){
+        viewModelScope.launch {
+            dwellingRepository.deleteDwellings()
+        }
+
+    }
 }

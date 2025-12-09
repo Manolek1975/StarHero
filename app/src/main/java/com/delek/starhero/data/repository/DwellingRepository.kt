@@ -33,4 +33,9 @@ class DwellingRepository @Inject constructor(private val dao: DwellingDao) {
         val response: Int = dao.getPlanetByDwelling(id)
         return response
     }
+
+    suspend fun deleteDwellings() {
+        dao.deleteDwellings()
+    }
+
 }

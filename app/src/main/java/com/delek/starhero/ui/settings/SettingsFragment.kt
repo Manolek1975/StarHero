@@ -140,9 +140,10 @@ class SettingsFragment : Fragment() {
         dialogBuilder.setMessage("Creating new game, ALL data for the current game will be deleted. Do you want to continue?")
         dialogBuilder.setNegativeButton("NO") { _, _ -> }
         dialogBuilder.setPositiveButton("DELETE") { _, _: Int ->
-/*            data.edit().putInt("role_id", 0).apply()
-            viewModel.deleteTiles()
-            viewModel.deletePrimaryKeyIndex()*/
+            data.edit().putInt("hero", 0).apply()
+            data.edit().putInt("planet", 0).apply()
+            viewModel.deleteDwellings()
+            //viewModel.deletePrimaryKeyIndex()
             val i = Intent(activity, MainActivity::class.java)
             MainActivity.stopPlayer()
             startActivity(i) // To Main Activity

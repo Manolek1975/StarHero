@@ -1,5 +1,7 @@
 package com.delek.starhero.ui.power
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -27,6 +29,7 @@ class PowerFragment : Fragment() {
     private var _binding: FragmentPowerBinding? = null
     private val binding get() = _binding!!
     private val args: PowerFragmentArgs by navArgs()
+    private lateinit var data: SharedPreferences
     private lateinit var typeAdapter: TypeAdapter
     private lateinit var powerAdapter: PowerAdapter
     private var numPowers: Int = 0
@@ -37,6 +40,7 @@ class PowerFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentPowerBinding.inflate(inflater, container, false)
+        data = requireContext().getSharedPreferences("data", Context.MODE_PRIVATE)
         initUI()
         return binding.root
     }
@@ -66,13 +70,15 @@ class PowerFragment : Fragment() {
         }*/
         var origin = 0
         viewModel.getHeroById(args.heroId)
+        data.edit().putInt("hero", args.heroId).apply()
         viewModel.hero.observe(viewLifecycleOwner) {
             origin = it.origin
         }
 
         viewModel.getPlanetByDwelling(origin)
+
         viewModel.planet.observe(viewLifecycleOwner) { planet ->
-            println(planet)
+            data.edit().putInt("planet", planet.id).apply()
             findNavController().navigate(
                 PowerFragmentDirections.actionNavPowerToNavSurface(planet.id)
             )
