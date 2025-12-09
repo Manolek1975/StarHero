@@ -23,8 +23,14 @@ class DwellingRepository @Inject constructor(private val dao: DwellingDao) {
     suspend fun getDwellingByPlanet(id: Int): Dwelling? {
         val response: DwellingEntity? = dao.getDwellingByPlanet(id)
         return response?.toDomain()
-
     }
 
+    suspend fun updateDwellingPlanet(id: Int, planet: Int) {
+        dao.updateDwellingPlanet(id, planet)
+    }
 
+    suspend fun getPlanetByDwelling(id: Int): Int {
+        val response: Int = dao.getPlanetByDwelling(id)
+        return response
+    }
 }

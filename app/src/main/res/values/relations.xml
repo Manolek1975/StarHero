@@ -26,7 +26,6 @@
         <item>4</item>
         <item>4</item>
         <item>4</item>
-        <item>4</item>
         <!-- DRUID -->
         <item>5</item>
         <item>5</item>
@@ -56,21 +55,21 @@
         <item>9</item>
         <item>9</item>
         <item>9</item>
-        <!-- SORCERER -->
-        <item>10</item>
-        <item>10</item>
-        <item>10</item>
-        <item>10</item>
-        <item>10</item>
-        <item>10</item>
-        <item>10</item>
-        <!-- SWORDSMAN -->
-        <item>11</item>
-        <item>11</item>
-        <item>11</item>
-        <item>11</item>
         <!-- WHITE KNIGHT -->
-        <item>12</item>
+        <item>10</item>
+        <item>10</item>
+        <item>10</item>
+        <item>10</item>
+        <item>10</item>
+        <!-- SORCERER -->
+        <item>11</item>
+        <item>11</item>
+        <item>11</item>
+        <item>11</item>
+        <item>11</item>
+        <item>11</item>
+        <item>11</item>
+        <!-- SWORDSMAN -->
         <item>12</item>
         <item>12</item>
         <item>12</item>
@@ -121,14 +120,13 @@
         <!-- BLACK KNIGHT -->
         <item>2</item>
         <item>8</item>
-        <item>12</item>
+        <item>10</item>
         <item>4</item>
         <item>3</item>
         <!-- CAPTAIN -->
         <item>6</item>
         <item>8</item>
         <item>3</item>
-        <item>11</item>
         <item>9</item>
         <item>1</item>
         <!-- DRUID -->
@@ -160,6 +158,12 @@
         <item>1</item>
         <item>2</item>
         <item>10</item>
+        <!-- WHITE KNIGHT -->
+        <item>5</item>
+        <item>4</item>
+        <item>1</item>
+        <item>10</item>
+        <item>2</item>
         <!-- SORCERER -->
         <item>4</item>
         <item>2</item>
@@ -173,12 +177,6 @@
         <item>2</item>
         <item>13</item>
         <item>6</item>
-        <!-- WHITE KNIGHT -->
-        <item>5</item>
-        <item>4</item>
-        <item>1</item>
-        <item>10</item>
-        <item>2</item>
         <!-- WITCH -->
         <item>2</item>
         <item>1</item>
@@ -232,7 +230,6 @@
         <item>2</item>
         <item>2</item>
         <item>2</item>
-        <item>2</item>
         <item>4</item>
         <item>5</item>
         <!-- DRUID -->
@@ -264,6 +261,12 @@
         <item>4</item>
         <item>4</item>
         <item>4</item>
+        <!-- WHITE KNIGHT -->
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>4</item>
+        <item>5</item>
         <!-- SORCERER -->
         <item>1</item>
         <item>2</item>
@@ -276,13 +279,7 @@
         <item>2</item>
         <item>2</item>
         <item>2</item>
-        <item>5</item>
-        <!-- WHITE KNIGHT -->
-        <item>1</item>
-        <item>2</item>
         <item>4</item>
-        <item>4</item>
-        <item>5</item>
         <!-- WITCH -->
         <item>1</item>
         <item>2</item>

@@ -6,7 +6,7 @@
         <item>HOUSE</item>
         <item>GUARD</item>
         <item>CHAPEL</item>
-        <item />
+        <item>GHOST</item>
         <item>LARGE\nCAMPFIRE</item>
         <item>SMALL\nCAMPFIRE</item>
         <item>ALTAR</item>
@@ -17,8 +17,6 @@
         <item>CAIRNS</item>
         <item>HOARD</item>
         <item>POOL</item>
-        <item>LOST\nCASTLE</item>
-        <item>LOST\nCITY</item>
     </string-array>
 
     <string-array name="image_dwellings">
@@ -39,31 +37,6 @@
         <item>d_cairns</item>
         <item>d_hoard</item>
         <item>d_pool</item>
-
-        <item>d_lost_castle</item>
-        <item>d_lost_city</item>
     </string-array>
 
-    <string-array name="planet_dwellings">
-        <item>3</item>
-        <item>11</item>
-        <item>7</item>
-        <item>15</item>
-        <item>0</item>
-
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>0</item>
-
-        <item>3</item>
-        <item>1</item>
-        <item>2</item>
-        <item>4</item>
-        <item>0</item>
-
-        <item>4</item>
-        <item>0</item>
-    </string-array>
 </resources>

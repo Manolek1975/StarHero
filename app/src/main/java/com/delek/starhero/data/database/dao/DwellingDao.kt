@@ -21,4 +21,10 @@ interface DwellingDao {
     @Query("SELECT * FROM dwellings WHERE planet = :id")
     suspend fun getDwellingByPlanet(id: Int): DwellingEntity?
 
+    @Query("UPDATE dwellings SET planet = :planet WHERE id = :id")
+    suspend fun updateDwellingPlanet(id: Int, planet: Int)
+
+    @Query("SELECT planet FROM dwellings WHERE id = :id")
+    suspend fun getPlanetByDwelling(id: Int): Int
+
 }

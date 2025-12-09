@@ -42,6 +42,7 @@ class PowerFragment : Fragment() {
     }
 
     private fun initUI() {
+        initDwellings()
         initPower()
         initListeners()
     }
@@ -63,13 +64,30 @@ class PowerFragment : Fragment() {
         for (i in coords.indices) {
             viewModel.updatePosStar(coords[i].x, coords[i].y, i)
         }*/
+        var origin = 0
         viewModel.getHeroById(args.heroId)
         viewModel.hero.observe(viewLifecycleOwner) {
-            println(it)
-            findNavController().navigate(
+            origin = it.origin
+        }
 
-                PowerFragmentDirections.actionNavPowerToNavSurface(3)
+        viewModel.getPlanetByDwelling(origin)
+        viewModel.planet.observe(viewLifecycleOwner) { planet ->
+            println(planet)
+            findNavController().navigate(
+                PowerFragmentDirections.actionNavPowerToNavSurface(planet.id)
             )
+        }
+    }
+
+    private fun initDwellings() {
+        var ran: Int
+        val planets = mutableListOf(0)
+        for (d in 1..15) {
+            do {
+                ran = (1..95).random()
+            } while (planets.contains(ran))
+            planets.add(ran)
+            viewModel.updateDwellingPlanet(d, ran)
         }
     }
 

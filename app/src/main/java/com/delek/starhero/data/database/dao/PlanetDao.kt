@@ -20,4 +20,5 @@ interface PlanetDao {
 
     @Query("SELECT * FROM planets WHERE starId = :id")
     suspend fun getPlanetsByStarId(id: Int): List<PlanetEntity>
+
 }
