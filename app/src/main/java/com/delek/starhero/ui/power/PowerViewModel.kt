@@ -24,7 +24,7 @@ class PowerViewModel @Inject constructor(
     private val repoStar: StarRepository,
     private val repoPlanet: PlanetRepository,
     private val repoDwelling: DwellingRepository,
-    private val repoPower: PowerRepository,
+    private val repoPower: PowerRepository
 ): ViewModel() {
 
     val hero = MutableLiveData<Hero>()

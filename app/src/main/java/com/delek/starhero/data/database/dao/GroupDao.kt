@@ -18,8 +18,8 @@ interface GroupDao {
     @Query("SELECT * FROM groups WHERE id = :id")
     suspend fun getById(id: Int): GroupEntity
 
-    @Query("SELECT * FROM groups WHERE start = :start")
-    suspend fun getGroupByStart(start: Int): List<GroupEntity>
+    @Query("SELECT * FROM groups WHERE dwelling = :dwelling")
+    suspend fun getGroupByDwelling(dwelling: Int): List<GroupEntity>
 
     @Query("SELECT groups.* FROM groups INNER JOIN relations " +
             "ON groups.id = relations.groupId " +
@@ -45,4 +45,9 @@ interface GroupDao {
             "AND relations.relation = '5'")
     suspend fun getEnemyNatives(id: Int): List<GroupEntity>
 
+    @Query("UPDATE groups SET dwelling = :dwelling WHERE id = :id")
+    suspend fun updateGroupStart(id: Int, dwelling: Int)
+
+    @Query("DELETE FROM groups")
+    suspend fun deleteGroups()
 }

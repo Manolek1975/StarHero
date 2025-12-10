@@ -5,12 +5,12 @@ import com.delek.starhero.data.database.entity.GroupEntity
 data class Group(
     val id: Int,
     val name: String,
-    val start: Int,
+    val dwelling: Int,
     val ship: Int,
     val description: String,
 
 )
 
-fun GroupEntity.toDomain() = Group(id, name, start, ship, description)
+fun GroupEntity.toDomain() = Group(id, name, dwelling, ship, description)
 
 

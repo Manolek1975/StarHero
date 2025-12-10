@@ -125,7 +125,7 @@
         android:label="fragment_dwelling"
         tools:layout="@layout/fragment_dwelling" >
         <argument
-            android:name="id"
+            android:name="dwellingId"
             app:argType="integer" />
     </fragment>
 

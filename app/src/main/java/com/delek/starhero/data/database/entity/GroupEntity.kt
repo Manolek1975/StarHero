@@ -8,7 +8,7 @@ data class GroupEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     val name: String,
-    val start: Int,
+    val dwelling: Int,
     val ship: Int,
     val description: String
 

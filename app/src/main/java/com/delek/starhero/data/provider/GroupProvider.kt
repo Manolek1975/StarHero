@@ -10,10 +10,10 @@ class GroupProvider {
         fun loadGroups(context: Context): List<GroupEntity> {
             val groups = mutableListOf<GroupEntity>()
             val name = context.resources.getStringArray(R.array.name_group)
-            val start = context.resources.getStringArray(R.array.start_group)
+            val dwelling = context.resources.getStringArray(R.array.start_group)
 
             for (i in name.indices) {
-                val group = GroupEntity(i + 1, name[i], start[i].toInt(), 0, "")
+                val group = GroupEntity(i + 1, name[i], dwelling[i].toInt(), 0, "")
                 groups.add(group)
             }
             return groups

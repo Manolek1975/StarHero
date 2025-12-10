@@ -37,32 +37,28 @@ class SurfaceFragment : Fragment() {
 
     private fun initUI() {
         viewModel.getPlanetById(args.planetId)
-        viewModel.planet.observe(viewLifecycleOwner) {
-            val id = Util.getResId(it.surface, R.drawable::class.java)
+        viewModel.planet.observe(viewLifecycleOwner) { planet ->
+            val id = Util.getResId(planet.surface, R.drawable::class.java)
             val bg = ContextCompat.getDrawable(requireContext(), id)
             binding.root.background = bg
-            binding.tvPlanet.text = it.name
+            binding.tvPlanet.text = planet.name
         }
 
         viewModel.getDwellingByPlanet(args.planetId)
-        viewModel.dwelling.observe(viewLifecycleOwner) {
-            if (it != null) {
-                val id = Util.getResId(it.image, R.drawable::class.java)
+        viewModel.dwelling.observe(viewLifecycleOwner) { dwelling ->
+            if (dwelling != null) {
+                val id = Util.getResId(dwelling.image, R.drawable::class.java)
                 binding.ivDwelling.setImageResource(id)
-                binding.tvDwelling.text = it.name
+                binding.tvDwelling.text = dwelling.name
+            }
+            binding.ivDwelling.setOnClickListener {
+                println("Dwelling: " + dwelling.id)
+                findNavController().navigate(
+                    SurfaceFragmentDirections.actionNavSurfaceToNavDwelling(dwelling.id)
+                )
             }
         }
 
-/*        binding.skill1.text = "AUTO\nATTACK"
-        binding.skill2.text = "FEIGN\nDEAD"
-        binding.skill3.text = "BERSERK"
-        binding.skill4.text = "HIDE"*/
-
-        binding.ivDwelling.setOnClickListener {
-            findNavController().navigate(
-                SurfaceFragmentDirections.actionNavSurfaceToNavDwelling(1)
-            )
-        }
 
     }
 

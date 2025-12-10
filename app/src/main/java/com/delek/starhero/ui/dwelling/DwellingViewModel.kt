@@ -30,9 +30,9 @@ class DwellingViewModel @Inject constructor(
         }
     }
 
-    fun getGroupByStart(start: Int) {
+    fun getGroupByDwelling(dwelling: Int) {
         viewModelScope.launch {
-            group.value = groupRepo.getGroupByStart(start)
+            group.value = groupRepo.getGroupByDwelling(dwelling)
         }
     }
 

@@ -40,7 +40,7 @@ class DwellingFragment : Fragment() {
     }
 
     private fun initUI() {
-        viewModel.getDwellingById(args.id)
+        viewModel.getDwellingById(args.dwellingId)
         viewModel.dwelling.observe(viewLifecycleOwner) { dwelling ->
             binding.dwellingName.text = dwelling.name
         }
@@ -58,7 +58,7 @@ class DwellingFragment : Fragment() {
         binding.rvNative.layoutManager = GridLayoutManager(context, 4)
         binding.rvNative.adapter = nativeAdapter
         // Update Adapters
-        viewModel.getGroupByStart(args.id)
+        viewModel.getGroupByDwelling(args.dwellingId)
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.group.observe(viewLifecycleOwner) { group ->

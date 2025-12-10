@@ -143,6 +143,7 @@ class SettingsFragment : Fragment() {
             data.edit().putInt("hero", 0).apply()
             data.edit().putInt("planet", 0).apply()
             viewModel.deleteDwellings()
+            viewModel.deleteGroups()
             //viewModel.deletePrimaryKeyIndex()
             val i = Intent(activity, MainActivity::class.java)
             MainActivity.stopPlayer()
