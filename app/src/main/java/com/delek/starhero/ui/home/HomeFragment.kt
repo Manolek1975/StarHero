@@ -41,7 +41,6 @@ class HomeFragment : Fragment() {
                 )
             } else {
                 val planet = data.getInt("planet", 0)
-                println(planet)
                 findNavController().navigate(
                     HomeFragmentDirections.actionNavHomeToNavSurface(planet)
                 )

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <string-array name="name_planets">
         <item>Umma</item>
@@ -103,7 +103,7 @@
     </string-array>
 
     <string-array name="image_planets">
-        <item>p_111</item>
+        <item tools:ignore="Typos">p_111</item>
         <item>p_102</item>
         <item>p_103</item>
         <item>p_101</item>
@@ -204,7 +204,7 @@
     </string-array>
 
     <string-array name="surface_planets">
-        <item>surface11</item>
+        <item tools:ignore="Typos">surface11</item>
         <item>surface02</item>
         <item>surface13</item>
         <item>surface09</item>
@@ -215,7 +215,7 @@
         <item>surface05</item>
         <item>surface23</item>
         <item>surface22</item>
-        <item>surface11</item>
+        <item tools:ignore="Typos">surface11</item>
         <item>surface10</item>
         <item>surface21</item>
         <item>surface22</item>

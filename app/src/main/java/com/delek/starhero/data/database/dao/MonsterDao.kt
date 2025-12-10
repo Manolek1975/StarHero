@@ -1,0 +1,24 @@
+package com.delek.starhero.data.database.dao
+
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import com.delek.starhero.data.database.entity.MonsterEntity
+
+@Dao
+interface MonsterDao {
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(monsters: List<MonsterEntity>)
+
+    @Query("SELECT * FROM monsters")
+    suspend fun getAllMonsters(): List<MonsterEntity>
+
+    @Query("SELECT * FROM monsters WHERE id = :id")
+    suspend fun getAdviceMonsterById(id: Int): MonsterEntity
+
+    @Query("SELECT * FROM monsters WHERE id = :id")
+    suspend fun getSoundMonsterById(id: Int): MonsterEntity
+
+}
