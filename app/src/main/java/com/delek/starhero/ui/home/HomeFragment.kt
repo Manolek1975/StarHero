@@ -42,7 +42,7 @@ class HomeFragment : Fragment() {
             } else {
                 val planet = data.getInt("planet", 0)
                 findNavController().navigate(
-                    HomeFragmentDirections.actionNavHomeToNavSurface(planet)
+                    HomeFragmentDirections.actionNavHomeToNavPlanet(planet)
                 )
             }
         }

@@ -5,7 +5,7 @@
     android:id="@+id/surfaceId"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/surface27"
+    android:background="@drawable/s_101"
     tools:context=".ui.surface.SurfaceFragment">
 
     <androidx.appcompat.widget.AppCompatTextView

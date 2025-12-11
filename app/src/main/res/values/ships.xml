@@ -24,25 +24,25 @@
     </string-array>
 
     <string-array name="image_ships">
-        <item>s_argo</item>
-        <item>s_seabear</item>
-        <item>s_kilbane</item>
-        <item>s_levis</item>
+        <item>ss_argo</item>
+        <item>ss_seabear</item>
+        <item>ss_kilbane</item>
+        <item>ss_levis</item>
 
-        <item>s_diamond</item>
-        <item>s_rosaura</item>
-        <item>s_minerva</item>
-        <item>s_anson</item>
+        <item>ss_diamond</item>
+        <item>ss_rosaura</item>
+        <item>ss_minerva</item>
+        <item>ss_anson</item>
 
-        <item>s_nepeta</item>
-        <item>s_patriot</item>
-        <item>s_neptune</item>
-        <item>s_astute</item>
+        <item>ss_nepeta</item>
+        <item>ss_patriot</item>
+        <item>ss_neptune</item>
+        <item>ss_astute</item>
 
-        <item>s_cornelia</item>
-        <item>s_urtica</item>
-        <item>s_diana</item>
-        <item>s_dryad</item>
+        <item>ss_cornelia</item>
+        <item>ss_urtica</item>
+        <item>ss_diana</item>
+        <item>ss_dryad</item>
     </string-array>
 
 </resources>

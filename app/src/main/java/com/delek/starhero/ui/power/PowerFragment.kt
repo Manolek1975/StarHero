@@ -80,7 +80,7 @@ class PowerFragment : Fragment() {
         viewModel.planet.observe(viewLifecycleOwner) { planet ->
             data.edit().putInt("planet", planet.id).apply()
             findNavController().navigate(
-                PowerFragmentDirections.actionNavPowerToNavSurface(planet.id)
+                PowerFragmentDirections.actionNavPowerToNavPlanet(planet.id)
             )
         }
     }
