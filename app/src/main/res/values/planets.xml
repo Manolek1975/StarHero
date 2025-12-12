@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <string-array name="name_planets">
         <item>Umma</item>
@@ -103,19 +103,19 @@
     </string-array>
 
     <string-array name="image_planets">
-        <item>p_111</item>
+        <item tools:ignore="Typos">p_111</item>
         <item>p_102</item>
         <item>p_103</item>
         <item>p_101</item>
         <item>p_116</item>
         <item>p_113</item>
         <item>p_115</item>
-        <item>p_122</item>
+        <item>p_114</item>
         <item>p_124</item>
         <item>p_107</item>
         <item>p_106</item>
         <item>p_109</item>
-        <item>p_122</item>
+        <item>p_114</item>
         <item>p_117</item>
         <item>p_127</item>
         <item>p_129</item>
@@ -123,9 +123,9 @@
         <item>p_105</item>
         <item>p_110</item>
         <item>p_125</item>
-        <item>p_122</item>
+        <item>p_114</item>
         <item>p_123</item>
-        <item>p_108</item>
+        <item>p_104</item>
         <item>p_124</item>
         <item>p_102</item>
         <item>p_103</item>
@@ -138,33 +138,33 @@
         <item>p_116</item>
         <item>p_113</item>
         <item>p_115</item>
+        <item>p_114</item>
+        <item>p_123</item>
+        <item>p_104</item>
+        <item>p_124</item>
+        <item>p_130</item>
+        <item>p_112</item>
         <item>p_122</item>
         <item>p_123</item>
-        <item>p_108</item>
+        <item>p_104</item>
+        <item>p_124</item>
+        <item>p_130</item>
+        <item>p_112</item>
+        <item>p_122</item>
+        <item>p_123</item>
+        <item>p_104</item>
         <item>p_124</item>
         <item>p_130</item>
         <item>p_118</item>
         <item>p_122</item>
         <item>p_123</item>
-        <item>p_108</item>
+        <item>p_112</item>
         <item>p_124</item>
         <item>p_130</item>
         <item>p_118</item>
         <item>p_122</item>
         <item>p_123</item>
-        <item>p_108</item>
-        <item>p_124</item>
-        <item>p_130</item>
-        <item>p_118</item>
-        <item>p_122</item>
-        <item>p_123</item>
-        <item>p_108</item>
-        <item>p_124</item>
-        <item>p_130</item>
-        <item>p_118</item>
-        <item>p_122</item>
-        <item>p_123</item>
-        <item>p_108</item>
+        <item>p_112</item>
         <item>p_124</item>
         <item>p_130</item>
         <item>p_118</item>
@@ -201,19 +201,19 @@
     </string-array>
 
     <string-array name="surface_planets">
-        <item>s_111</item>
+        <item tools:ignore="Typos">s_111</item>
         <item>s_102</item>
         <item>s_103</item>
         <item>s_101</item>
         <item>s_116</item>
         <item>s_113</item>
         <item>s_115</item>
-        <item>s_122</item>
+        <item>s_114</item>
         <item>s_124</item>
         <item>s_107</item>
         <item>s_106</item>
         <item>s_109</item>
-        <item>s_122</item>
+        <item>s_114</item>
         <item>s_117</item>
         <item>s_127</item>
         <item>s_129</item>
@@ -221,9 +221,9 @@
         <item>s_105</item>
         <item>s_110</item>
         <item>s_125</item>
-        <item>s_122</item>
+        <item>s_114</item>
         <item>s_123</item>
-        <item>s_108</item>
+        <item>s_104</item>
         <item>s_124</item>
         <item>s_102</item>
         <item>s_103</item>
@@ -236,33 +236,33 @@
         <item>s_116</item>
         <item>s_113</item>
         <item>s_115</item>
+        <item>s_114</item>
+        <item>s_123</item>
+        <item>s_104</item>
+        <item>s_124</item>
+        <item>s_130</item>
+        <item>s_112</item>
         <item>s_122</item>
         <item>s_123</item>
-        <item>s_108</item>
+        <item>s_104</item>
+        <item>s_124</item>
+        <item>s_130</item>
+        <item>s_112</item>
+        <item>s_122</item>
+        <item>s_123</item>
+        <item>s_104</item>
         <item>s_124</item>
         <item>s_130</item>
         <item>s_118</item>
         <item>s_122</item>
         <item>s_123</item>
-        <item>s_108</item>
+        <item>s_112</item>
         <item>s_124</item>
         <item>s_130</item>
         <item>s_118</item>
         <item>s_122</item>
         <item>s_123</item>
-        <item>s_108</item>
-        <item>s_124</item>
-        <item>s_130</item>
-        <item>s_118</item>
-        <item>s_122</item>
-        <item>s_123</item>
-        <item>s_108</item>
-        <item>s_124</item>
-        <item>s_130</item>
-        <item>s_118</item>
-        <item>s_122</item>
-        <item>s_123</item>
-        <item>s_108</item>
+        <item>s_112</item>
         <item>s_124</item>
         <item>s_130</item>
         <item>s_118</item>

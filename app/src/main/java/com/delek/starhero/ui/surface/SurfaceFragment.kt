@@ -44,20 +44,14 @@ class SurfaceFragment : Fragment() {
             binding.tvPlanet.text = planet.name
         }
 
-        viewModel.getDwellingByPlanet(args.planetId)
+        binding.ivMonster.setImageResource(R.drawable.m_102)
+        binding.tvMonster.text = "Antmen"
+/*        viewModel.getDwellingByPlanet(args.planetId)
         viewModel.dwelling.observe(viewLifecycleOwner) { dwelling ->
             if (dwelling != null) {
                 val id = Util.getResId(dwelling.image, R.drawable::class.java)
-                binding.ivDwelling.setImageResource(id)
-                binding.tvDwelling.text = dwelling.name
             }
-            binding.ivDwelling.setOnClickListener {
-                println("Dwelling: " + dwelling.id)
-                findNavController().navigate(
-                    SurfaceFragmentDirections.actionNavSurfaceToNavDwelling(dwelling.id)
-                )
-            }
-        }
+        }*/
 
 
     }

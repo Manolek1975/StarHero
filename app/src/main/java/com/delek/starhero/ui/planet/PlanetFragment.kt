@@ -31,12 +31,6 @@ class PlanetFragment : Fragment() {
     ): View {
         _binding = FragmentPlanetBinding.inflate(inflater, container, false)
         initUI()
-/*            binding.ivDwelling.setOnClickListener {
-                println("Dwelling: " + dwelling.id)
-                findNavController().navigate(
-                    SurfaceFragmentDirections.actionNavSurfaceToNavDwelling(dwelling.id)
-                )
-            }*/
         return binding.root
     }
 
@@ -55,7 +49,7 @@ class PlanetFragment : Fragment() {
 
         viewModel.getDwellingByPlanet(args.planetId)
         viewModel.dwelling.observe(viewLifecycleOwner) { dwelling ->
-            if (dwelling != null) {
+            if (dwelling != null && dwelling.id<=7) {
                 val id = Util.getResId(dwelling.image, R.drawable::class.java)
                 binding.ivDwelling.leftDrawable(id, R.dimen.icon_size)
                 binding.ivDwelling.text = dwelling.name

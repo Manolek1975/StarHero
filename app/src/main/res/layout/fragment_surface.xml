@@ -23,25 +23,25 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/iv_dwelling"
+        android:id="@+id/iv_monster"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         android:contentDescription="@string/todo"
-        tools:src="@drawable/d_inn"
+        tools:src="@drawable/m_101"
         app:layout_constraintTop_toTopOf="@+id/tv_planet"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_dwelling"
+        android:id="@+id/tv_monster"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/gold"
         android:padding="4dp"
-        tools:text="DISCO BAR"
+        tools:text="Ratman"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/iv_dwelling"
+        app:layout_constraintTop_toBottomOf="@id/iv_monster"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
