@@ -50,6 +50,15 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_home
             ), drawerLayout
         )
+        //Disable drawer layout in Home fragment
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when(destination.id){
+                R.id.nav_home -> drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+                R.id.nav_select -> drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+                R.id.nav_detail -> drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+                else -> drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+            }
+        }
         navView.setupWithNavController(navController)
     }
 

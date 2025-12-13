@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.delek.starhero.R
 import com.delek.starhero.core.Util
@@ -46,12 +45,12 @@ class SurfaceFragment : Fragment() {
 
         binding.ivMonster.setImageResource(R.drawable.m_102)
         binding.tvMonster.text = "Antmen"
-/*        viewModel.getDwellingByPlanet(args.planetId)
-        viewModel.dwelling.observe(viewLifecycleOwner) { dwelling ->
-            if (dwelling != null) {
-                val id = Util.getResId(dwelling.image, R.drawable::class.java)
-            }
-        }*/
+        /*        viewModel.getDwellingByPlanet(args.planetId)
+                viewModel.dwelling.observe(viewLifecycleOwner) { dwelling ->
+                    if (dwelling != null) {
+                        val id = Util.getResId(dwelling.image, R.drawable::class.java)
+                    }
+                }*/
 
 
     }

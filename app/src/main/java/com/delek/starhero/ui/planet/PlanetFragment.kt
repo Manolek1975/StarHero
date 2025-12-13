@@ -40,11 +40,6 @@ class PlanetFragment : Fragment() {
             binding.tvPlanet.text = planet.name
             val id = Util.getResId(planet.image, R.drawable::class.java)
             binding.ivPlanet.setImageResource(id)
-            binding.ivPlanet.setOnClickListener {
-                findNavController().navigate(
-                    PlanetFragmentDirections.actionNavPlanetToNavSurface(planet.id)
-                )
-            }
         }
 
         viewModel.getDwellingByPlanet(args.planetId)
@@ -52,10 +47,17 @@ class PlanetFragment : Fragment() {
             if (dwelling != null && dwelling.id<=7) {
                 val id = Util.getResId(dwelling.image, R.drawable::class.java)
                 binding.ivDwelling.leftDrawable(id, R.dimen.icon_size)
-                binding.ivDwelling.text = dwelling.name
+                binding.tvDwelling.text = dwelling.name
                 binding.ivPlanet.setOnClickListener {
                     findNavController().navigate(
                         PlanetFragmentDirections.actionNavPlanetToNavDwelling(dwelling.id)
+                    )
+                }
+            } else {
+                binding.tvDwelling.background = null
+                binding.ivPlanet.setOnClickListener {
+                    findNavController().navigate(
+                        PlanetFragmentDirections.actionNavPlanetToNavSurface(args.planetId)
                     )
                 }
             }

@@ -13,7 +13,6 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.delek.starhero.R
@@ -52,11 +51,11 @@ class PowerFragment : Fragment() {
     }
 
     private fun initListeners() {
-        binding.ivCancel.setOnClickListener {
+/*        binding.ivCancel.setOnClickListener {
             findNavController().navigate(
                 PowerFragmentDirections.actionPowerFragmentToNavDetail(args.heroId)
             )
-        }
+        }*/
         binding.ivCheck.setOnClickListener {
             initStars()
             initAdviceChits()
@@ -77,12 +76,12 @@ class PowerFragment : Fragment() {
 
         viewModel.getPlanetByDwelling(origin)
 
-        viewModel.planet.observe(viewLifecycleOwner) { planet ->
+/*        viewModel.planet.observe(viewLifecycleOwner) { planet ->
             data.edit().putInt("planet", planet.id).apply()
             findNavController().navigate(
                 PowerFragmentDirections.actionNavPowerToNavPlanet(planet.id)
             )
-        }
+        }*/
     }
 
     private fun initDwellings() {

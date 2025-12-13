@@ -1,6 +1,8 @@
 package com.delek.starhero.ui.detail
 
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -26,6 +28,7 @@ class DetailFragment : Fragment() {
     private val viewModel: DetailViewModel by viewModels()
     private var _binding: FragmentDetailBinding? = null
     private val binding get() = _binding!!
+    private lateinit var data: SharedPreferences
     private val args: DetailFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -33,14 +36,57 @@ class DetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentDetailBinding.inflate(inflater, container, false)
+        data = requireContext().getSharedPreferences("data", Context.MODE_PRIVATE)
         initUI()
         return binding.root
     }
 
     private fun initUI() {
         initHero()
+        initDwellings()
         initNatives(args.heroId)
-        initListeners()
+        initOrigin()
+    }
+
+    private fun initOrigin() {
+        var origin: Int
+        data.edit().putInt("hero", args.heroId).apply()
+        viewModel.getHeroById(args.heroId)
+        viewModel.hero.observe(viewLifecycleOwner) {
+            origin = it.origin
+            viewModel.getPlanetByDwelling(origin)
+            viewModel.planet.observe(viewLifecycleOwner) { planet ->
+                data.edit().putInt("planet", planet.id).apply()
+                initListeners()
+            }
+        }
+    }
+
+    private fun initListeners() {
+        binding.ivCancel.setOnClickListener {
+            findNavController().navigate(
+                DetailFragmentDirections.actionNavDetailToNavSelect()
+            )
+        }
+        binding.ivCheck.setOnClickListener {
+            val planet = data.getInt("planet", 0)
+            println("PLANET: $planet")
+            findNavController().navigate(
+                DetailFragmentDirections.actionNavDetailToNavPlanet(planet)
+            )
+        }
+    }
+
+    private fun initDwellings() {
+        var ran: Int
+        val planets = mutableListOf(0)
+        for (d in 1..15) {
+            do {
+                ran = (1..95).random()
+            } while (planets.contains(ran))
+            planets.add(ran)
+            viewModel.updateDwellingPlanet(d, ran)
+        }
     }
 
     private fun initHero() {
@@ -77,8 +123,6 @@ class DetailFragment : Fragment() {
                 binding.ivShip.leftDrawable(shipId, R.dimen.icon_size)
             }
         }
-
-
     }
 
     private fun initNatives(id: Int) {
@@ -109,19 +153,6 @@ class DetailFragment : Fragment() {
             for (i in it) enemy.add(i.name)
             if (enemy.isEmpty()) binding.tvEnemy.visibility = View.GONE
             binding.tvEnemy.text = enemy.joinToString(prefix = "ENEMY: ", separator = ", ")
-        }
-    }
-
-    private fun initListeners() {
-        binding.ivCancel.setOnClickListener {
-            findNavController().navigate(
-                DetailFragmentDirections.actionNavDetailToNavSelect()
-            )
-        }
-        binding.ivCheck.setOnClickListener {
-            findNavController().navigate(
-                DetailFragmentDirections.actionNavDetailToPowerFragment(args.heroId)
-            )
         }
     }
 

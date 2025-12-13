@@ -12,9 +12,9 @@
         android:id="@+id/tv_planet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/head_rounded"
-        android:padding="8dp"
+        android:padding="4dp"
         android:textColor="@color/black"
         android:textSize="24sp"
         tools:text="PLANET"
@@ -35,12 +35,9 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_monster"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/gold"
-        android:padding="4dp"
+        style="@style/rounded_text"
         tools:text="Ratman"
-        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@id/iv_monster"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
