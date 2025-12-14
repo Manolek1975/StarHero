@@ -48,4 +48,10 @@ class DwellingViewModel @Inject constructor(
         }
     }
 
+    fun getDwellingByPlanet(id: Int) {
+        viewModelScope.launch {
+            dwelling.postValue(dwellingRepo.getDwellingByPlanet(id))
+        }
+    }
+
 }

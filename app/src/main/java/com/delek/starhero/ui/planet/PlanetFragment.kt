@@ -44,13 +44,13 @@ class PlanetFragment : Fragment() {
 
         viewModel.getDwellingByPlanet(args.planetId)
         viewModel.dwelling.observe(viewLifecycleOwner) { dwelling ->
-            if (dwelling != null && dwelling.id<=7) {
+            if (dwelling != null) {
                 val id = Util.getResId(dwelling.image, R.drawable::class.java)
                 binding.ivDwelling.leftDrawable(id, R.dimen.icon_size)
                 binding.tvDwelling.text = dwelling.name
                 binding.ivPlanet.setOnClickListener {
                     findNavController().navigate(
-                        PlanetFragmentDirections.actionNavPlanetToNavDwelling(dwelling.id)
+                        PlanetFragmentDirections.actionNavPlanetToNavDwelling(args.planetId, dwelling.id)
                     )
                 }
             } else {

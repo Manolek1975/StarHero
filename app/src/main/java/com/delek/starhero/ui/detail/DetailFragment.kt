@@ -70,7 +70,6 @@ class DetailFragment : Fragment() {
         }
         binding.ivCheck.setOnClickListener {
             val planet = data.getInt("planet", 0)
-            println("PLANET: $planet")
             findNavController().navigate(
                 DetailFragmentDirections.actionNavDetailToNavPlanet(planet)
             )

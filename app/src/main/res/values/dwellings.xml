@@ -3,40 +3,42 @@
 
     <string-array name="name_dwellings">
         <item>DISCO BAR</item>
-        <item>HOUSE</item>
+        <item>OUTPOST</item>
         <item>GUARD</item>
         <item>CHAPEL</item>
-        <item>GHOST</item>
-        <item>LARGE\nCAMPFIRE</item>
-        <item>SMALL\nCAMPFIRE</item>
-        <item>ALTAR</item>
-        <item>STATUE</item>
-        <item>LAIR</item>
+
+        <item>WIND FARMS</item>
+        <item>PLAIN CAMP</item>
+        <item>WOOD CAMP</item>
+        <item>SILO</item>
+
+        <item>TOWER</item>
+        <item>POWER PLANT</item>
         <item>VAULT</item>
-        <item>SHRINE</item>
-        <item>CAIRNS</item>
-        <item>HOARD</item>
+        <item>FACTORY</item>
+        <item>SYNCHROTRON</item>
+        <item>LABORATORY</item>
         <item>POOL</item>
     </string-array>
 
     <string-array name="image_dwellings">
-        <item>d_inn</item>
-        <item>d_house</item>
-        <item>d_guard</item>
-        <item>d_chapel</item>
-        <item>d_ghost</item>
+        <item>d_101</item>
+        <item>d_102</item>
+        <item>d_103</item>
+        <item>d_104</item>
+        <item>d_105</item>
 
-        <item>d_large_campfire</item>
-        <item>d_small_campfire</item>
-        <item>d_altar</item>
-        <item>d_statue</item>
-        <item>d_lair</item>
+        <item>d_106</item>
+        <item>d_107</item>
+        <item>d_108</item>
+        <item>d_109</item>
+        <item>d_110</item>
 
-        <item>d_vault</item>
-        <item>d_shrine</item>
-        <item>d_cairns</item>
-        <item>d_hoard</item>
-        <item>d_pool</item>
+        <item>d_111</item>
+        <item>d_112</item>
+        <item>d_113</item>
+        <item>d_114</item>
+        <item>d_115</item>
     </string-array>
 
 </resources>

@@ -11,6 +11,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
+import com.delek.starhero.R
+import com.delek.starhero.core.Util
 import com.delek.starhero.databinding.FragmentDwellingBinding
 import com.delek.starhero.ui.dwelling.GroupAdapter.Companion.selected
 import dagger.hilt.android.AndroidEntryPoint
@@ -39,11 +41,31 @@ class DwellingFragment : Fragment() {
         return binding.root
     }
 
-    private fun initUI() {
-        viewModel.getDwellingById(args.dwellingId)
-        viewModel.dwelling.observe(viewLifecycleOwner) { dwelling ->
-            binding.dwellingName.text = dwelling.name
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.ivDwelling.setOnClickListener {
+            selected = 0
+            requireActivity().onBackPressedDispatcher.onBackPressed()
         }
+    }
+
+    private fun initUI() {
+        initHead()
+        initNatives()
+    }
+
+    private fun initHead() {
+        viewModel.getDwellingByPlanet(args.planetId)
+        viewModel.dwelling.observe(viewLifecycleOwner) { dwelling ->
+            if (dwelling != null && dwelling.id <= 7) {
+                val id = Util.getResId(dwelling.image, R.drawable::class.java)
+                binding.ivDwelling.setImageResource(id)
+                binding.tvDwelling.text = dwelling.name
+            }
+        }
+    }
+
+    private fun initNatives() {
         // Adapter Group
         groupAdapter = GroupAdapter(onItemSelected = {
             viewModel.getNativesByGroup(it.id)
@@ -69,14 +91,6 @@ class DwellingFragment : Fragment() {
                     }
                 }
             }
-        }
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding.arrowBack.setOnClickListener {
-            selected = 0
-            requireActivity().onBackPressedDispatcher.onBackPressed()
         }
     }
 }
