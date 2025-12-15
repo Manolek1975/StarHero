@@ -9,15 +9,15 @@
         <item>Druid</item>
         <item>Dwarf</item>
         <item>Hunter</item>
-        <item>Psionic</item>
+        <item>Magician</item>
 
         <item>Pilgrim</item>
         <item>Knight</item>
-        <item>Kinetic</item>
+        <item>Sorcerer</item>
         <item>Rogue</item>
 
         <item>Witch</item>
-        <item>Balor</item>
+        <item>Sucubo</item>
         <item>Enchanter</item>
         <item>Vixen</item>
     </string-array>
@@ -27,16 +27,19 @@
         <item>h_banzo</item>
         <item>h_blackguard</item>
         <item>h_captain</item>
+
         <item>h_druid</item>
         <item>h_dwarf</item>
         <item>h_hunter</item>
-        <item>h_psionic</item>
+        <item>h_magician</item>
+
         <item>h_pilgrim</item>
         <item>h_knight</item>
-        <item>h_kinetic</item>
+        <item>h_sorcerer</item>
         <item>h_rogue</item>
+
         <item>h_witch</item>
-        <item>h_balor</item>
+        <item>h_sucubo</item>
         <item>h_enchanter</item>
         <item>h_vixen</item>
     </string-array>
