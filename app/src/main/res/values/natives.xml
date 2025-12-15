@@ -52,6 +52,13 @@
         <item>WHQ</item>
         <item>W1</item>
         <item>W2</item>
+
+        <item>V1</item>
+        <item>V2</item>
+        <item>V3</item>
+        <item>V4</item>
+        <item>V5</item>
+        <item>V6</item>
     </string-array>
 
     <string-array name="type_natives">
@@ -105,6 +112,14 @@
         <item>ARCHER</item>
         <item>ARCHER</item>
         <item>ARCHER</item>
+
+        <item>Visitor</item>
+        <item>Visitor</item>
+        <item>Visitor</item>
+        <item>Visitor</item>
+        <item>Visitor</item>
+        <item>Visitor</item>
+
     </string-array>
 
     <string-array name="group_natives">
@@ -158,6 +173,14 @@
         <item>9</item>
         <item>9</item>
         <item>9</item>
+
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+
     </string-array>
 
     <string-array name="image_natives">
@@ -211,6 +234,13 @@
         <item>n_archer</item>
         <item>n_archer</item>
         <item>n_archer</item>
+
+        <item>n_crone</item>
+        <item>n_scholar</item>
+        <item>n_shaman</item>
+        <item>n_warlock</item>
+        <item>n_bard</item>
+        <item>n_pandora</item>
     </string-array>
 
     <string-array name="weight_natives">
@@ -256,6 +286,12 @@
         <item>M</item>
         <item>M</item>
         <item>M</item>
+        <item>L</item>
+        <item>L</item>
+        <item>L</item>
+        <item>L</item>
+        <item>L</item>
+        <item>L</item>
     </string-array>
 
     <string-array name="weapon_natives">
@@ -301,6 +337,12 @@
         <item>1</item>
         <item>2</item>
         <item>2</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
     </string-array>
 
     <string-array name="armor_natives">
@@ -343,6 +385,12 @@
         <item>1</item>
         <item>1</item>
         <item>1</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -391,6 +439,12 @@
         <item />
         <item />
         <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
     </string-array>
 
     <string-array name="move_a_natives">
@@ -436,6 +490,12 @@
         <item>4</item>
         <item>4</item>
         <item>4</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
     </string-array>
 
     <string-array name="fight_b_natives">
@@ -481,6 +541,12 @@
         <item>M1**</item>
         <item>L1**</item>
         <item>L1**</item>
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
     </string-array>
 
     <string-array name="move_b_natives">
@@ -526,6 +592,12 @@
         <item>4</item>
         <item>4</item>
         <item>4</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
     </string-array>
     
     <string-array name="hire_natives">
@@ -571,6 +643,12 @@
         <item>2</item>
         <item>2</item>
         <item>2</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
     </string-array>
 
     <string-array name="bounty_natives">
@@ -616,6 +694,12 @@
         <item>4</item>
         <item>4</item>
         <item>4</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
     </string-array>
 
 

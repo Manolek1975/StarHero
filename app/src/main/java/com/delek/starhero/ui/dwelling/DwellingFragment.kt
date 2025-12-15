@@ -57,7 +57,7 @@ class DwellingFragment : Fragment() {
     private fun initHead() {
         viewModel.getDwellingByPlanet(args.planetId)
         viewModel.dwelling.observe(viewLifecycleOwner) { dwelling ->
-            if (dwelling != null && dwelling.id <= 7) {
+            if (dwelling != null) {
                 val id = Util.getResId(dwelling.image, R.drawable::class.java)
                 binding.ivDwelling.setImageResource(id)
                 binding.tvDwelling.text = dwelling.name
