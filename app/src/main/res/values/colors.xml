@@ -9,6 +9,7 @@
     <color name="gray">#FF9E9E9E</color>
     <color name="transparent">#00000000</color>
 
+    <color name="gray_dark">#505050</color>
     <color name="yellow">#FFFFEB3B</color>
     <color name="cyan">#FF03DAC5</color>
     <color name="gold">#C3A03B</color>

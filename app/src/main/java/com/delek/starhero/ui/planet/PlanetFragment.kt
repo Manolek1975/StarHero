@@ -1,5 +1,7 @@
 package com.delek.starhero.ui.planet
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,17 +26,27 @@ class PlanetFragment : Fragment() {
     private var _binding: FragmentPlanetBinding? = null
     private val binding get() = _binding!!
     private val args: PlanetFragmentArgs by navArgs()
+    private lateinit var data: SharedPreferences
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentPlanetBinding.inflate(inflater, container, false)
+        data = requireContext().getSharedPreferences("data", Context.MODE_PRIVATE)
         initUI()
         return binding.root
     }
 
     private fun initUI() {
+
+        val ship = data.getInt("ship", 0)
+        viewModel.getShipById(ship)
+        viewModel.ship.observe(viewLifecycleOwner) {
+            val id = Util.getResId(it.image, R.drawable::class.java)
+            binding.ivShip.setImageResource(id)
+        }
+
         viewModel.getPlanetById(args.planetId)
         viewModel.planet.observe(viewLifecycleOwner) { planet ->
             binding.tvPlanet.text = planet.name
@@ -50,7 +62,10 @@ class PlanetFragment : Fragment() {
                 binding.tvDwelling.text = dwelling.name
                 binding.ivPlanet.setOnClickListener {
                     findNavController().navigate(
-                        PlanetFragmentDirections.actionNavPlanetToNavDwelling(args.planetId, dwelling.id)
+                        PlanetFragmentDirections.actionNavPlanetToNavDwelling(
+                            args.planetId,
+                            dwelling.id
+                        )
                     )
                 }
             } else {

@@ -46,15 +46,6 @@
             android:id="@+id/action_nav_detail_to_nav_planet"
             app:destination="@id/nav_planet" />
     </fragment>
-    <fragment
-        android:id="@+id/nav_power"
-        android:name="com.delek.starhero.ui.power.PowerFragment"
-        android:label="fragment_power"
-        tools:layout="@layout/fragment_power" >
-        <argument
-            android:name="hero_id"
-            app:argType="integer" />
-    </fragment>
 
     <fragment
         android:id="@+id/nav_settings"
@@ -114,9 +105,6 @@
         <argument
             android:name="planetId"
             app:argType="integer" />
-        <action
-            android:id="@+id/action_nav_surface_to_nav_dwelling"
-            app:destination="@id/nav_dwelling" />
     </fragment>
 
     <fragment
@@ -131,5 +119,11 @@
             android:name="dwellingId"
             app:argType="integer" />
     </fragment>
+
+    <fragment
+        android:id="@+id/nav_character"
+        android:name="com.delek.starhero.ui.character.CharacterFragment"
+        android:label="fragment_character"
+        tools:layout="@layout/fragment_character" />
 
 </navigation>

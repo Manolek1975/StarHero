@@ -73,6 +73,7 @@ class MainActivity : AppCompatActivity() {
         val navigationView: NavigationView = this.findViewById(R.id.nav_view)
         val navMenu: Menu = navigationView.menu
         navMenu.findItem(R.id.nav_home).setVisible(false)
+        navMenu.findItem(R.id.nav_select).setVisible(false)
         navMenu.findItem(R.id.nav_detail).setVisible(false)
     }
 

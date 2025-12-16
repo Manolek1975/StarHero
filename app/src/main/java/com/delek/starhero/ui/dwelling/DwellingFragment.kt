@@ -52,6 +52,7 @@ class DwellingFragment : Fragment() {
     private fun initUI() {
         initHead()
         initNatives()
+        initActions()
     }
 
     private fun initHead() {
@@ -92,5 +93,13 @@ class DwellingFragment : Fragment() {
                 }
             }
         }
+    }
+
+    private fun initActions() {
+        binding.action1.text = getString(R.string.talk)
+        binding.action2.text = getString(R.string.trade)
+        binding.action3.text = getString(R.string.hire)
+        binding.action4.text = getString(R.string.attack)
+
     }
 }

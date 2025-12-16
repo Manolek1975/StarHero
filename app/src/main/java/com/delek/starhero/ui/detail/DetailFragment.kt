@@ -51,6 +51,7 @@ class DetailFragment : Fragment() {
     private fun initOrigin() {
         var origin: Int
         data.edit().putInt("hero", args.heroId).apply()
+        data.edit().putInt("ship", 1).apply()
         viewModel.getHeroById(args.heroId)
         viewModel.hero.observe(viewLifecycleOwner) {
             origin = it.origin
@@ -79,12 +80,12 @@ class DetailFragment : Fragment() {
     private fun initDwellings() {
         var ran: Int
         val planets = mutableListOf(0)
-        for (d in 1..15) {
+        for (dwelling in 1..15) {
             do {
                 ran = (1..95).random()
             } while (planets.contains(ran))
             planets.add(ran)
-            viewModel.updateDwellingPlanet(d, ran)
+            viewModel.updateDwellingPlanet(dwelling, ran)
         }
     }
 

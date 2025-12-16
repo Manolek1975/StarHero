@@ -142,6 +142,7 @@ class SettingsFragment : Fragment() {
         dialogBuilder.setPositiveButton("DELETE") { _, _: Int ->
             data.edit().putInt("hero", 0).apply()
             data.edit().putInt("planet", 0).apply()
+            data.edit().putInt("ship", 1).apply()
             viewModel.deleteDwellings()
             viewModel.deleteGroups()
             //viewModel.deletePrimaryKeyIndex()
