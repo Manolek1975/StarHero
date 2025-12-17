@@ -9,8 +9,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.delek.starhero.R
+import com.delek.starhero.data.database.entity.HeroItemEntity
 import com.delek.starhero.databinding.FragmentCharacterBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CharacterFragment : Fragment() {
 
     companion object {
@@ -33,10 +36,15 @@ class CharacterFragment : Fragment() {
     }
 
     private fun initUI() {
+        val heroItem = HeroItemEntity(0, 2, 0)
+
+        viewModel.insertHeroItem(heroItem)
+
         binding.tvHeroName.text = "Amazon"
         binding.ivHeroImage.setImageResource(R.drawable.h_amazon)
         binding.ivHead.setImageResource(R.drawable.t_101)
         binding.ivNeck.setImageResource(R.drawable.t_101)
 
     }
+
 }
