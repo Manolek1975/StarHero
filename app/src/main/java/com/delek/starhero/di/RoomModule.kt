@@ -81,4 +81,8 @@ object RoomModule {
     @Provides
     fun provideAdviceChitDao(db: StarHeroDatabase) = db.getAdviceChitDao()
 
+    @Singleton
+    @Provides
+    fun provideTreasureDao(db: StarHeroDatabase) = db.getTreasureDao()
+
 }

@@ -35,6 +35,8 @@ class CharacterFragment : Fragment() {
     private fun initUI() {
         binding.tvHeroName.text = "Amazon"
         binding.ivHeroImage.setImageResource(R.drawable.h_amazon)
+        binding.ivHead.setImageResource(R.drawable.t_101)
+        binding.ivNeck.setImageResource(R.drawable.t_101)
 
     }
 }

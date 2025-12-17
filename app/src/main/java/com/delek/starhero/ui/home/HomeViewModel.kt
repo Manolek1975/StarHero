@@ -17,6 +17,7 @@ import com.delek.starhero.domain.model.Skill
 import com.delek.starhero.domain.model.Star
 import com.delek.starhero.domain.model.StartPower
 import com.delek.starhero.domain.model.Surface
+import com.delek.starhero.domain.model.Treasure
 import com.delek.starhero.domain.model.Weapon
 import com.delek.starhero.domain.usecase.GetAdviceChitUseCase
 import com.delek.starhero.domain.usecase.GetDwellingUseCase
@@ -32,6 +33,7 @@ import com.delek.starhero.domain.usecase.GetSkillUseCase
 import com.delek.starhero.domain.usecase.GetStarUseCase
 import com.delek.starhero.domain.usecase.GetStartPowerUseCase
 import com.delek.starhero.domain.usecase.GetSurfaceUseCase
+import com.delek.starhero.domain.usecase.GetTreasureUseCase
 import com.delek.starhero.domain.usecase.GetWeaponUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -53,7 +55,8 @@ class HomeViewModel @Inject constructor(
     private val getStarUseCase: GetStarUseCase,
     private val getPlanetUseCase: GetPlanetUseCase,
     private val getSurfaceUseCase: GetSurfaceUseCase,
-    private val adviceChitUseCase: GetAdviceChitUseCase
+    private val adviceChitUseCase: GetAdviceChitUseCase,
+    private val getTreasureUseCase: GetTreasureUseCase
 ): ViewModel() {
 
     private val heroList = MutableLiveData<Hero>()
@@ -71,6 +74,8 @@ class HomeViewModel @Inject constructor(
     private val planetList = MutableLiveData<Planet>()
     private val surfaceList = MutableLiveData<Surface>()
     private val adviceChitList = MutableLiveData<List<AdviceChit>>()
+    private val treasureList = MutableLiveData<List<Treasure>>()
+
 
     fun onCreate() {
         viewModelScope.launch {
@@ -162,7 +167,12 @@ class HomeViewModel @Inject constructor(
             if (monster.isNotEmpty()) {
                 monsterList.postValue(monster)
             }
-
+        }
+        viewModelScope.launch {
+            val treasure = getTreasureUseCase()
+            if (treasure.isNotEmpty()) {
+                treasureList.postValue(treasure)
+            }
         }
    }
 

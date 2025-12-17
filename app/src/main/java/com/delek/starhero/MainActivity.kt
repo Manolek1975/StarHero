@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         val navController = navHost.navController
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home
+                R.id.nav_sector
             ), drawerLayout
         )
         //Disable drawer layout in Home fragment
@@ -60,6 +60,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
         navView.setupWithNavController(navController)
+/*        val header = navView.getHeaderView(0)
+        val icon: ImageView = header.findViewById(R.id.imageView)
+        icon.setImageResource(R.drawable.h_amazon)*/
     }
 
     private fun initMedia() {
