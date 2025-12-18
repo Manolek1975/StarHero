@@ -7,5 +7,7 @@ import androidx.room.PrimaryKey
 data class HeroItemEntity(
     @PrimaryKey(autoGenerate = true) val id: Int,
     val itemId: Int,
-    val box: Int
+    val box: Int,
+    val equip: Boolean
+
 )

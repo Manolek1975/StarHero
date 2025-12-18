@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.delek.starhero.R
-import com.delek.starhero.data.database.entity.HeroItemEntity
+import com.delek.starhero.core.Util
 import com.delek.starhero.databinding.FragmentCharacterBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -36,14 +36,22 @@ class CharacterFragment : Fragment() {
     }
 
     private fun initUI() {
-        val heroItem = HeroItemEntity(0, 2, 0)
 
-        viewModel.insertHeroItem(heroItem)
+        // TEST OJO only in fragment TRADE
+/*        val heroItem = HeroItemEntity(0, 2, 0)
+        viewModel.insertHeroItem(heroItem)*/
 
-        binding.tvHeroName.text = "Amazon"
-        binding.ivHeroImage.setImageResource(R.drawable.h_amazon)
-        binding.ivHead.setImageResource(R.drawable.t_101)
-        binding.ivNeck.setImageResource(R.drawable.t_101)
+        val heroId = data.getInt("hero", 0)
+        viewModel.getHeroById(heroId)
+        viewModel.hero.observe(viewLifecycleOwner) {
+            binding.tvHeroName.text = it.name
+            val id = Util.getResId(it.image, R.drawable::class.java)
+            binding.ivHeroImage.setImageResource(id)
+
+        }
+
+        //binding.ivHead.setImageResource(R.drawable.t_101)
+        //binding.ivHead.leftDrawable(R.drawable.t_101, R.dimen.icon_size)
 
     }
 

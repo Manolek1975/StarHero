@@ -15,11 +15,6 @@ class GroupRepository @Inject constructor(private val groupDao: GroupDao) {
         return response.map { it.toDomain() }
     }
 
-    suspend fun getGroupById(id: Int): Group {
-        val response: GroupEntity = groupDao.getById(id)
-        return response.toDomain()
-    }
-
     suspend fun getGroupByDwelling(dwelling: Int): List<Group> {
         val response: List<GroupEntity> = groupDao.getGroupByDwelling(dwelling)
         return response.map { it.toDomain() }
@@ -45,14 +40,8 @@ class GroupRepository @Inject constructor(private val groupDao: GroupDao) {
         return response.map { it.toDomain() }
     }
 
-    suspend fun updateGroupStart(id: Int, planet: Int) {
-        groupDao.updateGroupStart(id, planet)
-    }
-
     suspend fun deleteGroups() {
         groupDao.deleteGroups()
     }
-
-
 
 }

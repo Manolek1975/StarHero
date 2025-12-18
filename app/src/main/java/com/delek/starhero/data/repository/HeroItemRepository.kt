@@ -14,4 +14,8 @@ class HeroItemRepository @Inject constructor(private val heroItemDao: HeroItemDa
         val response: List<HeroItemEntity> = heroItemDao.getAll()
         return response.map { it.toDomain() }
     }
+
+    suspend fun deleteHeroItems() {
+        heroItemDao.deleteHeroItems()
+    }
 }

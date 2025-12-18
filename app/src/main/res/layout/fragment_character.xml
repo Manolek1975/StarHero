@@ -32,7 +32,6 @@
         style="@style/button_action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:background="@drawable/t_101"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintTop_toBottomOf="@id/tv_hero_name"
         app:layout_constraintEnd_toStartOf="@id/iv_neck"
@@ -43,7 +42,7 @@
         style="@style/button_action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:background="@drawable/t_101"
+        android:background="@drawable/eq_neck"
         app:layout_constraintTop_toBottomOf="@id/tv_hero_name"
         app:layout_constraintStart_toEndOf="@id/iv_head"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,11 +57,19 @@
         app:layout_constraintEnd_toStartOf="@id/iv_hero_image"/>
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/iv_weapon"
+        android:id="@+id/iv_belt"
         style="@style/button_action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/iv_chest"
+        app:layout_constraintEnd_toStartOf="@id/iv_hero_image"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_weapon"
+        style="@style/button_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iv_belt"
         app:layout_constraintEnd_toStartOf="@id/iv_hero_image"/>
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -74,11 +81,19 @@
         app:layout_constraintStart_toEndOf="@id/iv_hero_image"/>
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/iv_shield"
+        android:id="@+id/iv_gloves"
         style="@style/button_action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/iv_shoulder"
+        app:layout_constraintStart_toEndOf="@id/iv_hero_image"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_shield"
+        style="@style/button_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iv_gloves"
         app:layout_constraintStart_toEndOf="@id/iv_hero_image"/>
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -99,4 +114,6 @@
         app:layout_constraintTop_toBottomOf="@id/iv_hero_image"
         app:layout_constraintStart_toEndOf="@id/iv_pants"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -145,6 +145,7 @@ class SettingsFragment : Fragment() {
             data.edit().putInt("ship", 1).apply()
             viewModel.deleteDwellings()
             viewModel.deleteGroups()
+            viewModel.deleteHeroItems()
             //viewModel.deletePrimaryKeyIndex()
             val i = Intent(activity, MainActivity::class.java)
             MainActivity.stopPlayer()

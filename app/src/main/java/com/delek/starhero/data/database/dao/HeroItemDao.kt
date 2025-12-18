@@ -14,4 +14,7 @@ interface HeroItemDao {
     @Query("SELECT * FROM hero_items")
     suspend fun getAll(): List<HeroItemEntity>
 
+    @Query("DELETE FROM hero_items")
+    suspend fun deleteHeroItems()
+
 }
