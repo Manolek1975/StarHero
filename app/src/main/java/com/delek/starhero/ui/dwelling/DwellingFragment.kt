@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import com.delek.starhero.R
@@ -77,6 +78,7 @@ class DwellingFragment : Fragment() {
         // Adapter Natives
         nativeAdapter = NativeAdapter(onItemSelected = {
             nativeAdapter.updateList(viewModel.natives.value!!)
+
         })
         binding.rvNative.layoutManager = GridLayoutManager(context, 4)
         binding.rvNative.adapter = nativeAdapter
@@ -86,10 +88,16 @@ class DwellingFragment : Fragment() {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.group.observe(viewLifecycleOwner) { group ->
                     groupAdapter.updateList(group)
+                    binding.action2.setOnClickListener {
+                        findNavController().navigate(
+                            DwellingFragmentDirections.actionNavDwellingToNavTrade(group[0].id)
+                        )
+                    }
                     viewModel.getNativesByGroup(group[0].id)
                     viewModel.natives.observe(viewLifecycleOwner) { native ->
                         nativeAdapter.updateList(native)
                     }
+
                 }
             }
         }

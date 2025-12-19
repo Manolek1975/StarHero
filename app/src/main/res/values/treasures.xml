@@ -2,10 +2,37 @@
 <resources>
 
     <string-array name="name_treasures">
-        <item>Hood</item>
+        <item>Gun</item>
+        <item>Hood of Magician lost</item>
     </string-array>
 
     <string-array name="image_treasures">
+        <item>tw_101</item>
         <item>t_101</item>
+    </string-array>
+
+    <string-array name="type_treasures">
+        <item>weapon</item>
+        <item>head</item>
+    </string-array>
+
+    <string-array name="damage_treasures">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="str_treasures">
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="def_treasures">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="price_treasures">
+        <item>10</item>
+        <item>20</item>
     </string-array>
 </resources>

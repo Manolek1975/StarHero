@@ -8,12 +8,14 @@ data class TreasureEntity(
     @PrimaryKey(autoGenerate = true) val id: Int,
     val name: String,
     val image: String,
-    val type: Int,
+    val type: String,
+    val damage: Int,
     val str: Int,
     val def: Int,
     val hp: Int,
     val spd: Int,
     val pow: Int,
-    val skill: Int
+    val skill: Int,
+    val price: Int
 
 )

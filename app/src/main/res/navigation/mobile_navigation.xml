@@ -118,6 +118,9 @@
         <argument
             android:name="dwellingId"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_nav_dwelling_to_nav_trade"
+            app:destination="@id/nav_trade" />
     </fragment>
 
     <fragment
@@ -125,5 +128,15 @@
         android:name="com.delek.starhero.ui.character.CharacterFragment"
         android:label="fragment_character"
         tools:layout="@layout/fragment_character" />
+
+    <fragment
+        android:id="@+id/nav_trade"
+        android:name="com.delek.starhero.ui.trade.TradeFragment"
+        android:label="fragment_trade"
+        tools:layout="@layout/fragment_trade" >
+        <argument
+            android:name="groupId"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>

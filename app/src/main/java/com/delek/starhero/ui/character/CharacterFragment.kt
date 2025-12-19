@@ -47,10 +47,10 @@ class CharacterFragment : Fragment() {
             binding.tvHeroName.text = it.name
             val id = Util.getResId(it.image, R.drawable::class.java)
             binding.ivHeroImage.setImageResource(id)
-
         }
 
-        //binding.ivHead.setImageResource(R.drawable.t_101)
+
+        binding.ivWeapon.setImageResource(R.drawable.tw_101)
         //binding.ivHead.leftDrawable(R.drawable.t_101, R.dimen.icon_size)
 
     }

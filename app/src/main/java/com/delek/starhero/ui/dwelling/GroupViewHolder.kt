@@ -26,8 +26,6 @@ class GroupViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             binding.tvGroup.setTextColor(ContextCompat.getColor(context, R.color.primaryVariant))
         }
 
-        //binding.tvGroup.text = group.name
-
         binding.tvGroup.setOnClickListener {
             selected = adapterPosition
             onItemSelected(group)

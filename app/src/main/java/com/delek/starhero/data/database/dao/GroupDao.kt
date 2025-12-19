@@ -16,7 +16,7 @@ interface GroupDao {
     suspend fun getAll(): List<GroupEntity>
 
     @Query("SELECT * FROM groups WHERE id = :id")
-    suspend fun getById(id: Int): GroupEntity
+    suspend fun getGroupById(id: Int): GroupEntity
 
     @Query("SELECT * FROM groups WHERE dwelling = :dwelling")
     suspend fun getGroupByDwelling(dwelling: Int): List<GroupEntity>

@@ -6,7 +6,7 @@ import com.delek.starhero.domain.model.Treasure
 import com.delek.starhero.domain.model.toDomain
 import javax.inject.Inject
 
-class TreasuresRepository @Inject constructor(private val treasureDao: TreasureDao) {
+class TreasureRepository @Inject constructor(private val treasureDao: TreasureDao) {
 
     suspend fun insertAll(weapons: List<TreasureEntity>) = treasureDao.insertTreasures(weapons)
 
