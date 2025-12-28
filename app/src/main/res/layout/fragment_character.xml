@@ -29,7 +29,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_head"
-        style="@style/button_action"
+        style="@style/button_slot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -39,7 +39,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_neck"
-        style="@style/button_action"
+        style="@style/button_slot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/eq_neck"
@@ -50,7 +50,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_chest"
-        style="@style/button_action"
+        style="@style/button_slot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/iv_hero_image"
@@ -58,7 +58,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_belt"
-        style="@style/button_action"
+        style="@style/button_slot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/iv_chest"
@@ -66,7 +66,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_weapon"
-        style="@style/button_action"
+        style="@style/button_slot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/iv_belt"
@@ -74,7 +74,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_shoulder"
-        style="@style/button_action"
+        style="@style/button_slot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/iv_hero_image"
@@ -82,7 +82,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_gloves"
-        style="@style/button_action"
+        style="@style/button_slot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/iv_shoulder"
@@ -90,7 +90,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_shield"
-        style="@style/button_action"
+        style="@style/button_slot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/iv_gloves"
@@ -98,7 +98,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_pants"
-        style="@style/button_action"
+        style="@style/button_slot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -108,7 +108,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_boots"
-        style="@style/button_action"
+        style="@style/button_slot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/iv_hero_image"

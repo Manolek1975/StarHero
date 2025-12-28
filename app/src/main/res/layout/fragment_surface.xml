@@ -36,34 +36,52 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <LinearLayout
+    <!-- ACTION BUTTONS -->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_attack"
+        style="@style/button_action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@id/space"
+        app:layout_constraintStart_toStartOf="parent"/>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/skill_1"
-            style="@style/button_action"
-            tools:text="AUTO\nATTACK" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_skill"
+        style="@style/button_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/space"
+        app:layout_constraintStart_toEndOf="@id/iv_attack" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/skill_2"
-            style="@style/button_action"
-            tools:text="FEIGN\n DEAD"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_skill2"
+        style="@style/button_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/space"
+        app:layout_constraintStart_toEndOf="@id/iv_skill" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/skill_3"
-            style="@style/button_action"
-            tools:text="BERSERK"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_skill3"
+        style="@style/button_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/space"
+        app:layout_constraintStart_toEndOf="@id/iv_skill2" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/skill_4"
-            style="@style/button_action"
-            tools:text="HIDE"/>
-    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_skill4"
+        style="@style/button_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/space"
+        app:layout_constraintStart_toEndOf="@id/iv_skill3" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

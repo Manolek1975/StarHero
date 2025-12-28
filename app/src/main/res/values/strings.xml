@@ -38,11 +38,13 @@
     <string name="cancel">Cancel</string>
     <string name="head_star_fragment">Sector Virgo</string>
     <!-- DWELLING -->
+    <string name="menu_character">Character</string>
     <string name="talk">TALK</string>
     <string name="trade">TRADE</string>
     <string name="hire">HIRE</string>
+    <string name="hide">HIDE</string>
     <string name="attack">ATTACK</string>
-    <string name="menu_character">Character</string>
+
 
 
 </resources>

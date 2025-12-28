@@ -96,6 +96,9 @@
         <action
             android:id="@+id/action_nav_planet_to_nav_dwelling"
             app:destination="@id/nav_dwelling" />
+        <action
+            android:id="@+id/action_nav_planet_to_nav_star"
+            app:destination="@id/nav_star" />
     </fragment>
     <fragment
         android:id="@+id/nav_surface"

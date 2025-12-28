@@ -57,8 +57,6 @@ class TradeFragment : Fragment() {
                 }
             }
         }
-
-
     }
 
     private fun showBuyDialog(name: String){

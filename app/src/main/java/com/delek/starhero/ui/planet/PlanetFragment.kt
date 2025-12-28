@@ -52,6 +52,11 @@ class PlanetFragment : Fragment() {
             binding.tvPlanet.text = planet.name
             val id = Util.getResId(planet.image, R.drawable::class.java)
             binding.ivPlanet.setImageResource(id)
+            binding.ivShip.setOnClickListener {
+                findNavController().navigate(
+                    PlanetFragmentDirections.actionNavPlanetToNavStar(planet.starId)
+                )
+            }
         }
 
         viewModel.getDwellingByPlanet(args.planetId)

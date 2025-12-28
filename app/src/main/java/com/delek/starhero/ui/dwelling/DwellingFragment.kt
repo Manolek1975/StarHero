@@ -88,7 +88,7 @@ class DwellingFragment : Fragment() {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.group.observe(viewLifecycleOwner) { group ->
                     groupAdapter.updateList(group)
-                    binding.action2.setOnClickListener {
+                    binding.ivTrade.setOnClickListener {
                         findNavController().navigate(
                             DwellingFragmentDirections.actionNavDwellingToNavTrade(group[0].id)
                         )
@@ -104,10 +104,11 @@ class DwellingFragment : Fragment() {
     }
 
     private fun initActions() {
-        binding.action1.text = getString(R.string.talk)
-        binding.action2.text = getString(R.string.trade)
-        binding.action3.text = getString(R.string.hire)
-        binding.action4.text = getString(R.string.attack)
+        binding.ivTalk.text = getString(R.string.talk)
+        binding.ivTrade.text = getString(R.string.trade)
+        binding.ivHire.text = getString(R.string.hire)
+        binding.ivHide.text = getString(R.string.hide)
+        binding.ivAttack.text = getString(R.string.attack)
 
     }
 }
