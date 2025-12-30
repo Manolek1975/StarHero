@@ -25,7 +25,7 @@
     <string name="head">Select Hero</string>
     <!-- DETAIL -->
     <string name="size">Size: %1$s</string>
-    <string name="skill">Skill: %1$s</string>
+    <string name="skill">Skill</string>
     <string name="strength">STRENGTH</string>
     <string name="defense">DEFENSE</string>
     <string name="health">HEALTH</string>
@@ -44,7 +44,8 @@
     <string name="hire">HIRE</string>
     <string name="hide">HIDE</string>
     <string name="attack">ATTACK</string>
-
+    <string name="run">RUN</string>
+    <string name="use">USE</string>
 
 
 </resources>

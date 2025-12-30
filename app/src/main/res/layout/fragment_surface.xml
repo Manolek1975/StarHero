@@ -37,7 +37,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- ACTION BUTTONS -->
-    <androidx.appcompat.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/iv_attack"
         style="@style/button_action"
         android:layout_width="wrap_content"
@@ -46,7 +46,7 @@
         app:layout_constraintBottom_toTopOf="@id/space"
         app:layout_constraintStart_toStartOf="parent"/>
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/iv_skill"
         style="@style/button_action"
         android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
         app:layout_constraintBottom_toTopOf="@id/space"
         app:layout_constraintStart_toEndOf="@id/iv_attack" />
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/iv_skill2"
         style="@style/button_action"
         android:layout_width="wrap_content"
@@ -62,7 +62,7 @@
         app:layout_constraintBottom_toTopOf="@id/space"
         app:layout_constraintStart_toEndOf="@id/iv_skill" />
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/iv_skill3"
         style="@style/button_action"
         android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
         app:layout_constraintBottom_toTopOf="@id/space"
         app:layout_constraintStart_toEndOf="@id/iv_skill2" />
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/iv_skill4"
         style="@style/button_action"
         android:layout_width="wrap_content"

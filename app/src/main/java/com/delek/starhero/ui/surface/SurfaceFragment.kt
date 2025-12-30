@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.toColorInt
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
@@ -24,6 +25,7 @@ class SurfaceFragment : Fragment() {
     private var _binding: FragmentSurfaceBinding? = null
     private val binding get() = _binding!!
     private val args: SurfaceFragmentArgs by navArgs()
+    private var counter: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,6 +37,12 @@ class SurfaceFragment : Fragment() {
     }
 
     private fun initUI() {
+        initHead()
+        initMonster()
+        initActionButtons()
+    }
+
+    private fun initHead() {
         viewModel.getPlanetById(args.planetId)
         viewModel.planet.observe(viewLifecycleOwner) { planet ->
             val id = Util.getResId(planet.surface, R.drawable::class.java)
@@ -42,17 +50,32 @@ class SurfaceFragment : Fragment() {
             binding.root.background = bg
             binding.tvPlanet.text = planet.name
         }
+    }
 
+    private fun initMonster() {
         binding.ivMonster.setImageResource(R.drawable.m_102)
         binding.tvMonster.text = "Antmen"
-        /*        viewModel.getDwellingByPlanet(args.planetId)
-                viewModel.dwelling.observe(viewLifecycleOwner) { dwelling ->
-                    if (dwelling != null) {
-                        val id = Util.getResId(dwelling.image, R.drawable::class.java)
-                    }
-                }*/
+    }
 
+    private fun initActionButtons() {
+        binding.ivAttack.text = getString(R.string.attack)
+        binding.ivSkill.text =  getString(R.string.skill)
+        binding.ivSkill2.text = getString(R.string.hide)
+        binding.ivSkill3.text = getString(R.string.run)
+        binding.ivSkill4.text = getString(R.string.use)
+        binding.ivAttack.setOnClickListener {
+            if (!counter) {
+                binding.ivAttack.background.setTint("#FFC3493B".toColorInt())
+                counter = true
+            } else {
+                binding.ivAttack.background.setTint("#C3A03B".toColorInt())
+                counter = false
+            }
+
+        }
 
     }
+
+
 
 }

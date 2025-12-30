@@ -9,7 +9,7 @@ plugins {
 
 android {
     namespace = "com.delek.starhero"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.delek.starhero"
@@ -35,14 +35,18 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
+
     buildFeatures {
         viewBinding = true
     }
     room {
         schemaDirectory("$projectDir/schemas")
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
     }
 }
 
