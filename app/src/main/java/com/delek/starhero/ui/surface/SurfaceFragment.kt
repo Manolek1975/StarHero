@@ -1,11 +1,14 @@
 package com.delek.starhero.ui.surface
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AlphaAnimation
+import android.view.animation.Animation
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.toColorInt
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
@@ -25,13 +28,14 @@ class SurfaceFragment : Fragment() {
     private var _binding: FragmentSurfaceBinding? = null
     private val binding get() = _binding!!
     private val args: SurfaceFragmentArgs by navArgs()
-    private var counter: Boolean = false
+    private lateinit var data: SharedPreferences
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSurfaceBinding.inflate(inflater, container, false)
+        data = requireContext().getSharedPreferences("data", Context.MODE_PRIVATE)
         initUI()
         return binding.root
     }
@@ -64,16 +68,41 @@ class SurfaceFragment : Fragment() {
         binding.ivSkill3.text = getString(R.string.run)
         binding.ivSkill4.text = getString(R.string.use)
         binding.ivAttack.setOnClickListener {
-            if (!counter) {
-                binding.ivAttack.background.setTint("#FFC3493B".toColorInt())
-                counter = true
-            } else {
-                binding.ivAttack.background.setTint("#C3A03B".toColorInt())
-                counter = false
-            }
-
+            binding.ivAttack.blink()
+            combat()
         }
 
+    }
+
+    private fun combat() {
+        val hero = data.getInt("hero", 0)
+        viewModel.getHeroById(hero)
+        viewModel.hero.observe(viewLifecycleOwner) { hero ->
+            val str = hero.strength
+            println(str)
+            viewModel.getMonsterById(1)
+            viewModel.monster.observe(viewLifecycleOwner) { monster ->
+                val def = monster.armor
+                println(def)
+            }
+        }
+
+    }
+
+    private fun View.blink(
+        times: Int = 10,
+        duration: Long = 100L,
+        offset: Long = 20L,
+        minAlpha: Float = 0.0f,
+        maxAlpha: Float = 1.0f,
+        repeatMode: Int = Animation.ABSOLUTE
+    ) {
+        startAnimation(AlphaAnimation(minAlpha, maxAlpha).also {
+            it.duration = duration
+            it.startOffset = offset
+            it.repeatMode = repeatMode
+            it.repeatCount = times
+        })
     }
 
 

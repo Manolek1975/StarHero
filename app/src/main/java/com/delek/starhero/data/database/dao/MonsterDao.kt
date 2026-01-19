@@ -16,6 +16,9 @@ interface MonsterDao {
     suspend fun getAllMonsters(): List<MonsterEntity>
 
     @Query("SELECT * FROM monsters WHERE id = :id")
+    suspend fun getMonsterById(id: Int): MonsterEntity
+
+    @Query("SELECT * FROM monsters WHERE id = :id")
     suspend fun getAdviceMonsterById(id: Int): MonsterEntity
 
     @Query("SELECT * FROM monsters WHERE id = :id")
